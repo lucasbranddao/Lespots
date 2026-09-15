@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Spots — Mapa</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Work+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@400;700;900&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap" rel="stylesheet">
+<style>
+  /* Commercial display fonts — drop the real files into ./fonts/ to activate.
+     Until they exist, the stacks fall back to Great Vibes / Playfair Display. */
+  @font-face {
+    font-family: 'Parfumerie Script';
+    src: url('fonts/ParfumerieScript.woff2') format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Joshico';
+    src: url('fonts/Joshico.woff2') format('woff2');
+    font-display: swap;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --burgundy:#8d0b0b; --dark-red:#6d0808; --green:#1c3535; --gold:#e8a12e;
+    --gold-light:#e8a12e; --cream:#fdf8f0; --cream-dim:#f3ebdd; --ink:#2b211b;
+    --blush:#ffdada; --mint:#cfe1dd; --lemon:#ffe088;
+  }
+  html, body { height:100%; font-family:'Work Sans', sans-serif; background:var(--cream); color:var(--ink); }
+  .shell { display:flex; flex-direction:column; height:100vh; }
+
+  .topbar {
+    flex-shrink:0; display:flex; align-items:center; justify-content:space-between;
+    padding:0 1.5rem; height:56px; background:#fff; border-bottom:4px solid var(--burgundy);
+    box-shadow:0 4px 0 0 var(--burgundy); position:relative; z-index:1000;
+  }
+  .topbar-logo { font-family:'Parfumerie Script', 'Great Vibes', cursive; font-size:2rem; color:var(--gold); line-height:1; text-decoration:none; }
+  .topbar-back {
+    display:inline-flex; align-items:center; gap:6px; font-family:'Be Vietnam Pro', sans-serif;
+    font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--burgundy); text-decoration:none; padding:6px 14px; border:2px solid var(--burgundy); transition:all 0.18s;
+  }
+  .topbar-back:hover { background:var(--burgundy); color:#fff; }
+  .topbar-back .ms { font-size:15px; font-family:'Material Symbols Outlined'; font-variation-settings:'FILL' 1; }
+
+  .content { display:flex; flex:1; overflow:hidden; }
+
+  .panel {
+    width:330px; flex-shrink:0; display:flex; flex-direction:column; background:var(--cream);
+    border-right:3px solid var(--burgundy); overflow:hidden; z-index:500;
+  }
+  .panel-header { padding:1.1rem 1.25rem 0.8rem; border-bottom:2px solid var(--cream-dim); background:var(--cream); flex-shrink:0; }
+  .panel-title { font-family:'Joshico', 'Playfair Display', serif; font-style:italic; font-size:1.2rem; font-weight:700; color:var(--burgundy); margin-bottom:0.6rem; }
+  .panel-count { font-family:'Be Vietnam Pro', sans-serif; font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem; }
+
+  .filter-row { display:flex; flex-wrap:wrap; gap:5px; }
+  .fpill {
+    font-family:'Be Vietnam Pro', sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.05em;
+    text-transform:uppercase; padding:5px 12px; cursor:pointer; border:2px solid var(--burgundy);
+    background:#fff; color:var(--burgundy); user-select:none; transition:all 0.15s; white-space:nowrap;
+    display:inline-flex; align-items:center; gap:5px;
+  }
+  .fpill:hover { transform:translateY(-1px); }
+  .fpill.active { background:var(--burgundy); color:#fff; box-shadow:2px 2px 0 var(--gold); }
+  .fpill .ms { font-size:14px; font-family:'Material Symbols Outlined'; font-variation-settings:'FILL' 1; }
+
+  .spot-list { flex:1; overflow-y:auto; }
+  .spot-list::-webkit-scrollbar { width:4px; }
+  .spot-list::-webkit-scrollbar-track { background:var(--cream-dim); }
+  .spot-list::-webkit-scrollbar-thumb { background:var(--burgundy); border-radius:2px; }
+
+  .spot-item { display:flex; gap:10px; padding:0.9rem 1.25rem; border-bottom:1px solid var(--cream-dim); cursor:pointer; transition:background 0.15s; position:relative; }
+  .spot-item:hover, .spot-item.highlighted { background:#fff; }
+  .spot-item.highlighted::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--burgundy); }
+
+  .spot-thumb { width:58px; height:58px; object-fit:cover; flex-shrink:0; border:2px solid #fff; box-shadow:2px 2px 0 var(--burgundy); }
+  .spot-info { flex:1; min-width:0; }
+  .spot-name { font-family:'Joshico', 'Playfair Display', serif; font-style:italic; font-size:1rem; font-weight:700; color:var(--burgundy); line-height:1.2; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .spot-loc { font-family:'Be Vietnam Pro', sans-serif; font-size:9px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--green); margin-bottom:5px; display:flex; align-items:center; gap:3px; }
+  .spot-loc .ms { font-size:11px; }
+  .spot-cats { display:flex; flex-wrap:wrap; gap:3px; }
+  .spot-cat-chip { font-family:'Be Vietnam Pro', sans-serif; font-size:8px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:2px 7px; border-radius:9999px; color:#fff; }
+
+  .no-results-panel { display:none; padding:2rem 1.25rem; text-align:center; font-family:'Joshico', 'Playfair Display', serif; font-style:italic; color:#9c8478; font-size:0.95rem; }
+
+  #map { flex:1; z-index:1; }
+
+  .le-marker { display:flex; flex-direction:column; align-items:center; cursor:pointer; }
+  .le-marker-pin { width:38px; height:38px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); border:3px solid #fff; box-shadow:2px 2px 0 rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; transition:transform 0.2s, box-shadow 0.2s; }
+  .le-marker-pin .ms { transform:rotate(45deg); font-size:18px; font-family:'Material Symbols Outlined'; font-variation-settings:'FILL' 1; color:#fff; display:block; line-height:1; }
+  .le-marker-label { margin-top:4px; font-family:'Be Vietnam Pro', sans-serif; font-size:9px; font-weight:700; letter-spacing:0.05em; white-space:nowrap; background:#fff; color:var(--ink); padding:1px 5px; border-radius:3px; box-shadow:1px 1px 0 rgba(0,0,0,0.15); max-width:110px; overflow:hidden; text-overflow:ellipsis; }
+  .le-marker:hover .le-marker-pin { box-shadow:3px 3px 0 rgba(0,0,0,0.4); }
+  .le-marker.active .le-marker-pin { transform:rotate(-45deg) scale(1.2); box-shadow:4px 4px 0 rgba(0,0,0,0.4); }
+
+  .leaflet-popup-content-wrapper { border-radius:0 !important; border:3px solid var(--burgundy) !important; box-shadow:6px 6px 0 var(--burgundy) !important; padding:0 !important; overflow:hidden; background:var(--cream) !important; font-family:'Work Sans', sans-serif !important; max-width:340px; }
+  .leaflet-popup-tip-container { display:none !important; }
+  .leaflet-popup-close-button { color:var(--burgundy) !important; font-size:18px !important; top:6px !important; right:8px !important; font-weight:900 !important; }
+  .leaflet-popup-content { margin:0 !important; width:auto !important; }
+
+  /* horizontal popup: image left · brief info + button right */
+  .popup-h { display:flex; align-items:stretch; }
+  .popup-img { width:118px; flex-shrink:0; align-self:stretch; min-height:158px; object-fit:cover; display:block; filter:saturate(0.9); border-right:3px solid var(--burgundy); }
+  .popup-body { padding:0.7rem 0.85rem; display:flex; flex-direction:column; gap:5px; min-width:0; flex:1; }
+  .popup-venue { align-self:flex-start; font-family:'Be Vietnam Pro', sans-serif; font-size:8px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:2px 8px; color:#fff; background:var(--ink); border-radius:9999px; }
+  .popup-name { font-family:'Joshico', 'Playfair Display', serif; font-style:italic; font-size:1.35rem; font-weight:900; color:var(--burgundy); line-height:1.1; }
+  .popup-loc { font-family:'Be Vietnam Pro', sans-serif; font-size:9px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--green); display:flex; align-items:center; gap:3px; }
+  .popup-chips { display:flex; flex-wrap:wrap; gap:3px; }
+  .popup-cat { font-family:'Be Vietnam Pro', sans-serif; font-size:8px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; padding:2px 7px; color:#fff; border-radius:9999px; }
+  .popup-link { margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; gap:4px; font-family:'Be Vietnam Pro', sans-serif; font-size:9px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; padding:6px 12px; background:var(--burgundy); color:#fff; text-decoration:none; transition:all 0.15s; }
+  .popup-link:hover { background:var(--dark-red); transform:translateX(2px); }
+  .popup-link .ms { font-size:13px; font-family:'Material Symbols Outlined'; font-variation-settings:'FILL' 1; }
+  @media (max-width:480px) { .popup-img { width:96px; min-height:140px; } }
+
+  @media (max-width:700px) {
+    .content { flex-direction:column; }
+    .panel { width:100%; height:240px; border-right:none; border-top:3px solid var(--burgundy); order:2; }
+    #map { order:1; height:calc(100% - 240px); }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <a href="index.html" class="topbar-logo">Le Spots</a>
+    <a href="index.html" class="topbar-back"><span class="ms">arrow_back</span> Voltar ao guia</a>
+  </header>
+
+  <div class="content">
+    <aside class="panel">
+      <div class="panel-header">
+        <p class="panel-title">Mapa dos Spots</p>
+        <p class="panel-count" id="panel-count">— spots</p>
+        <div class="filter-row" id="filter-pills"></div>
+      </div>
+      <div class="spot-list" id="spot-list"></div>
+      <p class="no-results-panel" id="no-results-panel">Nenhum spot nessa categoria.</p>
+    </aside>
+    <div id="map"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// ── Venue → pin colour + icon ─────────────────────────────────
+const VENUE_COLOR = { 'Restaurante':'#8d0b0b', 'Bar':'#e8a12e', 'Café':'#1c3535' };
+const VENUE_ICON  = { 'Restaurante':'restaurant', 'Bar':'local_bar', 'Café':'local_cafe' };
+const EMOJI = {
+  cuisine:  { 'Ramén':'🍜','Italiana':'🍝','Petiscos':'🍢','Nordestina':'🌶️','Contemporânea':'🎨','Café':'☕','Frango':'🍗','Poke':'🥗' },
+  occasion: { 'Encontro':'💋','Comemoração':'🥂','Conforto':'😌','Trabalhar':'💻','Brunch':'🥐','Especial':'✨' },
+  badge:    { 'Favorito':'🌟','Hype':'🔥','Custo-benefício':'💰' },
+};
+function emj(group, v) { const e = (EMOJI[group]||{})[v]; return e ? e + ' ' + v : v; }
+function venueColor(v) { return VENUE_COLOR[v] || '#8d0b0b'; }
+
+// ── State ─────────────────────────────────────────────────────
+let allSpots = [], allVenues = [], activeVenue = null, markers = {}, activeId = null;
+
+// ── Map init ──────────────────────────────────────────────────
+const map = L.map('map', { center:[-23.557,-46.660], zoom:13, zoomControl:false });
+L.control.zoom({ position:'bottomright' }).addTo(map);
+// Esri World Light Gray Canvas — clean light basemap, no API key required.
+// (CARTO's positron looks similar but now rate-limits/stamps anonymous tiles.)
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution:'Tiles &copy; <a href="https://www.esri.com/">Esri</a>',
+  maxZoom:16,
+}).addTo(map);
+// Labels (street / neighbourhood names) as a separate overlay
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+  maxZoom:16, pane:'overlayPane',
+}).addTo(map);
+
+// ── Build chips (cuisine burgundy · occasion green · badge gold) ─
+function chipsFor(spot, small) {
+  const cls = small ? 'spot-cat-chip' : 'popup-cat';
+  return [
+    ...(spot.cuisine  || []).map(v => `<span class="${cls}" style="background:#8d0b0b;">${emj('cuisine', v)}</span>`),
+    ...(spot.occasion || []).map(v => `<span class="${cls}" style="background:#1c3535;">${emj('occasion', v)}</span>`),
+    ...(spot.badges   || []).map(v => `<span class="${cls}" style="background:#e8a12e;">${emj('badge', v)}</span>`),
+  ].join('');
+}
+
+// ── Marker ────────────────────────────────────────────────────
+function createMarker(spot) {
+  const color = venueColor(spot.venue);
+  const icon  = VENUE_ICON[spot.venue] || 'restaurant';
+  const html = `
+    <div class="le-marker" id="mwrap-${spot.id}">
+      <div class="le-marker-pin" style="background:${color};"><span class="ms">${icon}</span></div>
+      <div class="le-marker-label">${spot.name}</div>
+    </div>`;
+  const divIcon = L.divIcon({ html, className:'', iconSize:[60,62], iconAnchor:[30,58], popupAnchor:[0,-58] });
+  const marker = L.marker(spot.coords, { icon:divIcon }).addTo(map);
+  marker.bindPopup(buildPopup(spot), { maxWidth:340, minWidth:300 });
+  marker.on('click', () => activateSpot(spot.id));
+  return marker;
+}
+
+function buildPopup(spot) {
+  return `
+    <div class="popup-h">
+      <img class="popup-img" src="${spot.image}" alt="${spot.imageAlt || spot.name}">
+      <div class="popup-body">
+        <span class="popup-venue">${spot.venue}</span>
+        <p class="popup-name">${spot.name}</p>
+        <p class="popup-loc"><span class="ms" style="font-family:'Material Symbols Outlined'; font-variation-settings:'FILL' 1; font-size:11px;">location_on</span>${spot.location}</p>
+        <div class="popup-chips">${(spot.cuisine || []).map(v => `<span class="popup-cat" style="background:#8d0b0b;">${emj('cuisine', v)}</span>`).join('')}</div>
+        <a class="popup-link" href="index.html#${spot.id}">Detalhes<span class="ms">arrow_forward</span></a>
+      </div>
+    </div>`;
+}
+
+// ── Left list ─────────────────────────────────────────────────
+function renderList() {
+  const list = document.getElementById('spot-list');
+  const noRes = document.getElementById('no-results-panel');
+  const count = document.getElementById('panel-count');
+  const visible = allSpots.filter(s => !activeVenue || s.venue === activeVenue);
+
+  count.textContent = `${visible.length} spot${visible.length !== 1 ? 's' : ''}`;
+  if (!visible.length) { list.innerHTML = ''; noRes.style.display = 'block'; return; }
+  noRes.style.display = 'none';
+
+  list.innerHTML = visible.map(spot => `
+    <div class="spot-item" id="li-${spot.id}" onclick="activateSpot('${spot.id}')">
+      <img class="spot-thumb" src="${spot.image}" alt="${spot.name}" loading="lazy">
+      <div class="spot-info">
+        <p class="spot-name">${spot.name}</p>
+        <p class="spot-loc"><span class="ms" style="font-family:'Material Symbols Outlined'; font-size:11px;">location_on</span>${spot.location}</p>
+        <div class="spot-cats"><span class="spot-cat-chip" style="background:${venueColor(spot.venue)};">${spot.venue}</span>${chipsFor(spot, true)}</div>
+      </div>
+    </div>`).join('');
+}
+
+// ── Activate ──────────────────────────────────────────────────
+function activateSpot(id) {
+  if (activeId) {
+    document.getElementById(`mwrap-${activeId}`)?.classList.remove('active');
+    document.getElementById(`li-${activeId}`)?.classList.remove('highlighted');
+  }
+  activeId = id;
+  const spot = allSpots.find(s => s.id === id);
+  if (!spot) return;
+  document.getElementById(`mwrap-${id}`)?.classList.add('active');
+  const li = document.getElementById(`li-${id}`);
+  if (li) { li.classList.add('highlighted'); li.scrollIntoView({ behavior:'smooth', block:'nearest' }); }
+  const m = markers[id];
+  if (m) { map.flyTo(spot.coords, Math.max(map.getZoom(), 15), { duration:0.6 }); setTimeout(() => m.openPopup(), 500); }
+}
+
+// ── Venue filter ──────────────────────────────────────────────
+function filterVenue(v) {
+  activeVenue = v;
+  document.querySelectorAll('.fpill').forEach(p => {
+    const pv = p.dataset.venue === '' ? null : p.dataset.venue;
+    p.classList.toggle('active', pv === activeVenue);
+  });
+  allSpots.forEach(spot => {
+    const m = markers[spot.id]; if (!m) return;
+    (!activeVenue || spot.venue === activeVenue) ? m.addTo(map) : map.removeLayer(m);
+  });
+  renderList();
+}
+
+function renderFilterPills() {
+  const row = document.getElementById('filter-pills');
+  const pills = [{ value:null, label:'Todos', icon:'apps' },
+                 ...allVenues.map(v => ({ value:v, label:v, icon: VENUE_ICON[v] || 'restaurant' }))];
+  row.innerHTML = pills.map(p => `
+    <span class="fpill ${p.value === activeVenue ? 'active' : ''}" data-venue="${p.value === null ? '' : p.value}"
+          onclick="filterVenue(${p.value === null ? 'null' : `'${p.value}'`})">
+      <span class="ms">${p.icon}</span>${p.label}
+    </span>`).join('');
+}
+
+function fitMapToSpots(spots) {
+  if (!spots.length) return;
+  map.fitBounds(L.latLngBounds(spots.map(s => s.coords)), { padding:[40,40] });
+}
+
+// ── Main ──────────────────────────────────────────────────────
+async function init() {
+  let data;
+  try {
+    const res = await fetch('spots.json');
+    if (!res.ok) throw new Error();
+    data = await res.json();
+  } catch {
+    document.getElementById('spot-list').innerHTML =
+      `<p style="padding:2rem; font-family:'Work Sans',sans-serif; color:#8d0b0b;">Não foi possível carregar spots.json.<br><small>Use um servidor local: <code>python3 -m http.server 8080</code></small></p>`;
+    return;
+  }
+
+  allSpots = (data.spots || []).filter(s => s.coords);
+  const seen = new Set();
+  allSpots.forEach(s => { if (s.venue && !seen.has(s.venue)) { seen.add(s.venue); allVenues.push(s.venue); } });
+
+  renderFilterPills();
+  renderList();
+  allSpots.forEach(spot => { markers[spot.id] = createMarker(spot); });
+  fitMapToSpots(allSpots);
+}
+init();
+</script>
+<script src="subscribe.js"></script>
+</body>
+</html>

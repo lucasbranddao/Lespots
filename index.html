@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Le Spots — Guia Pessoal de SP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@400;600;700;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-variant":          "#efe5d5",
+          "on-surface":               "#2b211b",
+          "primary-fixed":            "#ffdada",
+          "tertiary":                 "#e8a12e",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-container":       "#e8a12e",
+          "secondary-container":      "#cfe1dd",
+          "background":               "#fdf8f0",
+          "tertiary-fixed":           "#ffe088",
+          "surface":                  "#fdf8f0",
+          "primary":                  "#8d0b0b",
+          "on-secondary":             "#ffffff",
+          "outline-variant":          "#e8cfc0",
+          "surface-dim":              "#e6dcc8",
+          "secondary-fixed":          "#cfe1dd",
+          "inverse-on-surface":       "#f6efe2",
+          "surface-container":        "#f3ebdd",
+          "on-background":            "#2b211b",
+          "secondary":                "#1c3535",
+          "primary-container":        "#6d0808",
+          "outline":                  "#9c8478",
+          "surface-container-low":    "#f6efe2",
+          "on-primary":               "#ffffff",
+          "surface-container-high":   "#f3ebdd",
+          "on-surface-variant":       "#6b5347",
+          "inverse-primary":          "#ffb3b5",
+          "inverse-surface":          "#2b211b"
+        },
+        fontFamily: {
+          "script":        ["Parfumerie Script", "Great Vibes", "cursive"],
+          "serif-display": ["Joshico", "Playfair Display", "serif"],
+          "serif-body":    ["Work Sans", "sans-serif"],
+          "sans-label":    ["Be Vietnam Pro", "sans-serif"],
+        },
+      },
+    },
+  }
+</script>
+<style>
+  /* Commercial display fonts — drop the real files into ./fonts/ to activate.
+     Until they exist, the stacks fall back to Great Vibes / Playfair Display. */
+  @font-face {
+    font-family: 'Parfumerie Script';
+    src: url('fonts/ParfumerieScript.woff2') format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Joshico';
+    src: url('fonts/Joshico.woff2') format('woff2');
+    font-display: swap;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { font-family: 'Work Sans', Georgia, sans-serif; background: #fdf8f0; color: #2b211b; }
+
+  .font-script   { font-family: 'Parfumerie Script', 'Great Vibes', cursive; }
+  .font-display  { font-family: 'Joshico', 'Playfair Display', serif; }
+  .font-body     { font-family: 'Work Sans', sans-serif; }
+  .font-label    { font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: 0.09em; text-transform: uppercase; font-weight: 700; }
+
+  .paper-texture { background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); }
+  .sticker-shadow { filter: drop-shadow(2px 3px 0px rgba(0,0,0,0.3)); }
+  .hard-shadow    { box-shadow: 6px 6px 0px 0px #8d0b0b; }
+  .gold-shadow    { box-shadow: 5px 5px 0px 0px #e8a12e; }
+
+  .washi-tape       { background: rgba(232,161,46,0.55); transform: rotate(-2deg); }
+  .washi-tape-green { background: rgba(28,53,53,0.45);  transform: rotate(1.5deg); }
+
+  .drop-cap::first-letter {
+    font-family: 'Joshico', 'Playfair Display', serif;
+    font-size: 3.8rem; font-weight: 900; color: #e8a12e;
+    float: left; line-height: 0.78; margin-right: 0.12em; margin-top: 0.06em;
+  }
+
+  .chip {
+    display: inline-block; font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 9.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 9999px; white-space: nowrap;
+  }
+  .cat-badge {
+    display: inline-flex; align-items: center; gap: 4px; color: #fff;
+    font-family: 'Be Vietnam Pro', sans-serif; font-size: 9px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px;
+  }
+
+  .tip-box-green  { background: #d6e8e4; border-left: 4px solid #1c3535; }
+  .tip-box-dashed { background: #f3ebdd; border: 2px dashed #8d0b0b; }
+
+  .spot-card { position: relative; }
+
+  /* ── Faceted filter pill ── */
+  .fpill {
+    cursor: pointer; transition: all 0.16s; user-select: none;
+    font-family: 'Be Vietnam Pro', sans-serif; font-size: 9.5px; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 3px 11px; border-radius: 9999px; border: 1.5px solid;
+  }
+  .fpill:hover { transform: scale(1.05); }
+
+  /* ── Venue tab (horizontal selector) ── */
+  .venue-tab {
+    cursor: pointer; transition: all 0.18s; user-select: none;
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Be Vietnam Pro', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.09em; text-transform: uppercase;
+    padding: 9px 20px; border: 2px solid #8d0b0b; background: #fff; color: #8d0b0b;
+    white-space: nowrap;
+  }
+  .venue-tab:hover { transform: translateY(-2px); }
+  .venue-tab.active { background: #8d0b0b; color: #fff; box-shadow: 3px 3px 0 #e8a12e; }
+  .venue-tab .ms { font-size: 16px; font-variation-settings: 'FILL' 1; }
+
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  #no-results { display: none; text-align: center; padding: 4rem 2rem;
+    font-family: 'Joshico', 'Playfair Display', serif; font-style: italic; color: #9c8478; font-size: 1.25rem; }
+
+  /* ── Newsletter inputs ── */
+  .nl-input {
+    width: 100%; font-family: 'Work Sans', sans-serif; font-size: 0.95rem;
+    padding: 10px 14px; border: 2px solid #8d0b0b; background: #fff; color: #2b211b;
+  }
+  .nl-input:focus { outline: none; border-color: #e8a12e; box-shadow: 3px 3px 0 #e8a12e; }
+  .nl-channel {
+    cursor: pointer; user-select: none; display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Be Vietnam Pro', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 7px 14px; border: 2px solid #8d0b0b; background: #fff; color: #8d0b0b; transition: all 0.15s;
+  }
+  .nl-channel.active { background: #8d0b0b; color: #fff; }
+  .nl-channel .ms { font-size: 15px; }
+
+  @media (max-width: 768px) { .drop-cap::first-letter { font-size: 3rem; } }
+</style>
+</head>
+<body class="selection:bg-tertiary-fixed">
+
+<!-- NAV -->
+<header class="bg-surface-container-lowest border-b-4 border-primary sticky top-0 z-50" style="box-shadow: 0 4px 0 0 #8d0b0b;">
+  <nav class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
+    <a href="#" class="font-script leading-none" style="font-size: 2.4rem; color: #e8a12e; line-height:1;">Le Spots</a>
+    <div class="flex gap-4 items-center">
+      <a href="map.html" class="font-label hidden sm:inline-block text-xs px-4 py-2 transition-all hover:scale-105"
+         style="border:2px solid #8d0b0b; color:#8d0b0b; text-decoration:none;">Ver Mapa</a>
+      <span class="material-symbols-outlined cursor-pointer active:scale-90 transition-transform" style="color:#8d0b0b; font-size:22px;">favorite</span>
+      <span class="material-symbols-outlined cursor-pointer active:scale-90 transition-transform" style="color:#8d0b0b; font-size:22px;">search</span>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden" style="background:#6d0808;">
+  <div class="absolute inset-0 opacity-[0.11] pointer-events-none select-none overflow-hidden">
+    <span class="material-symbols-outlined absolute top-8 left-8 text-7xl sticker-shadow" style="color:#ffe088; font-variation-settings:'FILL' 1;">star</span>
+    <span class="material-symbols-outlined absolute bottom-16 right-10 text-[7rem] sticker-shadow" style="color:#ffdada; font-variation-settings:'FILL' 1;">photo_camera</span>
+    <span class="material-symbols-outlined absolute top-1/3 right-1/4 text-[6rem] sticker-shadow" style="color:#cfe1dd; font-variation-settings:'FILL' 1; transform:rotate(14deg);">auto_awesome</span>
+    <span class="material-symbols-outlined absolute bottom-1/4 left-16 text-7xl sticker-shadow" style="color:#ffe088; font-variation-settings:'FILL' 1; transform:rotate(-8deg);">wine_bar</span>
+  </div>
+  <div class="relative z-10 text-center max-w-3xl px-6">
+    <p class="font-label mb-4" style="font-size:11px; letter-spacing:0.45em; color:#ffe088;">Lugares que valem em SP</p>
+    <h1 class="font-script text-white leading-none" style="font-size: clamp(5rem, 18vw, 11rem); text-shadow: 3px 4px 0 rgba(0,0,0,0.18);">Le Spots</h1>
+    <p class="font-display italic mt-4 max-w-md mx-auto" style="font-size: clamp(1rem, 2.5vw, 1.2rem); color:#ffdada; opacity:0.88; line-height:1.65;">
+      "Guia pessoal e com muita personalidade — onde o conforto encontra a comida boa de verdade em São Paulo."
+    </p>
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <button onclick="document.getElementById('spots-feed').scrollIntoView({behavior:'smooth'})"
+              class="font-label text-xs px-8 py-3 transition-all duration-200 hover:scale-105 active:scale-95"
+              style="background:#e8a12e; color:#fff; border:2px solid #e8a12e; box-shadow:4px 4px 0 #4a0606;">Explorar Guia</button>
+      <a href="map.html" class="font-label text-xs px-8 py-3 transition-all duration-200 hover:scale-105 inline-block"
+         style="border:2px solid rgba(255,218,218,0.6); color:#ffdada; background:transparent; text-decoration:none;">Ver Mapa</a>
+    </div>
+  </div>
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 font-label opacity-30 flex gap-14" style="color:#ffdada; font-size:9px; letter-spacing:0.55em;">
+    <span>HNM</span><span>VOL.1</span><span>JUN / 26</span>
+  </div>
+</section>
+
+<!-- VENUE SELECTOR (horizontal) -->
+<div class="sticky top-[60px] z-40 border-b-2 border-primary" style="background:#fdf8f0;">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-3 flex gap-2.5 overflow-x-auto" id="venue-tabs"></div>
+</div>
+
+<!-- MAIN -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 py-12 relative" id="spots-feed">
+  <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.035] select-none">
+    <span class="material-symbols-outlined absolute top-24 left-2 text-[9rem]">key</span>
+    <span class="material-symbols-outlined absolute top-[45%] right-[-1rem] text-[11rem] rotate-45">wine_bar</span>
+    <span class="material-symbols-outlined absolute bottom-32 left-16 text-8xl">magic_button</span>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+
+    <!-- SIDEBAR -->
+    <aside class="md:col-span-3 md:sticky md:top-32 space-y-6 z-20">
+
+      <!-- Filter box -->
+      <div class="paper-texture border-2 border-primary p-5 hard-shadow relative" style="transform: rotate(0.4deg);">
+        <div class="washi-tape absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-5 opacity-65 z-10 rounded-sm"></div>
+        <div class="flex items-center justify-between mb-4 pb-2 border-b-2 border-primary">
+          <h3 class="font-display font-bold text-lg" style="color:#8d0b0b;">Filtros</h3>
+          <button id="clear-filter-btn" onclick="clearAllFilters()"
+                  class="font-label px-2 py-1 transition-all hidden"
+                  style="font-size:8px; border:1.5px solid #9c8478; color:#6b5347; background:transparent;">✕ limpar</button>
+        </div>
+
+        <!-- Filter groups rendered by JS -->
+        <div id="filter-groups" class="space-y-5"></div>
+      </div>
+
+      <!-- City photo -->
+      <div class="hidden md:block sticker-shadow" style="transform: rotate(-1.3deg);">
+        <div class="relative">
+          <img src="https://picsum.photos/seed/sao-paulo-city/400/500" alt="São Paulo"
+               class="w-full aspect-[4/5] object-cover border-4 border-white grayscale hover:grayscale-0 transition-all duration-500">
+          <div class="washi-tape-green absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5 opacity-70 z-10 rounded-sm"></div>
+          <div class="bg-white pt-2 pb-3 px-3 border-x-4 border-b-4 border-white">
+            <p class="font-label text-center opacity-45" style="font-size:9px; color:#2b211b;">São Paulo, SP</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- FEED -->
+    <div class="md:col-span-9">
+      <p id="result-count" class="font-label mb-6" style="font-size:10px; color:#e8a12e; letter-spacing:0.12em;"></p>
+      <p id="no-results">Nenhum spot encontrado para essa combinação.</p>
+      <div class="space-y-20" id="spots-container"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="py-20 px-6 border-t-4 border-primary relative overflow-hidden" style="background:#6d0808;">
+  <div class="absolute inset-0 opacity-[0.1] pointer-events-none select-none">
+    <span class="material-symbols-outlined absolute top-8 left-10 text-8xl" style="color:#ffe088; font-variation-settings:'FILL' 1;">mail</span>
+    <span class="material-symbols-outlined absolute bottom-8 right-12 text-8xl" style="color:#cfe1dd; font-variation-settings:'FILL' 1;">notifications_active</span>
+  </div>
+
+  <div class="relative z-10 max-w-xl mx-auto paper-texture border-4 border-tertiary-container p-8 md:p-10" style="background:#fdf8f0; box-shadow: 8px 8px 0 #4a0606; transform: rotate(-0.5deg);">
+    <div class="washi-tape absolute -top-4 left-1/2 -translate-x-1/2 w-28 h-6 opacity-70 z-10 rounded-sm"></div>
+
+    <div class="text-center mb-6">
+      <p class="font-label mb-2" style="font-size:10px; color:#e8a12e; letter-spacing:0.3em;">Não perca nenhum spot</p>
+      <h2 class="font-script leading-none mb-2" style="font-size: clamp(2.4rem, 7vw, 3.4rem); color:#8d0b0b;">Entre na lista</h2>
+      <p class="font-body italic" style="font-size:0.95rem; color:#6b5347;">Receba os novos spots de SP em primeira mão, por email ou WhatsApp.</p>
+    </div>
+
+    <form id="newsletter-form" class="space-y-4" onsubmit="return handleSubscribe(event)">
+      <!-- Channel toggles -->
+      <div class="flex justify-center gap-3">
+        <span class="nl-channel active" id="ch-email" data-channel="email" onclick="toggleChannel('email')">
+          <span class="material-symbols-outlined ms">mail</span> Email
+        </span>
+        <span class="nl-channel" id="ch-whatsapp" data-channel="whatsapp" onclick="toggleChannel('whatsapp')">
+          <span class="material-symbols-outlined ms">chat</span> WhatsApp
+        </span>
+      </div>
+
+      <!-- Email field -->
+      <div id="field-email">
+        <label class="font-label block mb-1" style="font-size:9px; color:#8d0b0b;">Seu email</label>
+        <input type="email" id="nl-email" class="nl-input" placeholder="voce@email.com" autocomplete="email">
+      </div>
+
+      <!-- WhatsApp field -->
+      <div id="field-whatsapp" class="hidden">
+        <label class="font-label block mb-1" style="font-size:9px; color:#8d0b0b;">Seu WhatsApp (com DDD)</label>
+        <input type="tel" id="nl-whatsapp" class="nl-input" placeholder="(11) 99999-9999" autocomplete="tel">
+      </div>
+
+      <button type="submit" class="w-full font-label text-xs py-3 transition-all hover:scale-[1.02] active:scale-95"
+              style="background:#8d0b0b; color:#fff; border:2px solid #8d0b0b; box-shadow:4px 4px 0 #e8a12e;">
+        Quero receber
+      </button>
+
+      <p id="nl-message" class="font-label text-center hidden" style="font-size:10px;"></p>
+      <p class="font-body text-center italic opacity-50" style="font-size:0.72rem; color:#6b5347;">
+        Sem spam. Só os bons lugares. Cancele quando quiser.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="py-20 px-6 text-center relative overflow-hidden border-t-4 border-primary" style="background:#fdf8f0;">
+  <div class="absolute inset-0 opacity-[0.03] pointer-events-none select-none">
+    <div class="grid grid-cols-6 gap-8 p-4">
+      <span class="material-symbols-outlined text-8xl">local_cafe</span><span class="material-symbols-outlined text-8xl">camera</span>
+      <span class="material-symbols-outlined text-8xl">icecream</span><span class="material-symbols-outlined text-8xl">nightlife</span>
+      <span class="material-symbols-outlined text-8xl">bakery_dining</span><span class="material-symbols-outlined text-8xl">celebration</span>
+    </div>
+  </div>
+  <div class="relative z-10 max-w-lg mx-auto border-4 border-primary p-10 bg-white hard-shadow" style="transform:rotate(-0.6deg);">
+    <p class="font-script leading-tight mb-4" style="font-size: clamp(2.4rem, 6vw, 3.4rem); color:#8d0b0b;">"The good old days are happening now."</p>
+    <div class="flex justify-center gap-6 mt-4">
+      <span class="material-symbols-outlined text-4xl" style="color:#8d0b0b;">wine_bar</span>
+      <span class="material-symbols-outlined text-4xl" style="color:#e8a12e;">history_edu</span>
+      <span class="material-symbols-outlined text-4xl" style="color:#1c3535;">favorite</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 px-8 flex flex-col items-center space-y-5 text-center border-t-8 relative overflow-hidden" style="background:#8d0b0b; border-color:#e8a12e;">
+  <div class="absolute -top-8 -left-8 opacity-[0.07] rotate-12 select-none">
+    <span class="material-symbols-outlined text-[180px]" style="color:#ffe088;">auto_awesome</span>
+  </div>
+  <span class="font-script" style="font-size:2.6rem; color:#ffe088; line-height:1;">Le Spots</span>
+  <nav class="flex flex-wrap justify-center gap-8 text-sm font-body">
+    <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="#">Sobre</a>
+    <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="map.html">Mapa</a>
+    <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="#">Instagram</a>
+    <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="#">Contato</a>
+  </nav>
+  <p class="font-label opacity-35" style="font-size:9px; color:#fff; letter-spacing:0.2em;">© 2026 Le Spots · Vol. 1 · São Paulo</p>
+</footer>
+
+<!-- MOBILE BOTTOM NAV -->
+<div class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 border-t-4 border-primary" style="background:#efe5d5;">
+  <a class="flex flex-col items-center px-5 py-2 rounded-full transition-all active:scale-90" style="background:#8d0b0b; color:#fff;" href="index.html">
+    <span class="material-symbols-outlined text-base">explore</span><span class="font-label text-[8px] mt-0.5">Explorar</span>
+  </a>
+  <a class="flex flex-col items-center px-4 py-2 rounded-full text-on-surface-variant hover:bg-primary-fixed transition-all" href="#">
+    <span class="material-symbols-outlined text-base">star</span><span class="font-label text-[8px] mt-0.5">Favoritos</span>
+  </a>
+  <a class="flex flex-col items-center px-4 py-2 rounded-full text-on-surface-variant hover:bg-primary-fixed transition-all" href="map.html">
+    <span class="material-symbols-outlined text-base">location_on</span><span class="font-label text-[8px] mt-0.5">Mapa</span>
+  </a>
+  <a class="flex flex-col items-center px-4 py-2 rounded-full text-on-surface-variant hover:bg-primary-fixed transition-all" href="#">
+    <span class="material-symbols-outlined text-base">person</span><span class="font-label text-[8px] mt-0.5">Perfil</span>
+  </a>
+</div>
+
+<script>
+// ═══════════════ Facet config ═══════════════
+// Color encodes the facet:  Cozinha = burgundy · Ocasião = green · Selos = gold
+const FACETS = [
+  { key:'cuisine',  field:'cuisine',  title:'Cozinha',  color:'#8d0b0b' },
+  { key:'occasion', field:'occasion', title:'Ocasião',  color:'#1c3535' },
+  { key:'badge',    field:'badges',   title:'Selos',    color:'#e8a12e' },
+];
+
+const EMOJI = {
+  cuisine:  { 'Ramén':'🍜','Italiana':'🍝','Petiscos':'🍢','Nordestina':'🌶️','Contemporânea':'🎨','Café':'☕','Frango':'🍗','Poke':'🥗' },
+  occasion: { 'Encontro':'💋','Comemoração':'🥂','Conforto':'😌','Trabalhar':'💻','Brunch':'🥐','Especial':'✨' },
+  badge:    { 'Favorito':'🌟','Hype':'🔥','Custo-benefício':'💰' },
+};
+const VENUE_ICON = { 'Bar':'local_bar', 'Restaurante':'restaurant', 'Café':'local_cafe' };
+
+function labelFor(facetKey, value) {
+  const e = (EMOJI[facetKey] || {})[value];
+  return e ? `${e} ${value}` : value;
+}
+
+// ═══════════════ State ═══════════════
+// venue: null=Todos. cuisine/occasion/badge: null=any, else single value (AND between facets)
+const filters = { venue:null, cuisine:null, occasion:null, badge:null };
+
+let SPOTS = [];
+let TAG_COLORS = [
+  { bg:'#ffdada', color:'#4a0606' }, { bg:'#cfe1dd', color:'#0d2020' },
+  { bg:'#ffe088', color:'#4a3208' }, { bg:'#efe5d5', color:'#2b211b' },
+];
+const tagColor = i => TAG_COLORS[i % TAG_COLORS.length];
+
+// ═══════════════ Render a spot card ═══════════════
+function renderSpot(spot, index) {
+  const isEven = index % 2 === 0;
+
+  // Image badges: venue + first cuisine
+  const venueIcon = VENUE_ICON[spot.venue] || 'restaurant';
+  const venueBadge = `<span class="cat-badge" style="background:#8d0b0b;"><span class="material-symbols-outlined" style="font-size:12px; font-variation-settings:'FILL' 1;">${venueIcon}</span>${spot.venue}</span>`;
+  const cuisineBadges = (spot.cuisine || []).slice(0,2).map(c =>
+    `<span class="cat-badge" style="background:#e8a12e;">${labelFor('cuisine', c)}</span>`
+  ).join('');
+
+  // Facet chips below name (color-coded by facet)
+  const facetChips =
+    (spot.cuisine  || []).map(v => `<span class="chip" style="background:#fff; color:#8d0b0b; border:1.5px solid #8d0b0b;">${labelFor('cuisine', v)}</span>`).join('') +
+    (spot.occasion || []).map(v => `<span class="chip" style="background:#fff; color:#1c3535; border:1.5px solid #1c3535;">${labelFor('occasion', v)}</span>`).join('') +
+    (spot.badges   || []).map(v => `<span class="chip" style="background:#e8a12e; color:#fff;">${labelFor('badge', v)}</span>`).join('');
+
+  // Free-form descriptive tags (lighter)
+  const tagsHTML = (spot.tags || []).map((tag,i) => {
+    const c = tagColor(i);
+    return `<span class="chip" style="background:${c.bg}; color:${c.color}; font-size:8.5px; opacity:0.9;">${tag}</span>`;
+  }).join('');
+
+  const ratingHTML = (spot.rating || []).map(icon =>
+    `<span class="material-symbols-outlined" style="font-size:17px; color:#e8a12e; font-variation-settings:'FILL' 1;">${icon}</span>`
+  ).join('');
+
+  const tipClass = spot.featured ? 'tip-box-green' : 'tip-box-dashed';
+  const tipIconColor = spot.featured ? '#1c3535' : '#8d0b0b';
+  const tipHTML = spot.tip ? `
+    <div class="p-4 mt-5 ${tipClass}" style="transform:rotate(${isEven ? '-0.5deg' : '0.4deg'});">
+      <div class="font-label flex items-center gap-1.5 mb-2" style="font-size:9px; color:${tipIconColor};">
+        <span class="material-symbols-outlined" style="font-size:13px;">campaign</span>${spot.tipLabel || 'DICA'}
+      </div>
+      <p class="font-body italic leading-relaxed" style="font-size:0.875rem; color:#2b211b;">"${spot.tip}"</p>
+    </div>` : '';
+
+  const imgW = spot.featured ? 'md:w-[47%]' : 'md:w-[40%]';
+  const imageHTML = `
+    <div class="${imgW} relative flex-shrink-0 self-stretch">
+      <div class="absolute top-3 left-3 z-20 flex flex-col gap-1 items-start">${venueBadge}${cuisineBadges}</div>
+      <img src="${spot.image}" alt="${spot.imageAlt || spot.name}"
+           class="w-full h-full object-cover transition-all duration-500"
+           style="filter:saturate(0.88); min-height:200px; max-height:360px;"
+           onmouseover="this.style.filter='saturate(1.05)'" onmouseout="this.style.filter='saturate(0.88)'">
+    </div>`;
+
+  const txtW = spot.featured ? 'md:w-[53%]' : 'md:w-[60%]';
+  const textHTML = `
+    <div class="${txtW} flex flex-col justify-between py-1">
+      <div>
+        <div class="flex justify-between items-start mb-2">
+          <span class="font-label flex items-center gap-1" style="font-size:9px; color:#1c3535;">
+            <span class="material-symbols-outlined" style="font-size:13px;">location_on</span>${spot.location}
+          </span>
+          <div class="flex gap-0.5">${ratingHTML}</div>
+        </div>
+        <h2 class="font-display italic leading-none mb-3" style="font-size: clamp(2rem, 5vw, 3.1rem); color:#8d0b0b; font-weight:900;">${spot.name}</h2>
+        <div class="flex flex-wrap gap-1.5 mb-3">${facetChips}</div>
+        <div class="flex flex-wrap gap-1 mb-4">${tagsHTML}</div>
+        <p class="font-body drop-cap" style="font-size:0.97rem; line-height:1.78; color:#2b211b;">${spot.description}</p>
+      </div>
+      ${tipHTML}
+    </div>`;
+
+  const borderStyle = spot.featured ? 'border: 5px solid #8d0b0b;' : 'border: 4px solid #e8a12e;';
+  const shadowStyle = spot.featured ? 'box-shadow: 7px 7px 0 0 #8d0b0b;' : 'box-shadow: 6px 6px 0 0 #e8a12e;';
+  const offsetClass = (!spot.featured && !isEven) ? 'md:ml-12' : '';
+
+  const stickers = ['restaurant','favorite','wine_bar','auto_awesome','local_cafe','star','celebration'];
+  const stickerColors = ['#ffe088','#8d0b0b','#1c3535','#e8a12e','#ffdada','#cfe1dd','#ffe088'];
+  const si = index % stickers.length;
+  const stickerPos = spot.featured ? 'top:-34px; right:-16px; transform:rotate(10deg);' : 'bottom:-22px; left:-26px; transform:rotate(-9deg);';
+
+  return `
+    <article id="${spot.id}" class="spot-card reveal ${offsetClass}" style="scroll-margin-top:150px;" data-id="${spot.id}">
+      <div class="absolute z-30 sticker-shadow pointer-events-none" style="${stickerPos} position:absolute;">
+        <span class="material-symbols-outlined" style="font-size:3.6rem; color:${stickerColors[si]}; font-variation-settings:'FILL' 1;">${stickers[si]}</span>
+      </div>
+      <div class="washi-tape absolute z-10 w-24 h-5 opacity-50 rounded-sm" style="top:-8px; ${spot.featured ? 'right:2.5rem;' : 'left:2.5rem;'}"></div>
+      <div class="paper-texture relative overflow-hidden" style="${borderStyle} ${shadowStyle} padding:1.25rem;">
+        <div class="flex flex-col ${spot.featured ? 'md:flex-row' : 'md:flex-row-reverse'} gap-5">${imageHTML}${textHTML}</div>
+      </div>
+    </article>`;
+}
+
+// ═══════════════ Venue tabs (horizontal) ═══════════════
+function renderVenueTabs(venues) {
+  const el = document.getElementById('venue-tabs');
+  const tabs = [{ value:null, label:'Todos', icon:'apps' },
+                ...venues.map(v => ({ value:v, label:v, icon: VENUE_ICON[v] || 'restaurant' }))];
+  el.innerHTML = tabs.map(t => `
+    <span class="venue-tab ${t.value === filters.venue ? 'active' : ''}" data-venue="${t.value === null ? '' : t.value}"
+          onclick="selectVenue(${t.value === null ? 'null' : `'${t.value}'`})">
+      <span class="material-symbols-outlined ms">${t.icon}</span>${t.label}
+    </span>`).join('');
+}
+
+function selectVenue(value) {
+  filters.venue = value;
+  document.querySelectorAll('.venue-tab').forEach(tab => {
+    const tv = tab.dataset.venue === '' ? null : tab.dataset.venue;
+    tab.classList.toggle('active', tv === value);
+  });
+  applyFilters();
+}
+
+// ═══════════════ Sidebar facet groups ═══════════════
+function renderFilterGroups() {
+  const wrap = document.getElementById('filter-groups');
+  wrap.innerHTML = FACETS.map(facet => {
+    const values = uniqueValues(facet.field);
+    if (!values.length) return '';
+    const pills = values.map(v => {
+      const active = filters[facet.key] === v;
+      const style = active
+        ? `background:${facet.color}; color:#fff; border-color:${facet.color};`
+        : `background:#fff; color:${facet.color}; border-color:${facet.color};`;
+      return `<span class="fpill" style="${style}" data-facet="${facet.key}" data-value="${v}"
+                    onclick="toggleFacet('${facet.key}','${v.replace(/'/g, "\\'")}')">${labelFor(facet.key, v)}</span>`;
+    }).join('');
+    return `
+      <div>
+        <p class="font-label mb-2 flex items-center gap-1.5" style="font-size:9px; color:${facet.color};">
+          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${facet.color};"></span>${facet.title}
+        </p>
+        <div class="flex flex-wrap gap-1.5">${pills}</div>
+      </div>`;
+  }).join('');
+}
+
+function toggleFacet(key, value) {
+  filters[key] = (filters[key] === value) ? null : value; // single-select per group, toggle off
+  // Update pill active states for this facet
+  document.querySelectorAll(`.fpill[data-facet="${key}"]`).forEach(p => {
+    const facet = FACETS.find(f => f.key === key);
+    const active = filters[key] === p.dataset.value;
+    p.style.background = active ? facet.color : '#fff';
+    p.style.color = active ? '#fff' : facet.color;
+  });
+  applyFilters();
+}
+
+// ═══════════════ Filtering (venue AND cuisine AND occasion AND badge) ═══════════════
+function matchSpot(s) {
+  if (filters.venue    && s.venue !== filters.venue) return false;
+  if (filters.cuisine  && !(s.cuisine  || []).includes(filters.cuisine))  return false;
+  if (filters.occasion && !(s.occasion || []).includes(filters.occasion)) return false;
+  if (filters.badge    && !(s.badges   || []).includes(filters.badge))    return false;
+  return true;
+}
+
+function applyFilters() {
+  let visible = 0;
+  document.querySelectorAll('#spots-container article').forEach(card => {
+    const spot = SPOTS.find(s => s.id === card.dataset.id);
+    const show = spot && matchSpot(spot);
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+  document.getElementById('result-count').textContent =
+    `${visible} ${visible === 1 ? 'spot encontrado' : 'spots encontrados'}`;
+
+  const anyActive = filters.venue || filters.cuisine || filters.occasion || filters.badge;
+  document.getElementById('clear-filter-btn').classList.toggle('hidden', !anyActive);
+}
+
+function clearAllFilters() {
+  filters.venue = filters.cuisine = filters.occasion = filters.badge = null;
+  selectVenue(null);          // resets venue tabs
+  renderFilterGroups();       // resets sidebar pills
+  applyFilters();
+}
+
+// ═══════════════ Helpers ═══════════════
+function uniqueValues(field) {
+  const seen = new Set(), out = [];
+  SPOTS.forEach(s => (s[field] || []).forEach(v => { if (!seen.has(v)) { seen.add(v); out.push(v); } }));
+  return out;
+}
+function uniqueVenues() {
+  const seen = new Set(), out = [];
+  SPOTS.forEach(s => { if (s.venue && !seen.has(s.venue)) { seen.add(s.venue); out.push(s.venue); } });
+  return out;
+}
+
+// ═══════════════ Newsletter ═══════════════
+const channels = { email: true, whatsapp: false };
+function toggleChannel(ch) {
+  channels[ch] = !channels[ch];
+  document.getElementById('ch-' + ch).classList.toggle('active', channels[ch]);
+  document.getElementById('field-' + ch).classList.toggle('hidden', !channels[ch]);
+}
+function handleSubscribe(e) {
+  e.preventDefault();
+  const msg = document.getElementById('nl-message');
+  const email = document.getElementById('nl-email').value.trim();
+  const whats = document.getElementById('nl-whatsapp').value.trim();
+
+  if (!channels.email && !channels.whatsapp) { return showNlMsg(msg, 'Escolha pelo menos um canal.', false); }
+  if (channels.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { return showNlMsg(msg, 'Digite um email válido.', false); }
+  if (channels.whatsapp && whats.replace(/\D/g,'').length < 10) { return showNlMsg(msg, 'Digite um WhatsApp válido com DDD.', false); }
+
+  // Static site: persist locally. Swap this for a real POST to your backend later.
+  const sub = { email: channels.email ? email : null, whatsapp: channels.whatsapp ? whats : null, at: new Date().toISOString() };
+  try {
+    const list = JSON.parse(localStorage.getItem('lespots_subscribers') || '[]');
+    list.push(sub); localStorage.setItem('lespots_subscribers', JSON.stringify(list));
+  } catch {}
+
+  document.getElementById('newsletter-form').reset();
+  showNlMsg(msg, '🎉 Pronto! Você está na lista.', true);
+  return false;
+}
+function showNlMsg(el, text, ok) {
+  el.textContent = text;
+  el.style.color = ok ? '#1c3535' : '#ba1a1a';
+  el.classList.remove('hidden');
+  return false;
+}
+
+// ═══════════════ Reveal + parallax ═══════════════
+function initReveal() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+}
+function initParallax() {
+  const hero = document.querySelector('section');
+  if (!hero) return;
+  window.addEventListener('mousemove', e => {
+    const x = ((e.clientX / window.innerWidth) - 0.5) * 12;
+    const y = ((e.clientY / window.innerHeight) - 0.5) * 12;
+    hero.querySelectorAll('.sticker-shadow').forEach(el => { el.style.transform = `translate(${x}px, ${y}px)`; });
+  });
+}
+
+// ═══════════════ Main ═══════════════
+async function init() {
+  let data;
+  try {
+    const res = await fetch('spots.json');
+    if (!res.ok) throw new Error();
+    data = await res.json();
+  } catch {
+    document.getElementById('spots-container').innerHTML = `
+      <div style="padding:3rem 1rem; font-family:'Work Sans',sans-serif; color:#8d0b0b;">
+        <p style="font-size:1.15rem; margin-bottom:0.5rem;">Não foi possível carregar <strong>spots.json</strong>.</p>
+        <p style="font-size:0.9rem; opacity:0.7;">Abra via servidor local — não funciona com file://.</p>
+        <pre style="font-size:0.8rem; margin-top:1rem; opacity:0.6;">python3 -m http.server 8080</pre>
+      </div>`;
+    return;
+  }
+
+  SPOTS = data.spots || [];
+
+  renderVenueTabs(uniqueVenues());
+  renderFilterGroups();
+  document.getElementById('spots-container').innerHTML = SPOTS.map(renderSpot).join('');
+  applyFilters();
+
+  initReveal();
+  initParallax();
+  scrollToHashSpot();
+}
+
+// If arriving from the map ("Detalhes" → index.html#id), scroll to that spot and flash it.
+// We wait for the feed images to load first, otherwise late-loading images shift the
+// layout after we scroll and we end up parked near the top of the list.
+function scrollToHashSpot() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (!id) return;
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  el.classList.add('visible'); // cancel reveal-animation offset before measuring
+
+  // Instant, precise jump. We compute the absolute offset and bypass the global
+  // `scroll-smooth` (animating from the top over a huge distance is fragile and
+  // gets thrown off by images loading mid-flight).
+  const jump = () => {
+    const top = el.getBoundingClientRect().top + window.scrollY - 130; // clear sticky bars
+    const html = document.documentElement;
+    const prev = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    window.scrollTo(0, Math.max(0, top));
+    requestAnimationFrame(() => { html.style.scrollBehavior = prev; });
+  };
+
+  // Jump once the feed images have loaded (layout stable), capped at 2.5s…
+  const imgs = Array.from(document.querySelectorAll('#spots-container img')).filter(i => !i.complete);
+  let fired = false;
+  const first = () => { if (fired) return; fired = true; requestAnimationFrame(() => { jump(); flashSpot(el); }); };
+  if (imgs.length === 0) { first(); }
+  else {
+    let remaining = imgs.length;
+    imgs.forEach(img => {
+      const tick = () => { if (--remaining === 0) first(); };
+      img.addEventListener('load', tick, { once: true });
+      img.addEventListener('error', tick, { once: true });
+    });
+    setTimeout(first, 2500); // safety net
+  }
+  // …and one final correction after every resource has loaded.
+  window.addEventListener('load', () => setTimeout(jump, 120), { once: true });
+}
+
+function flashSpot(el) {
+  const body = el.querySelector('.paper-texture');
+  if (!body) return;
+  body.style.transition = 'box-shadow 0.3s';
+  const orig = body.style.boxShadow;
+  let on = false, n = 0;
+  const flash = setInterval(() => {
+    body.style.boxShadow = on ? orig : '0 0 0 4px #e8a12e, 7px 7px 0 0 #8d0b0b';
+    on = !on;
+    if (++n >= 6) { clearInterval(flash); body.style.boxShadow = orig; }
+  }, 260);
+}
+init();
+</script>
+<script src="subscribe.js"></script>
+</body>
+</html>

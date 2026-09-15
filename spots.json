@@ -1,0 +1,729 @@
+{
+  "spots": [
+    {
+      "id": "jojo-ramen",
+      "name": "Jojo Ramen",
+      "location": "PENDENTE — confirmar unidade visitada (várias unidades em SP)",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Ramén",
+        "Asiática"
+      ],
+      "occasion": [
+        "Conforto",
+        "Almoço casual"
+      ],
+      "badges": [
+        "Favorito"
+      ],
+      "tags": [
+        "porção grande",
+        "caldos apimentados",
+        "casual",
+        "sem reserva",
+        "costuma ficar cheio"
+      ],
+      "description": "Um dos melhores lámens de SP. É prático porque sai da bolha da Liberdade, tem opções para vários gostos e os caldos apimentados são os meus preferidos. As porções são grandes, então não recomendo pedir entrada, apesar de elas também serem bem gostosas.",
+      "tip": "É meu ramen preferido para um almoço, mas não para sair com amigos ou date. O ambiente é casual, não trabalha com reserva e costuma ficar cheio.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/jojo-ramen/800/540",
+      "imageAlt": "Tigela de ramen servida no Jojo Ramen",
+      "featured": true,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "caco",
+      "name": "Caco",
+      "location": "PENDENTE — confirmar endereço da unidade visitada; review cita Rua Lisboa",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Italiana",
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Encontro",
+        "Especial"
+      ],
+      "badges": [
+        "Favorito",
+        "Hype"
+      ],
+      "tags": [
+        "sabores marcantes",
+        "vive cheio",
+        "bom para visitas",
+        "cozinha autoral"
+      ],
+      "description": "Um dos meus restaurantes preferidos. A culinária é diferenciada, com sabores que explodem na boca, e até um simples macarrão com molho de tomate consegue surpreender. O ponto negativo é que está quase sempre lotado.",
+      "tip": "Vale tentar um dos poucos lugares no balcão: o atendimento ali transforma a refeição em uma experiência ainda mais especial.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/caco/800/540",
+      "imageAlt": "Prato de massa italiana no restaurante Caco",
+      "featured": true,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "cuia",
+      "name": "Cuia",
+      "location": "Av. Ipiranga, 200, loja 48 — República, SP",
+      "coords": [
+        -23.5465,
+        -46.645
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Brasileira",
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Trabalhar",
+        "Conforto",
+        "Especial"
+      ],
+      "badges": [
+        "Favorito"
+      ],
+      "tags": [
+        "chef Bel Coelho",
+        "comida afetiva",
+        "baião de dois",
+        "Copan"
+      ],
+      "description": "Da chef Bel Coelho, é comida que aquece a alma e o coração. Os pratos brasileiros e as releituras abrasileiradas surpreendem da primeira à última mordida. Destaque para o baião de dois, o melhor que já comi depois do da minha mãe, claro. De entrada, vale variar nas opções e dividir tudo.",
+      "tip": "O salão é pequeno e charmoso. Como venta bastante na área externa do Copan, priorize uma mesa do lado de dentro. Aproveite a visita para conhecer a Livraria Megafauna e passar na Tem Umami para a sobremesa.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/cuia/800/540",
+      "imageAlt": "Prato de comida brasileira contemporânea no Cuia, no Copan",
+      "featured": true,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "casaria",
+      "name": "Casarìa",
+      "location": "Al. Franca, 1243 / R. Haddock Lobo, 1077 — Jardim Paulista, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Italiana",
+        "Café"
+      ],
+      "occasion": [
+        "Encontro",
+        "Comemoração",
+        "Trabalhar",
+        "Brunch"
+      ],
+      "badges": [
+        "Custo-benefício"
+      ],
+      "tags": [
+        "versátil",
+        "bonito",
+        "bom para reuniões",
+        "cafeteria",
+        "fim de semana cheio"
+      ],
+      "description": "Restaurante e cafeteria honesta. Entrega comida boa, embora não seja daqueles lugares em que tudo é espetacular. O grande trunfo é a versatilidade: já usei o espaço para reunião grande, trabalho de TCC, date e café para fofocar. Se você não sabe onde ir, pode ser uma boa resposta.",
+      "tip": "No fim de semana fica bem cheio; durante a semana é mais tranquilo. O café da casa também funciona bem para algo mais rápido e tem boas sobremesas.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/casaria/800/540",
+      "imageAlt": "Mesa de café e comida italiana na Casarìa",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "flores-gastronomia",
+      "name": "Flores",
+      "location": "R. Piracuama, 128 — Perdizes, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Frutos do Mar",
+        "Mediterrânea"
+      ],
+      "occasion": [
+        "Conforto",
+        "Especial"
+      ],
+      "badges": [],
+      "tags": [
+        "polvo",
+        "varanda",
+        "pet friendly",
+        "família"
+      ],
+      "description": "É o restaurante que vou com meus avós, então entra no guia tanto pela comida quanto pelo sentimento. O grande destaque é o polvo, excelente da entrada ao prato principal. A varanda também é uma delícia de ficar.",
+      "tip": "Se for a primeira vez, escolha algo com polvo. É o ingrediente que mais marca a experiência por lá.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/flores-gastronomia/800/540",
+      "imageAlt": "Prato de polvo e frutos do mar no Flores Gastronomia",
+      "featured": false,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "the-fresh-goodies",
+      "name": "The Fresh Goodies",
+      "location": "R. Lopes Neto, 15 — Itaim Bibi, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Saudável"
+      ],
+      "occasion": [
+        "Brunch"
+      ],
+      "badges": [
+        "Hype"
+      ],
+      "tags": [
+        "bowls",
+        "estética",
+        "milho apimentado",
+        "almoço",
+        "status atual a confirmar"
+      ],
+      "description": "Ficou famoso pela estética, mas a comida não fica para trás. O milho apimentado como entrada é uma pedida essencial e, para mim, os bowls são o que mais vale a pena. Já os pratos de proteína com acompanhamento acabam saindo caros para algo mais básico.",
+      "tip": "Acho o cardápio melhor para almoço do que para brunch. Os pratos salgados funcionam melhor do que as sobremesas.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/the-fresh-goodies/800/540",
+      "imageAlt": "Bowl saudável servido no The Fresh Goodies",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "holy-burger",
+      "name": "Holy Burger",
+      "location": "R. Dr. Cesário Mota Júnior, 527 — Vila Buarque, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer"
+      ],
+      "occasion": [
+        "Conforto",
+        "Especial"
+      ],
+      "badges": [
+        "Favorito",
+        "Hype"
+      ],
+      "tags": [
+        "hambúrguer grande",
+        "coxinha de pastrami",
+        "poucos lugares",
+        "fila"
+      ],
+      "description": "Meu hambúrguer preferido em São Paulo. O lanche é grande e já vem com batata, então entrada não é necessária — embora seja difícil resistir à coxinha de pastrami. A casa é pequena e concorrida, então a experiência exige um pouco de planejamento.",
+      "tip": "Chegue perto do horário de abertura para reduzir a chance de fila. Se estiver em grupo, vale dividir entradas para provar mais coisas.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/holy-burger/800/540",
+      "imageAlt": "Hambúrguer com batatas servido no Holy Burger",
+      "featured": true,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "casa-hibrida",
+      "name": "Casa Híbrida",
+      "location": "Sumaré, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Petiscos"
+      ],
+      "occasion": [
+        "Comemoração"
+      ],
+      "badges": [],
+      "tags": [
+        "piscina",
+        "karaokê",
+        "salão de jogos",
+        "pista de dança",
+        "área externa"
+      ],
+      "description": "É o lugar dos aniversários. O espaço faz jus ao nome: tem piscina, salão de jogos, karaokê, pista de dança e área externa. O cardápio é simples, mas a graça da casa está mesmo na quantidade de ambientes e possibilidades para um grupo.",
+      "tip": "Para mim funciona melhor como lugar de comemoração do que como parada casual. No verão, a estrutura externa deve render uma tarde ótima com amigos.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/casa-hibrida/800/540",
+      "imageAlt": "Área externa com piscina da Casa Híbrida",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "los-perros",
+      "name": "Los Perros",
+      "location": "Bixiga e Consolação, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Petiscos"
+      ],
+      "occasion": [
+        "Encontro"
+      ],
+      "badges": [
+        "Favorito",
+        "Hype"
+      ],
+      "tags": [
+        "casual",
+        "mesinhas internas",
+        "bom para date",
+        "unidades diferentes"
+      ],
+      "description": "O espaço do Bixiga é uma experiência à parte: ao lado de uma escadaria e de uma pracinha, tem um clima casual que funciona bem para encontrar amigos. O ambiente interno, com mesinhas, também deixa a casa mais interessante para um date.",
+      "tip": "Se a ideia for aproveitar o espaço com calma, prefira chegar mais cedo e escolher entre a área externa e as mesas internas.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/los-perros/800/540",
+      "imageAlt": "Mesas e fachada do Los Perros em São Paulo",
+      "featured": false,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "broca",
+      "name": "Broca",
+      "location": "Vila Madalena, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Asiática",
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Encontro",
+        "Especial"
+      ],
+      "badges": [],
+      "tags": [
+        "pratos para compartilhar",
+        "influência asiática",
+        "Aspicuelta",
+        "bom em grupo"
+      ],
+      "description": "Um restaurante-bar com pratos para compartilhar e bastante referência asiática. A comida é o ponto alto e o formato funciona especialmente bem em grupo, porque dá para pedir várias coisas e experimentar mais do cardápio.",
+      "tip": "Vá em umas quatro pessoas para conseguir provar mais pratos. A localização na Aspicuelta também facilita encaixar o lugar no começo de uma noite pela Vila Madalena.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/broca/800/540",
+      "imageAlt": "Pratos de influência asiática para compartilhar no Broca",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "esquina-do-souza",
+      "name": "Esquina do Souza",
+      "location": "Pompéia, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Petiscos"
+      ],
+      "occasion": [
+        "Conforto"
+      ],
+      "badges": [
+        "Favorito"
+      ],
+      "tags": [
+        "coxinha",
+        "comida de boteco",
+        "porções",
+        "clássico"
+      ],
+      "description": "Para mim, tem uma das melhores coxinhas da cidade. A casa tem outras comidinhas ótimas, mas a coxinha é o motivo principal para entrar neste guia.",
+      "tip": "Peça a porção de coxinha. É o item que eu considero indispensável e ainda vale levar uma porção para viagem.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/esquina-do-souza/800/540",
+      "imageAlt": "Porção de coxinhas servida no Esquina do Souza",
+      "featured": false,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "agua-e-biscoito",
+      "name": "Água e Biscoito",
+      "location": "Barra Funda, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Contemporânea",
+        "Petiscos"
+      ],
+      "occasion": [
+        "Encontro",
+        "Comemoração"
+      ],
+      "badges": [
+        "Hype"
+      ],
+      "tags": [
+        "bar de rua",
+        "casual e elegante",
+        "boa seleção musical",
+        "crudo"
+      ],
+      "description": "Mistura um pouco de tudo, mas com identidade. É bar de rua, tem comidinhas bem executadas, uma seleção musical gostosa e consegue ser casual e elegante ao mesmo tempo. Funciona para date, almoço com amigas e até aniversário.",
+      "tip": "Na comida, o crudo é a minha sugestão: fresco, leve e cheio de sabor.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/agua-e-biscoito/800/540",
+      "imageAlt": "Prato de crudo servido no Água e Biscoito",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "kotchi",
+      "name": "Kotchi",
+      "location": "Jardins, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Japonesa",
+        "Asiática"
+      ],
+      "occasion": [
+        "Encontro",
+        "Comemoração",
+        "Especial"
+      ],
+      "badges": [
+        "Hype"
+      ],
+      "tags": [
+        "intimista",
+        "elegante",
+        "pratos para dividir",
+        "umami",
+        "atendimento"
+      ],
+      "description": "Bar com culinária japonesa em um ambiente elegante e intimista. Parece feito para dates: dá para começar pelo balcão e seguir para pratos para dividir. O atendimento foi excelente e fiquei com vontade de voltar para provar o restante do cardápio.",
+      "tip": "O prato que mais marcou minha visita foi o Duck Foie Tsukune, com muito umami e uma combinação de sabores bem diferente.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/kotchi/800/540",
+      "imageAlt": "Prato japonês autoral servido no Kotchi",
+      "featured": true,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "sina",
+      "name": "Sina",
+      "location": "Av. Cotovia, 844 — Moema, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Café"
+      ],
+      "occasion": [
+        "Brunch",
+        "Conforto"
+      ],
+      "badges": [],
+      "tags": [
+        "bike shop",
+        "cafés especiais",
+        "vinil",
+        "DJ",
+        "Moema"
+      ],
+      "description": "Conheci o Sina quando ainda era uma casinha vintage nos Jardins. Hoje, em Moema, tem uma estética mais futurista, mas continua gostoso e com uma proposta muito bacana, conectando o mundo biker ao café. Os grãos especiais, as comidinhas e a equipe simpática fazem a experiência funcionar.",
+      "tip": "Para quem pedala, a experiência é ainda mais completa por causa da oficina e da loja de bicicletas. A música em vinil e algumas programações com DJ também deixam o brunch mais divertido.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/sina/800/540",
+      "imageAlt": "Café especial e bicicletas no Sina Café em Moema",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "ze-latte",
+      "name": "Zé Latte",
+      "location": "R. Benedito Lapin, 103 — Itaim Bibi, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Café"
+      ],
+      "occasion": [
+        "Brunch",
+        "Conforto"
+      ],
+      "badges": [
+        "Favorito"
+      ],
+      "tags": [
+        "cafés gelados",
+        "avocado toast",
+        "calçada",
+        "pós-treino",
+        "casual"
+      ],
+      "description": "Provavelmente meu café preferido no Itaim. Combina casualidade com modernidade e tem cafés gelados diferentes. Mesmo quando está cheio, costuma ser tranquilo conseguir lugar. Para mim, as opções salgadas são mais interessantes que os doces, incluindo uma avocado toast maravilhosa.",
+      "tip": "É perfeito para ir depois de uma corrida ou treino, encontrar amigas ou curtir um momento sozinha. Sentar na calçada e observar a rua fez diferença na experiência.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/ze-latte/800/540",
+      "imageAlt": "Café gelado e avocado toast no Zé Latte",
+      "featured": true,
+      "rating": [
+        "star",
+        "favorite",
+        "local_cafe"
+      ]
+    },
+    {
+      "id": "good-market",
+      "name": "Good Market",
+      "location": "R. Guarará, 385 — Jardim Paulista, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Café",
+        "Brunch"
+      ],
+      "occasion": [
+        "Trabalhar",
+        "Brunch",
+        "Conforto"
+      ],
+      "badges": [],
+      "tags": [
+        "padaria",
+        "toasts",
+        "pães artesanais",
+        "bom para fofocar",
+        "all day"
+      ],
+      "description": "Se fosse para definir, diria que é mais padaria do que cafeteria. As toasts são gostosas, tem opções de almoço e o ambiente funciona muito bem para fofocar com amigas, trabalhar ou simplesmente passar uma tarde sem pressa.",
+      "tip": "Tem vários pães e itens para levar para casa. Vale escolher um pão especial para o café da manhã do dia seguinte.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/good-market/800/540",
+      "imageAlt": "Pães e toast servidos no Good Market",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "le-jazz-boulangerie",
+      "name": "Le Jazz Boulangerie",
+      "location": "R. Joaquim Antunes, 501 — Pinheiros, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Café",
+        "Francesa"
+      ],
+      "occasion": [
+        "Brunch",
+        "Conforto"
+      ],
+      "badges": [],
+      "tags": [
+        "padaria francesa",
+        "pães",
+        "sanduíches",
+        "fim de semana cheio"
+      ],
+      "description": "Padaria de inspiração francesa com bom atendimento e cardápio extenso. O destaque está nos pães da vitrine, nos sanduíches diferentes e nas sobremesas. Aos finais de semana costuma ficar cheia.",
+      "tip": "Gosto mais para o dia a dia do que para o fim de semana, quando algumas opções podem acabar e a experiência fica mais corrida. Vale comparar com as outras opções de brunch da região.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/le-jazz-boulangerie/800/540",
+      "imageAlt": "Vitrine de pães franceses da Le Jazz Boulangerie",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "komah-bakery",
+      "name": "Komah Bakery",
+      "location": "R. Girassol, 273 — Vila Madalena, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Coreana",
+        "Café"
+      ],
+      "occasion": [
+        "Brunch"
+      ],
+      "badges": [
+        "Hype"
+      ],
+      "tags": [
+        "padaria coreana",
+        "queijo quente de kimchi",
+        "minimalista",
+        "fila",
+        "status atual a confirmar"
+      ],
+      "description": "Uma padaria coreana no meio da Vila Madalena que costuma atrair bastante gente. A estética é minimalista, os pães e docinhos diferentes valem conhecer, mas o item imperdível para mim é o queijo quente de kimchi: intenso, levemente picante e ótimo com café gelado.",
+      "tip": "Se estiver com fila, aproveite para passear pelas lojas próximas. De sobremesa, meu destaque é o doce de limão, bem cítrico e equilibrado.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/komah-bakery/800/540",
+      "imageAlt": "Queijo quente de kimchi e doces coreanos da Komah Bakery",
+      "featured": true,
+      "rating": [
+        "star",
+        "favorite"
+      ]
+    },
+    {
+      "id": "botanikafe",
+      "name": "Botanikafé",
+      "location": "PENDENTE — confirmar unidade visitada (várias unidades em SP)",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Café",
+        "Saudável",
+        "Brunch"
+      ],
+      "occasion": [
+        "Brunch",
+        "Trabalhar"
+      ],
+      "badges": [],
+      "tags": [
+        "brunch all day",
+        "bowls",
+        "toasts",
+        "home office",
+        "várias unidades"
+      ],
+      "description": "Acho que o Botanikafé já perdeu parte do brilho que tinha, mas continua sendo uma opção boa, bem localizada e com bastante variedade. O conceito de brunch all day aparece em cafés, bowls, toasts, sanduíches e pratos mais tradicionais. Funciona bem tanto em grupo quanto para uma tarde de home office.",
+      "tip": "A unidade do Café Bienal, dentro do Parque Ibirapuera, rende uma programação diferente combinando passeio pelo parque e brunch.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/botanikafe/800/540",
+      "imageAlt": "Mesa de brunch com bowls e toast no Botanikafé",
+      "featured": false,
+      "rating": [
+        "star"
+      ]
+    },
+    {
+      "id": "a-baianeira",
+      "name": "A Baianeira",
+      "location": "Av. Paulista, 1510 — MASP, Bela Vista, SP",
+      "coords": [
+        0,
+        0
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Brasileira",
+        "Café"
+      ],
+      "occasion": [
+        "Brunch",
+        "Trabalhar",
+        "Especial"
+      ],
+      "badges": [],
+      "tags": [
+        "MASP",
+        "programação cultural",
+        "pão de queijo recheado",
+        "brasileira"
+      ],
+      "description": "Cafeteria e restaurante dentro do MASP, o que deixa a experiência ainda melhor. Ainda não provei o restaurante, mas o café funciona muito bem para uma tarde, brunch, programação cultural ou até um home office diferente.",
+      "tip": "A dupla de pão de queijo recheado é imperdível: tem conforto de comida brasileira, mas com uma combinação de sabores diferente do óbvio.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/a-baianeira/800/540",
+      "imageAlt": "Pão de queijo recheado servido na A Baianeira do MASP",
+      "featured": true,
+      "rating": [
+        "star",
+        "favorite",
+        "local_cafe"
+      ]
+    }
+  ]
+}
