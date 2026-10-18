@@ -52,7 +52,7 @@
         "Contemporânea"
       ],
       "occasion": [
-        "Encontro",
+        "Perfeito para date",
         "Especial"
       ],
       "badges": [
@@ -90,7 +90,7 @@
         "Contemporânea"
       ],
       "occasion": [
-        "Trabalhar",
+        "Bom para trabalhar",
         "Conforto",
         "Especial"
       ],
@@ -125,12 +125,12 @@
       "venue": "Restaurante",
       "cuisine": [
         "Italiana",
-        "Café"
+        "Cafés especiais"
       ],
       "occasion": [
-        "Encontro",
-        "Comemoração",
-        "Trabalhar",
+        "Perfeito para date",
+        "Bom para comemorações",
+        "Bom para trabalhar",
         "Brunch"
       ],
       "badges": [
@@ -233,7 +233,7 @@
       ],
       "venue": "Restaurante",
       "cuisine": [
-        "Hambúrguer"
+        "Hambúrguer e sanduíches"
       ],
       "occasion": [
         "Conforto",
@@ -273,7 +273,7 @@
         "Petiscos"
       ],
       "occasion": [
-        "Comemoração"
+        "Bom para comemorações"
       ],
       "badges": [],
       "tags": [
@@ -306,7 +306,7 @@
         "Petiscos"
       ],
       "occasion": [
-        "Encontro"
+        "Perfeito para date"
       ],
       "badges": [
         "Favorito",
@@ -343,7 +343,7 @@
         "Contemporânea"
       ],
       "occasion": [
-        "Encontro",
+        "Perfeito para date",
         "Especial"
       ],
       "badges": [],
@@ -412,8 +412,8 @@
         "Petiscos"
       ],
       "occasion": [
-        "Encontro",
-        "Comemoração"
+        "Perfeito para date",
+        "Bom para comemorações"
       ],
       "badges": [
         "Hype"
@@ -448,8 +448,8 @@
         "Asiática"
       ],
       "occasion": [
-        "Encontro",
-        "Comemoração",
+        "Perfeito para date",
+        "Bom para comemorações",
         "Especial"
       ],
       "badges": [
@@ -483,7 +483,7 @@
       ],
       "venue": "Café",
       "cuisine": [
-        "Café"
+        "Cafés especiais"
       ],
       "occasion": [
         "Brunch",
@@ -517,7 +517,7 @@
       ],
       "venue": "Café",
       "cuisine": [
-        "Café"
+        "Cafés especiais"
       ],
       "occasion": [
         "Brunch",
@@ -555,11 +555,11 @@
       ],
       "venue": "Café",
       "cuisine": [
-        "Café",
+        "Cafés especiais",
         "Brunch"
       ],
       "occasion": [
-        "Trabalhar",
+        "Bom para trabalhar",
         "Brunch",
         "Conforto"
       ],
@@ -591,7 +591,7 @@
       ],
       "venue": "Café",
       "cuisine": [
-        "Café",
+        "Cafés especiais",
         "Francesa"
       ],
       "occasion": [
@@ -626,7 +626,7 @@
       "venue": "Café",
       "cuisine": [
         "Coreana",
-        "Café"
+        "Cafés especiais"
       ],
       "occasion": [
         "Brunch"
@@ -662,13 +662,13 @@
       ],
       "venue": "Café",
       "cuisine": [
-        "Café",
+        "Cafés especiais",
         "Saudável",
         "Brunch"
       ],
       "occasion": [
         "Brunch",
-        "Trabalhar"
+        "Bom para trabalhar"
       ],
       "badges": [],
       "tags": [
@@ -699,11 +699,11 @@
       "venue": "Café",
       "cuisine": [
         "Brasileira",
-        "Café"
+        "Cafés especiais"
       ],
       "occasion": [
         "Brunch",
-        "Trabalhar",
+        "Bom para trabalhar",
         "Especial"
       ],
       "badges": [],

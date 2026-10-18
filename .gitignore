@@ -3,3 +3,7 @@ files.zip
 screen*.png
 code.html
 .DS_Store
+
+# arquivos pessoais do Claude Code (o CLAUDE.md e .claude/commands/ SÃO versionados)
+CLAUDE.local.md
+.claude/settings.local.json

@@ -1,0 +1,1922 @@
+{
+  "spots": [
+    {
+      "id": "jojo-ramen",
+      "name": "Jojo Ramen",
+      "location": "Paraíso",
+      "coords": [
+        -23.5735,
+        -46.649
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Almoço casual"
+      ],
+      "description": "Um dos melhores Lámens de SP, é prático pois sai da bolha Liberdade, tem opções para todos os gostos mas os caldos apimentados são os mais gostosos! Porção grande, não recomendo pedir entrada, mas são bem gostosas também.",
+      "tip": "É meu ramen preferido para um almoço, mas não para sair com os amigos/ date. Ambiente casual, sem reserva e costuma ficar cheio.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/jojo-ramen/800/540",
+      "imageAlt": "Foto de Jojo Ramen",
+      "featured": false
+    },
+    {
+      "id": "caco",
+      "name": "Caco",
+      "location": "Cerqueira César",
+      "coords": [
+        -23.5655,
+        -46.677
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Italiana"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Quando quero me mimar",
+        "Momento com as amigas"
+      ],
+      "description": "Vale todos os selos, um dos meus restaurantes preferidos, o que dói é que está sempre lotado. Culinária diferenciada com sabores que explodem na boca, seu paladar não será o mesmo depois de lá. Até um simples macarrão com molho de tomate (meu prato preferido de lá) é surpreendente. Tem muitos pratos diferentes e drinks incríveis.",
+      "tip": "Tem um mini balcão com três lugares no bar, a bartender é a pessoa mais querida do mundo, explica os pratos, harmoniza os drinks e proporciona uma experiência diferente!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/caco/800/540",
+      "imageAlt": "Foto de Caco",
+      "featured": false
+    },
+    {
+      "id": "cuia",
+      "name": "Cuia",
+      "location": "Centro",
+      "coords": [
+        -23.544,
+        -46.6435
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Da chef Bel Coelho, comida que aquece a alma e o coração. Pratos brasileiros ou releituras abrasileiradas que surpreendem da primeira à última mordida. Destaque especial para o baião de dois, o melhor que já comi, depois do da minha mãe, claro. De entrada, vale variar nas opções e dividir tudo! Também tem um menu de brunch/ café mas não conheci.\n\nAmbiente pequeno mas charmoso. No Copan tem muito vento, priorize ficar em uma mesa do lado de dentro.",
+      "tip": "EXTRA: Megafauna e Tem Umami: Charme especial por estar no Copan, ligado a Livraria Megafauna que vale a visita. Aproveita e já vai na Tem Umami para a sobremesa, lá o sorvete caprese (confia) é meu preferido!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/cuia/800/540",
+      "imageAlt": "Foto de Cuia",
+      "featured": false
+    },
+    {
+      "id": "casaria",
+      "name": "Casarìa",
+      "location": "Jardins",
+      "coords": [
+        -23.5675,
+        -46.66
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Italiana"
+      ],
+      "occasion": [
+        "Domingo em família",
+        "Bom para trabalhar"
+      ],
+      "description": "Restaurante e cafeteria honesta. Entrega comida boa, bem boa, mas não espetacular. O lugar é lindo e é versátil, já fiz reunião com 10 pessoas, trabalho do TCC, date e café para fofocar, ou seja, se não sabe onde ir, lá pode ser o lugar!\n\nGosto do carpaccio de entrada e sempre peço uma taça de vinho (dica do garçom: pelo preço e quantidade vale mais que a garrafa).",
+      "tip": "No fim de semana fica bem cheio, mas durante a semana é tranquilo. Um quarteirão antes tem o café, que também é um ambiente gostoso para algo mais rápido, as sobremesas são deliciosas!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/casaria/800/540",
+      "imageAlt": "Foto de Casarìa",
+      "featured": false
+    },
+    {
+      "id": "flores",
+      "name": "Flores",
+      "location": "Perdizes",
+      "coords": [
+        -23.5335,
+        -46.6735
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Frutos do Mar"
+      ],
+      "occasion": [
+        "Domingo em família"
+      ],
+      "description": "É o restaurante que vou com meus avós, então entra no guia mais pelo sentimento do que qualquer coisa! O destaque do restaurante é o polvo, que é simplesmente maravilhoso, desde a entrada até o prato principal.\n\nDrinks autorais bem harmonizados e varanda gostosa de ficar, sempre levamos o Percy Jackson, meu cachorro, e ele ganha biscoito natureba de lá!",
+      "tip": "[preencher dica]",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/flores/800/540",
+      "imageAlt": "Foto de Flores",
+      "featured": false
+    },
+    {
+      "id": "the-fresh-goodies",
+      "name": "The Fresh Goodies",
+      "location": "Itaim Bibi",
+      "coords": [
+        -23.586,
+        -46.679
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Saudável"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Bom para trabalhar",
+        "After perfeito"
+      ],
+      "description": "Ficou famoso pela estética, mas a comida não fica para trás! O milho apimentado como entrada é uma pedida essencial e os bowls são os que mais valem a pena, os pratos de proteína + acompanhamento acabam saindo caro para uma coisa básica, portanto, se você não gosta de salada, lá não é seu lugar.",
+      "tip": "Cardápio maravilhoso para almoço, ruim para brunch (preço e opções). Enquanto os pratos são bons, as sobremesas nem tanto... Mas vale conhecer!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/the-fresh-goodies/800/540",
+      "imageAlt": "Foto de The Fresh Goodies",
+      "featured": false
+    },
+    {
+      "id": "holy-burguer",
+      "name": "Holy Burguer",
+      "location": "Vila Buarque",
+      "coords": [
+        -23.545,
+        -46.6535
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Quando quero me mimar",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Melhor hambúrguer de São Paulo e ponto. Hambúrguer grande e vem com batata, o que tira a necessidade de entrada, mas é impossível não comer a coxinha de pastrami, então se prepara para comer muito.\n\nO restaurante tem apenas 26 lugares e é muito concorrido todos os dias. Tem que ir provar, mas chegue na hora que abre! Em breve uma nova casa para diminuir as filas...",
+      "tip": "Quero muito ir com alguém para dividir o Pony Line, hambúrguer maior e que foi eleito o terceiro melhor do mundo e pedir o arancini de hambúrguer, coxinha de pastrami e a couve flor de entrada. UPDATE: Feito!! Valeu super, mas a coxinha é a melhor entrada, não achei que as outras valeram tanto.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/holy-burguer/800/540",
+      "imageAlt": "Foto de Holy Burguer",
+      "featured": false
+    },
+    {
+      "id": "hot-pork",
+      "name": "Hot Pork",
+      "location": "República",
+      "coords": [
+        -23.544,
+        -46.6465
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hot Dog"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Hot Dog da Casa do Porco, ou seja, a salsicha é simplesmente a melhor de São Paulo. É um hot dog básico mas muito bem feito, cheio de sabor e que com certeza você vai querer provar as duas opções que tem no cardápio.",
+      "tip": "EXTRA: Sorveteria do Centro: fica do lado, uma das melhores casquinhas de SP, são super elaboradas mas com sabores autênticos, sou apaixonada pela de morango! Na minha opinião, melhor que Tem Umami (mas adorei lá).",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/hot-pork/800/540",
+      "imageAlt": "Foto de Hot Pork",
+      "featured": false
+    },
+    {
+      "id": "modern-mama",
+      "name": "Modern Mama",
+      "location": "Itaim Bibi",
+      "coords": [
+        -23.5845,
+        -46.679
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Italiana"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Almoço casual",
+        "Momento com as amigas"
+      ],
+      "description": "Um restaurante italiano que vale o hype, conhecido por sua famosa lasanha, que é pedida obrigatória, nunca sai triste de lá. Os pratos são surpreendentes, uma lasanha não é só uma lasanha, um denver stake não é só uma carne e um ravioli não é só um ravioli.",
+      "tip": "Almoçar lá durante a semana é uma boa pedida! Pagando o valor do prato escolhido, você tem direito a uma entrada e sobremesa.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/modern-mama/800/540",
+      "imageAlt": "Foto de Modern Mama",
+      "featured": false
+    },
+    {
+      "id": "curado",
+      "name": "Curado",
+      "location": "Itaim Bibi",
+      "coords": [
+        -23.5845,
+        -46.68
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Comida de buteco"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Momento com as amigas"
+      ],
+      "description": "Feito para você sair Curado, tenta pegar a vibe de um boteco para colocar em um restaurante chique. As comidinhas são gostosas, te fazem sair feliz. Dizem que o steak tartar é o melhor, realmente é bom, mas a maionese de polvo e a coxinha ganham!",
+      "tip": "Não deixe de pedir o mousse de chocolate, um dos melhores de sp, o azeite e sal fazem toda a diferença, confia! Ótimo lugar para fofocar com as amigas, e falam que de fim de semana fica bem movimentado.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/curado/800/540",
+      "imageAlt": "Foto de Curado",
+      "featured": false
+    },
+    {
+      "id": "forno",
+      "name": "Forno",
+      "location": "Consolação",
+      "coords": [
+        -23.547,
+        -46.652
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Para levar quem visita a cidade",
+        "Momento com as amigas"
+      ],
+      "description": "Um dos meus lugares preferidos de São Paulo, ambiente 10/10 e comida melhor ainda. Dos mesmos donos do Holy Burguer, o restaurante serve hambúrgueres do Holy e pratos deliciosos como um steak ao poivre divino! Já sabe né? A coxinha de pastrami é obrigatória.",
+      "tip": "Assim como o Holy, tem muita fila, mas é mais agradável de esperar e tem mais espaço. Fique atento ao Instagram, eles fazem eventos/ cardápios especiais com outros chefs e restaurantes e os pratos ficam super especiais! Quinta é noite de jazz, uma experiência show (literalmente).",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/forno/800/540",
+      "imageAlt": "Foto de Forno",
+      "featured": false
+    },
+    {
+      "id": "hi-pokee",
+      "name": "Hi Pokee",
+      "location": "Cerqueira César",
+      "coords": [
+        -23.562,
+        -46.6685
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Poke"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Almoço casual"
+      ],
+      "description": "Melhor poke de sp e ponto. Proteínas frescas e diferentes, complementos maravilhosos e bases além do básico, possui bentôs além dos pokes e o guioza de entrada não é necessário, mas é delicioso! Ótima opção para uma refeição casual e delivery.",
+      "tip": "Amo montar meu poke com uma proteína extra, nunca vi nenhum outro lugar que coloca polvo e fica maravilhoso! Recentemente abriram um delivery de Onigiris, que são maravilhosos, foi o motivo do meu vício recente.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/hi-pokee/800/540",
+      "imageAlt": "Foto de Hi Pokee",
+      "featured": false
+    },
+    {
+      "id": "olga-ri",
+      "name": "Olga Ri",
+      "location": "Cerqueira César",
+      "coords": [
+        -23.559,
+        -46.6605
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Saudável"
+      ],
+      "occasion": [
+        "Almoço casual"
+      ],
+      "description": "Do mesmo chefe do Hi Pokee, as saladas são frescas e super bem servidas. Podem ser meio caras, mas o valor agregado é alto! Você pode optar por montar mas acho as opções prontas incríveis, ainda mais com os molhos sugeridos, queria conseguir provar todo o cardápio!",
+      "tip": "O restaurante no Jardins é lindo e casual, mas pedir no delivery é ótimo para um almoço rápido, prático e saudável.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/olga-ri/800/540",
+      "imageAlt": "Foto de Olga Ri",
+      "featured": false
+    },
+    {
+      "id": "zdeli",
+      "name": "ZDeli",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5665,
+        -46.681
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Almoço casual"
+      ],
+      "description": "Hambúrgueres muito bem feitos e pastrami melhor ainda. A batata de pastrami é uma pedida obrigatória e os hambúrgueres vão além do básico, proporcionando experiências incríveis! Quero muito ir provar o brunch deles na unidade do centro…",
+      "tip": "O legal do ZDeli é que, além de ter para todos os gostos, o cardápio além dos hambúrgueres também é muito bom, já fui almoçar o carpaccio e a salada e valeu super!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/zdeli/800/540",
+      "imageAlt": "Foto de ZDeli",
+      "featured": false
+    },
+    {
+      "id": "bosco",
+      "name": "Bosco",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5615,
+        -46.6825
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Italiana"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Domingo em família"
+      ],
+      "description": "Ambiente lindo, faz você se sentir fora da cidade! Maravilhoso para um date ou almoço de família, a melhor pedida é a burrata com mel, combinação maravilhosa. Os pratos são bons mas as estrelas são as entradas e o ambiente, vá para tomar uns drinks e comer uma massa leve!",
+      "tip": "Eles não realizam reserva e a casa costuma lotar, minha sugestão é ir no almoço de domingo e enquanto estiver na espera dar uma volta na Benedito Calixto!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/bosco/800/540",
+      "imageAlt": "Foto de Bosco",
+      "featured": false
+    },
+    {
+      "id": "urban-kitchen",
+      "name": "Urban Kitchen",
+      "location": "Campo Belo",
+      "coords": [
+        -23.622,
+        -46.669
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Saudável"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Bom para trabalhar"
+      ],
+      "description": "Um dos melhores lugares de comida saudável, tem pratos espetaculares com uma gastronomia fora da curva. A burrata de lá é enorme e, para mim, o frango pad thai é o melhor prato. Ótima pedida para um brunch, onde as opções vão desde toasts bem elaboradas até combos diferentes!",
+      "tip": "Só fui na unidade do Campo Belo e ela é linda, fresca e cheia de plantas, além de ficar em uma rua super agradável, vale pelo ambiente também!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/urban-kitchen/800/540",
+      "imageAlt": "Foto de Urban Kitchen",
+      "featured": false
+    },
+    {
+      "id": "santokki",
+      "name": "Santokki",
+      "location": "Vila Madalena",
+      "coords": [
+        -23.557,
+        -46.69
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Momento com as amigas"
+      ],
+      "description": "O restaurante do churrasquinho coreano na mesa, mas confesso que quando eu fui me acabei tanto nas entradas que são maravilhosas que não deu tempo de ir para o churrasco! Minha dica então é ir em várias pessoas, para comer os petiscos e o churrasco.",
+      "tip": "O restaurante é dos mesmos chefes do De Primeira, portanto vale ir para tomar uns drinks, a carta é super interessante!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/santokki/800/540",
+      "imageAlt": "Foto de Santokki",
+      "featured": false
+    },
+    {
+      "id": "braz-elettrica",
+      "name": "Braz Elettrica",
+      "location": "Pinheiros",
+      "coords": [
+        -23.565,
+        -46.6815
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Pizza"
+      ],
+      "occasion": [
+        "After perfeito"
+      ],
+      "description": "Feito no estilo da verdadeira pizza napoletana, com massa de fermentação natural, molho delicioso e sabores que saem da caixa! Além da clássica marguerita, a Shroom, de cogumelos, tem um lugar no meu coração e mais recentemente a de carbonara também ganhou um espaço! As pizzas são individuais, mas vale tentar dividir com todo mundo da mesa para comer vários sabores.",
+      "tip": "A unidade da Rua dos Pinheiros fecha às 4h da manhã então é uma ótima larica da madrugada!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/braz-elettrica/800/540",
+      "imageAlt": "Foto de Braz Elettrica",
+      "featured": false
+    },
+    {
+      "id": "notorious-fish",
+      "name": "Notorious Fish",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5675,
+        -46.6825
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Momento com as amigas"
+      ],
+      "description": "Uma hamburgueria do mar! Sanduíches maravilhosos de peixe e outros seres do mar que saem do convencional. Entradas gostosas e os melhores do cardápio, sem dúvidas, são o choripan, de polvo, shrimp roll, de camarão (que até pode ser uma entradinha) e o lobster roll, de lagosta (é caro e cheio de manteiga, mas que delícia).",
+      "tip": "Pedia muito no delivery, confesso que não fui tanto no restaurante, mas vale demais conhecer para sair um pouco do básico de sempre no que se trata de lanche!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/notorious-fish/800/540",
+      "imageAlt": "Foto de Notorious Fish",
+      "featured": false
+    },
+    {
+      "id": "miado",
+      "name": "Miado",
+      "location": "Consolação",
+      "coords": [
+        -23.559,
+        -46.6635
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Momento com as amigas"
+      ],
+      "description": "Um dos restaurantes da Renata Vanzetto, ou seja, é um lugar cheio de personalidade! Pratos para compartilhar e com influência asiática, com drinks gostosos e entradinhas melhores ainda. Gosto muito da berinjela e não deixe de pedir os Baos.",
+      "tip": "Fica bem cheio, mas como ela tem vários restaurantes naquele cantinho, você pode migrar para outro qualquer coisa. Recomendo principalmente o Mamma Vanzetto e o Motel, que também costuma lotar. Não curti tanto o Muquifo.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/miado/800/540",
+      "imageAlt": "Foto de Miado",
+      "featured": false
+    },
+    {
+      "id": "motel",
+      "name": "Motel",
+      "location": "Consolação",
+      "coords": [
+        -23.5592,
+        -46.664
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Para levar quem visita a cidade",
+        "Momento com as amigas"
+      ],
+      "description": "Mais um da Vanzetto, feito para date! As comidinhas são maravilhosas, vale provar de tudo, em especial o Caju Amigo. Mesa grande pode não ser uma boa, pois tem poucas mesas que não são de 2 lugares… A graça do restaurante é o ambiente, com uma estética impecável e referência aos motéis de estrada, cada detalhe é muito bem pensado!",
+      "tip": "A espera é confortável e vale já ir pedindo as comidinhas e drinks lá mesmo, pois tem mesinha e é gostoso conversar com os amigos no sofá.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/motel/800/540",
+      "imageAlt": "Foto de Motel",
+      "featured": false
+    },
+    {
+      "id": "pao-com-carne",
+      "name": "Pão com Carne",
+      "location": "Itaim Bibi",
+      "coords": [
+        -23.5855,
+        -46.6825
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Momento com as amigas"
+      ],
+      "description": "Já foi eleito o melhor de São Paulo e com razão. Não inventam muita moda, possuem bons ingredientes mas a carne em si é espetacular! Meu preferido é o Chimi Bacon e os nuggets são muito gostosos.",
+      "tip": "Adoro ir ao cinema no Brascan e comer lá antes, ou pedir para comer no cinema (melhor ainda!) Uma coca zero, a batata com a maionese deles e o hambúrguer torna o filme melhor rs.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/pao-com-carne/800/540",
+      "imageAlt": "Foto de Pão com Carne",
+      "featured": false
+    },
+    {
+      "id": "selvagem",
+      "name": "Selvagem",
+      "location": "Parque Ibirapuera",
+      "coords": [
+        -23.587,
+        -46.659
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Domingo em família",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Comida contemporânea no meio do Ibirapuera! O espaço é maravilhoso e você se sente abraçado pela natureza. Os frutos do mar são muito frescos, pedir o Crudo na Pitaya de entrada é essencial. Com muitas referências brasileiras assim como nos pratos, os drinks autorais são deliciosos.",
+      "tip": "[preencher dica]",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/selvagem/800/540",
+      "imageAlt": "Foto de Selvagem",
+      "featured": false
+    },
+    {
+      "id": "fito",
+      "name": "Fitó",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5665,
+        -46.702
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Sem palavras para descrever esse lugar. A chef Cafira faz releituras de pratos brasileiros de uma forma espetacular. Pedi a Peixada e a Paçoca e estava divino, perfeitamente equilibrado e com os sabores mais marcantes na medida certa!",
+      "tip": "Ótimo para um almoço com amigos ou até mesmo do trabalho, mas um jantar com os drinks trazem um toque especial.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/fito/800/540",
+      "imageAlt": "Foto de Fitó",
+      "featured": false
+    },
+    {
+      "id": "shuk",
+      "name": "Shuk",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5645,
+        -46.6855
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Oriente Médio"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Momento com as amigas"
+      ],
+      "description": "Restaurante árabe com uma experiência diferente! Todo o cardápio parece ser muito bom, mas os Kebabs são donos do meu coração. O ambiente é descontraído e com referências urbanas do Oriente Médio.",
+      "tip": "Eles possuem uma unidade na Vila Madalena de Esfihas que falam super bem, estou doida para conhecer!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/shuk/800/540",
+      "imageAlt": "Foto de Shuk",
+      "featured": false
+    },
+    {
+      "id": "da-marino",
+      "name": "Da Marino",
+      "location": "Jardim Europa",
+      "coords": [
+        -23.5865,
+        -46.6835
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Frutos do Mar"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Domingo em família",
+        "Quando quero me mimar"
+      ],
+      "description": "Do Grupo Nino, esse restaurante possui como base o uso de frutos do mar. Você pode escolher a proteína direto da vitrine, mas eles também possuem pratos “”prontos”” que são maravilhosos e, na minha opinião, compensam mais!",
+      "tip": "Um dos melhores polvos que já comi em São Paulo, veio no ponto certo e com sabores surpreendentes. Se você é fã desse animal fantástico como eu, não deixe de pedir o Brace com Ratatouille.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/da-marino/800/540",
+      "imageAlt": "Foto de Da Marino",
+      "featured": false
+    },
+    {
+      "id": "quincho",
+      "name": "Quincho",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5575,
+        -46.693
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Saudável"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Momento com as amigas"
+      ],
+      "description": "Restaurante vegano… Eu sei que em um primeiro momento pode parecer estranho, mas foi lá que comi as combinações mais espetaculares! Cada prato é uma surpresa de sabores muuito bons e as combinações são inusitadas e maravilhosas. De sobremesa, a torta de limão é maravilhosa, não deixe de pedir!",
+      "tip": "Lá os legumes são os protagonistas e isso é brilhante! Ainda não conheci o novo cardápio mas tenho vontade de ir em grupo para pedir várias coisinhas e dividir!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/quincho/800/540",
+      "imageAlt": "Foto de Quincho",
+      "featured": false
+    },
+    {
+      "id": "qt-pizza",
+      "name": "Qt Pizza",
+      "location": "Cerqueira César",
+      "coords": [
+        -23.562,
+        -46.659
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Pizza"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Momento com as amigas"
+      ],
+      "description": "Eleita uma das melhores pizzas do mundo! As pizzas napolitanas são maravilhosas, são individuais e os sabores são diferentes e incríveis, gostei muito da Cog Porc e quero provar a de Ovo, pois quem se desafia a fazer uma pizza de ovo!",
+      "tip": "O lugar é lindo, perfeito para um date! Fica do lado da Oscar Freire, então você ainda pode completar com um passeio pela rua e tomar um sorvete por lá!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/qt-pizza/800/540",
+      "imageAlt": "Foto de Qt Pizza",
+      "featured": false
+    },
+    {
+      "id": "make-hommus-not-war",
+      "name": "Make Hommus, Not War",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5605,
+        -46.6785
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Oriente Médio"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Momento com as amigas"
+      ],
+      "description": "A simplicidade do cardápio não reflete a complexidade do sabor do hommus! Lá essa tradicional pasta é a protagonista, presente em todos os pratos com combinações clássicas do oriente médio. O espaço é uma casinha super charmosa, trazendo ainda mais casualidade e afetividade para o lugar!",
+      "tip": "Possuem bebidas diferentes que vale provar! Quando fui, pedimos um hommus de entrada mas depois vimos que não era necessário pois os pratos vem com bastante já e são grandinhos!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/make-hommus-not-war/800/540",
+      "imageAlt": "Foto de Make Hommus, Not War",
+      "featured": false
+    },
+    {
+      "id": "badaue",
+      "name": "Badauê",
+      "location": "Jardins",
+      "coords": [
+        -23.57,
+        -46.661
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Frutos do Mar"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Domingo em família"
+      ],
+      "description": "Um dos melhores polvos que já comi. Com a combinação mais inusitada e mais gostosa. O cardápio é bem variado, mas focado em coisas do mar. Tem desde massas elaboradas até um sushi fresco e de qualidade.",
+      "tip": "O Camarão Crocante é uma ótima entrada, diferente de tudo que você já provou, tenho certeza! É um ótimo lugar para ir em família",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/badaue/800/540",
+      "imageAlt": "Foto de Badauê",
+      "featured": false
+    },
+    {
+      "id": "portal-da-coreia",
+      "name": "Portal da Coreia",
+      "location": "Liberdade",
+      "coords": [
+        -23.5575,
+        -46.6335
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Almoço casual"
+      ],
+      "description": "Por mais que o polo coreano seja no Bom Retiro, esse restaurante na Liberdade entrega uma experiência completa! A grande estrela é o churrasco coreano, todas as mesas possuem o fogareiro e o exaustor, você escolhe o corte da carne e vem com acompanhamentos como kimchi, gohan, cogumelos e outros selecionados diariamente.",
+      "tip": "O churrasco é individual mas bem servido, minha sugestão é pedir, para duas pessoas, um churrasco e uma entrada ou dois cortes diferentes mas sem entrada!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/portal-da-coreia/800/540",
+      "imageAlt": "Foto de Portal da Coreia",
+      "featured": false
+    },
+    {
+      "id": "estadao",
+      "name": "Estadão",
+      "location": "Bela Vista",
+      "coords": [
+        -23.549,
+        -46.6415
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "After perfeito"
+      ],
+      "description": "Clássico lugar no centro, é 24 horas perfeito para a larica da madrugada ou para um PF durante o dia. O ambiente é caótico, mas seu pedido vai chegar certo e em menos de dez minutos! As opções são bem apetitosas, mas a pedida lá é o lanche de pernil, que é o mais clássico de sp e que eu, particularmente, sou muuito fã.",
+      "tip": "Nunca vi uma pessoa falando mal desse lugar e pelo quanto que eu gosto de lanche de pernil (por mais que lá seja diferente de qualquer outro lugar) é capaz de logo logo ter um selo de favorito aqui…",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/estadao/800/540",
+      "imageAlt": "Foto de Estadão",
+      "featured": false
+    },
+    {
+      "id": "mescla",
+      "name": "Mescla",
+      "location": "Barra Funda",
+      "coords": [
+        -23.527,
+        -46.663
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Almoço casual",
+        "Domingo em família"
+      ],
+      "description": "Cozinha afetiva e pratos bem elaborados, meu tipo preferido de restaurante! O ambiente é acolhedor e os pratos mais ainda, o arroz de camarão é super bem servido e um dos destaques de lá, vale muito a pedida. Tive vontade de provar todas as entradas, que possuem combinações diferentes e ingredientes que dão água na boca.",
+      "tip": "Ocasionalmente eles fazem festivais com seleções especiais de vinhos ou edições limitadas de drinks, como no dia que eu fui que a carta era de apenas vinhos selecionados por sommelier mulheres.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/mescla/800/540",
+      "imageAlt": "Foto de Mescla",
+      "featured": false
+    },
+    {
+      "id": "tappo",
+      "name": "Tappo",
+      "location": "Higienópolis",
+      "coords": [
+        -23.544,
+        -46.658
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Italiana"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Momento com as amigas"
+      ],
+      "description": "Massas tradicionais em um ambiente intimista e refinado. Está muito hypado mas não tem nada fora do normal, as massas são muito boas, mas o tradicional é o forte e no final o carbonara é só um carbonara. Mas ainda sim, vale a visita para provar o Caccio e Pepe.",
+      "tip": "Lá é definitivamente o lugar de celebridades, encontramos várias! O ambiente é pequeno, por isso sempre tem fila, mas é bem bonito e perfeito para um date.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/tappo/800/540",
+      "imageAlt": "Foto de Tappo",
+      "featured": false
+    },
+    {
+      "id": "barkatu",
+      "name": "Barkatu",
+      "location": "Itaim Bibi",
+      "coords": [
+        -23.5855,
+        -46.6785
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Quando quero me mimar"
+      ],
+      "description": "Deixei um rim lá, mas valeu a pena. Possui um ambiente super especial, perfeito para date ou para uma noite especial com amigas! Os pratos são para compartilhar, o que eu adoro, e vale provar um pouco de tudo, não deixe de pedir o Kokota.\n\nAgora que língua está na moda, estou me desafiando nesse corte e a de lá é imperdível. Carne desmancha na boca e o molho deixa ser uma explosão de sabores! A que mais gostei até agora.",
+      "tip": "Tomamos os drinks autorais da casa (o que fez a conta ser um rim) que são diferentes e uma explosão de sabores! Valeu demais.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/barkatu/800/540",
+      "imageAlt": "Foto de Barkatu",
+      "featured": false
+    },
+    {
+      "id": "a-casa-do-porco",
+      "name": "A Casa do Porco",
+      "location": "República",
+      "coords": [
+        -23.543,
+        -46.6425
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Domingo em família",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Se você não gosta de carne de porco, nem vai. Mas aqui os pratos, a carne e as combinações são diferenciadas. Provamos o menu à la carte, que possui pratos para compartilhar e individuais.\n\nO Churrasco é um ótimo custo benefício, para duas pessoas, vem um pouco de cada corte e acompanhamentos que são de tirar o fôlego.",
+      "tip": "Antes o espaço tinha muuita fila, mas agora chegando antes das 8h você tem grandes chances de já conseguir uma mesa sem precisar de reserva! O espaço é ótimo para um date especial ou uma comemoração em família.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/a-casa-do-porco/800/540",
+      "imageAlt": "Foto de A Casa do Porco",
+      "featured": false
+    },
+    {
+      "id": "amazo",
+      "name": "Amazo",
+      "location": "Campos Elíseos",
+      "coords": [
+        -23.5375,
+        -46.647
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Frutos do Mar"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Bom para comemorações",
+        "Domingo em família",
+        "Quando quero me mimar"
+      ],
+      "description": "Um restaurante de autêntica comida peruana, ou seja, os ceviches são as estrelas! O ambiente da unidade do Centro é de tirar o fôlego, muito arborizado e em um casarão antigo, que possui um museu.\n\nLá comi formiga no ceviche e um polvo inexplicável de bom, com molhos excelentes e combinações que te fazem raspar o prato.",
+      "tip": "Se você quer uma experiência diferente e inesquecível, lá é o lugar. Minha recomendação é pedir ceviches e o polvo, que me arrisco a dizer que é o melhor de São Paulo!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/amazo/800/540",
+      "imageAlt": "Foto de Amazo",
+      "featured": false
+    },
+    {
+      "id": "yu",
+      "name": "Yū",
+      "location": "Jardim Europa",
+      "coords": [
+        -23.587,
+        -46.684
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Perfeito para date"
+      ],
+      "description": "Não sou muito de restaurante japonês chique, mas esse vale demais a visita. Em um belo ambiente com dj e perfeito para um date, cada prato ou combinado é uma experiência com um arroz perfeito e peixe que desmancha na boca.",
+      "tip": "É caro mas é um bom custo benefício, se você for comer uma quantidade ok. Lá não é lugar de se matar de comer rs. Vale verificar as opções quentes que são maravilhosas e o carpaccio é obrigatório!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/yu/800/540",
+      "imageAlt": "Foto de Yū",
+      "featured": false
+    },
+    {
+      "id": "capim-santo",
+      "name": "Capim Santo",
+      "location": "Jardim Paulistano",
+      "coords": [
+        -23.58,
+        -46.689
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Domingo em família",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Dentro de um Solar, a experiência de comer lá no meio das árvores é indescritível. Cada prato remete a culinária brasileira com muitas referências baianas trazendo sensações indescritíveis. Quando for, não esqueça de comer o brigadeiro de capim santo na hora da conta!",
+      "tip": "Vi que o cardápio mudou desde a última vez que fui, mas a burrata é enorme e vale a experiência. Além disso, o churros de tapioca é maravilhoso e diferente de tudo que você já viu!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/capim-santo/800/540",
+      "imageAlt": "Foto de Capim Santo",
+      "featured": false
+    },
+    {
+      "id": "balaio",
+      "name": "Balaio",
+      "location": "Bela Vista",
+      "coords": [
+        -23.556,
+        -46.6615
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Quando quero me mimar",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Do mesmo chef do Mocotó, o restaurante está no Bibi Michelin e entrega uma culinária diferente de tudo que você já viu. Localizado no térreo do IMS, um dos espaços culturais que eu mais gosto em sp, os drinks autorais são impecáveis e vale provar cada um deles. O Vereda é um prato vegetariano leve e cheio de sabor, uma verdadeira surpresa, mas a carne de sol de porco é a grande estrela!",
+      "tip": "Além do restaurante no térreo, há também um café maravilhoso junto com a Livraria Travessa no primeiro andar! Vale uma visita nas exposições do IMS, que trazem fotografias e histórias por meio delas que vale observar.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/balaio/800/540",
+      "imageAlt": "Foto de Balaio",
+      "featured": false
+    },
+    {
+      "id": "mapu",
+      "name": "Mapu",
+      "location": "Vila Mariana",
+      "coords": [
+        -23.5905,
+        -46.639
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Momento com as amigas"
+      ],
+      "description": "Restaurante taiwanês onde a estrela são os Baos, e realmente são bizarros de deliciosos, mas a berinjela é de comer rezando! Em uma casinha na Vila Mariana o destaque está no Bao tradicional, de cogumelos e pulled pork.",
+      "tip": "Perfeito para um almoço casual com amigas, para comer algo diferente, mas ainda leve!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/mapu/800/540",
+      "imageAlt": "Foto de Mapu",
+      "featured": false
+    },
+    {
+      "id": "nectar",
+      "name": "Néctar",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5625,
+        -46.697
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Saudável"
+      ],
+      "occasion": [
+        "Almoço casual"
+      ],
+      "description": "Como eles mesmos se denominam, esse é um fast food saudável, com milhares de opções no cardápio. Desde pf's fitness até pokes, sou viciada nos wraps de lá (por mais que sejam superfaturados) para pedir em casa ou ir no almoço do trabalho, quebra um galho, você come bem e ainda é muito gostoso!",
+      "tip": "O wrap crispy chicken, chicken bbq e black beef estão entre os meus favoritos mas a estrela é o molho ranch com matcha (que fica um ranch mais leve) mas todos os molhos são incríveis, e também a batata doce palito, que fica crocante por fora e macia por dentro, imperdível!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/nectar/800/540",
+      "imageAlt": "Foto de Néctar",
+      "featured": false
+    },
+    {
+      "id": "sanduteca",
+      "name": "Sanduteca",
+      "location": "República",
+      "coords": [
+        -23.5435,
+        -46.643
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Quando quero me mimar"
+      ],
+      "description": "Um dos meus lugares do momento na cidade. Dentro da Galeria Metrópole e sempre com fila, vale cada minuto de espera por esses sanduíches diferentes e bem elaborados. O de cogumelos, frango coreano e principalmente carne louca são bizarros de bons, a cada mordida você fica mais apaixonado pelo lanche, te juro! Junto com muito guardanapo (pois acredite, você vai sujar toda a mão e boca), peça uma limonada da casa, super refrescante e equilibrada!",
+      "tip": "A Galeria Metrópole tem várias lojinhas legais e um último andar aberto que vale demais o passeio. Fique ligada na programação pois sempre tem feirinhas de brechó, artesanato, vinis e outros! Para escapar da fila na Sanduteca, tento sempre chegar uns 10 minutos antes de abrir. No final do dia tem menos fila também, mas os sanduíches acabam. E durante a semana a fila é bem menor.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/sanduteca/800/540",
+      "imageAlt": "Foto de Sanduteca",
+      "featured": false
+    },
+    {
+      "id": "jota-burguer",
+      "name": "Jota Burguer",
+      "location": "Bela Vista",
+      "coords": [
+        -23.5605,
+        -46.6545
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "After perfeito"
+      ],
+      "description": "Dá até orgulho de ver crescer, pois é a hamburgueria que me acompanhava durante o intervalo da faculdade! Smashs bem gostosos, do mesmo grupo do Z Deli, então imagina a qualidade desse hambúrguer… Batata fininha e crocante, milkshake bem gostoso, vale a visita para conhecer um hambúrguer diferente, no estilo shake and shack.",
+      "tip": "Agora eles possuem unidades 24 horas, sendo uma das melhores laricas da madrugada, vale ir com a galera e estender a noite por um bom hambúrguer!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/jota-burguer/800/540",
+      "imageAlt": "Foto de Jota Burguer",
+      "featured": false
+    },
+    {
+      "id": "brisa",
+      "name": "Brisa",
+      "location": "Centro",
+      "coords": [
+        -23.544,
+        -46.6437
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Frutos do Mar"
+      ],
+      "occasion": [
+        "Perfeito para date"
+      ],
+      "description": "Do mesmo chef do Baru Marisqueria, esse pequeno restaurante dentro do Copan possui tapas e entradinhas para compartilhar, com referências principalmente colombianas e peruanas, mas tudo com muitos frutos do mar! Os pequenos pratos são divididos entre Levanta Muertos, De La Olla, Crocanticos e Chapa e minha sugestão é provar um de cada, pois cada categoria tem uma proposta diferente. Amei o Nuestro Guaca e a Lula Adorei, que ressaltam o ingrediente principal mas trazem outros sabores ainda mais complexos, explodindo na boca!",
+      "tip": "Vale reservar pois tem poucos lugares, sendo a maioria balcão. Não é um lugar para ir em mais de 4 pessoas e vale passar a tarde comendo os pratinhos, conversando e bebendo os drinks, a limonada de coco com rum (mas também tem sem álcool) é inexplicável de tão maravilhosa!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/brisa/800/540",
+      "imageAlt": "Foto de Brisa",
+      "featured": false
+    },
+    {
+      "id": "jaco",
+      "name": "Jacó",
+      "location": "Pinheiros",
+      "coords": [
+        -23.557,
+        -46.691
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Quando quero me mimar",
+        "Para levar quem visita a cidade",
+        "Momento com as amigas"
+      ],
+      "description": "O quanto eu amei esse lugar não está escrito. Restaurante belo mas simples, com uma vibe The Bear e com a cozinha aberta para você acompanhar o preparo e ver como são organizados. O lugar é tão bom que até campeão de masterchef faz estágio lá para aprender!\n\nOs pratos são pequenos e para compartilhar, a equipe explica cada prato na mesa, o que é super bacana. Amei os dumplings, o crudo e a centolla, mas a estrela é, sem dúvidas, o “Porco, Milho e Moyashi”, que foi uma sugestão do próprio masterchef e é imperdível, uma explosão de sabores. Provei os mocktails e achei super gostosos, os drinks devem surpreender também!",
+      "tip": "Vale fazer reserva pois lota rápido. A equipe é super simpática e a comida ainda mais surpreendente, dá para entender o por que o local está no Guia Bibi Michelin.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/jaco/800/540",
+      "imageAlt": "Foto de Jacó",
+      "featured": false
+    },
+    {
+      "id": "le-freak",
+      "name": "Le Freak",
+      "location": "Centro",
+      "coords": [
+        -23.544,
+        -46.6425
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Francesa"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Bom para comemorações",
+        "Momento com as amigas"
+      ],
+      "description": "Restaurante francês no centro, combina a estética tradicional francesa com uma disruptiva nas louças e detalhes. Drinks super gostosos, vale pedir indicação de acordo com seu gosto. Os pratos, em sua maioria, são para duas pessoas, assim como as entradinhas que são super gostosas. O que mais gostei foi a Tostada de Cebola, que lembra uma sopa de cebola francesa mas muito mais intensa! Entre os pratos, fiquei na dúvida entre o steak e short rib, mas fomos no pato para comer algo diferente e estava super macio, com um molho maravilhoso. De acompanhamento o cuscuz marroquino foi o melhor.",
+      "tip": "Vale ir em grupo para pedir várias entradas e dividir os cortes, provando um pouco de tudo, pois tudo é bem gostoso! Está super em alta por isso, recomendo fazer reserva, ou ir antes das 19h20 em dia de semana.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/le-freak/800/540",
+      "imageAlt": "Foto de Le Freak",
+      "featured": false
+    },
+    {
+      "id": "kidoairaku",
+      "name": "Kidoairaku",
+      "location": "Liberdade",
+      "coords": [
+        -23.559,
+        -46.635
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Perfeito para date"
+      ],
+      "description": "Despretensiosamente, entramos na casinha desse restaurante para almoçar e encontramos um tradicional restaurante japonês. Os peixes são muito frescos e os pratos quentes super saborosos, trazendo referências que não costumamos ver no Brasil. Até a farinha panko deles, caseira, é super diferente, deixando os empanados ainda melhores!",
+      "tip": "Fomos no almoço então o cardápio era mais enxuto, tinha Jubako, um prato servido em caixa retornável (bem tradicional) super bem servidos e com conserva, salada, sashimi, missô, frituras e mais. O curry estava super saboroso, optamos por uma opção que acompanhava um hambúrguer clássico japonês, que por si só é bem diferente. Também provamos o Ebi Tempura Soba, um macarrão com sopa acompanhado de um super camarão empanado, muito saboroso!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/kidoairaku/800/540",
+      "imageAlt": "Foto de Kidoairaku",
+      "featured": false
+    },
+    {
+      "id": "saiko",
+      "name": "Saiko",
+      "location": "Jardim Europa",
+      "coords": [
+        -23.582,
+        -46.682
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Almoço casual"
+      ],
+      "description": "Um dos lugares do momento, a portinha no Jardim Europa possui sandos (famosos sanduíches japoneses) maravilhosos. As opções parecem simples, mas na realidade é uma explosão de sabores. Os lanches ficam prontos super rápidos e só tem alguns bistrôs na rua. Mas vale a ida!",
+      "tip": "Amei o Ebi, de camarão, e o Gyukatsu, de filet mignon, cada caixa vem com seis pequenos pedaços do sanduíche, mas que alimentam bem! Extremamente saborosos e mostra a delicadeza no preparo.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/saiko/800/540",
+      "imageAlt": "Foto de Saiko",
+      "featured": false
+    },
+    {
+      "id": "dizzy",
+      "name": "Dizzy",
+      "location": "Santana",
+      "coords": [
+        -23.51,
+        -46.628
+      ],
+      "venue": "Restaurante",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Domingo em família"
+      ],
+      "description": "Saindo um pouco do meu eixo e indo para a Zona Norte, a Dizzy é uma daquelas tradicionais lanchonetes, mas com lanches muito gostosos! O cardápio vai desde opções mais tradicionais, até lanches elaborados com carnes dry aged. Provei o hambúrguer de costela com cheddar, uma combinação que não tem erro, mas deixo uma menção especial ao lanche de catupiry, que chega a desmanchar de tão suculento e completo que é!",
+      "tip": "O restaurante possui mais de uma opção de maionese da casa, vale provar todas, mas a tradicional é muito gostosa para comer com a batata. Na consistência certa, é o que faz a ida na lanchonete fazer sentido!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/dizzy/800/540",
+      "imageAlt": "Foto de Dizzy",
+      "featured": false
+    },
+    {
+      "id": "casa-hibrida",
+      "name": "Casa Híbrida",
+      "location": "Sumaré",
+      "coords": [
+        -23.5498225,
+        -46.6791761
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Variada"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Momento com as amigas"
+      ],
+      "description": "O lugar dos aniversários, o espaço é realmente híbrido. Com um cardápio simples mas bom de bebidas e comidas, a graça deste bar é o espaço, que possui uma piscina que você pode entrar, salão de jogos, karaokê, pista de dança e área externa! Além disso, aos domingos tem churrasco para completar a experiência.",
+      "tip": "Só fui lá em aniversários e realmente não vejo muito como o lugar para ir casualmente, mas no verão deve ser uma delícia reunir os amigos e ir passar a tarde na piscina bebendo uma caipirinha e escutando uma boa música!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/casa-hibrida/800/540",
+      "imageAlt": "Foto de Casa Híbrida",
+      "featured": false
+    },
+    {
+      "id": "los-perros",
+      "name": "Los Perros",
+      "location": "Bixiga",
+      "coords": [
+        -23.559839,
+        -46.6464541
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Pré role garantido",
+        "Momento com as amigas"
+      ],
+      "description": "Bar de vinhos está em alta agora e esse, na minha opinião, é o melhor. Com rótulos bem gostosos, o espaço do Bixiga é uma experiência à parte. Ao lado de uma escadaria e pracinha, o ambiente casual se torna uma boa pedida para uma sexta-feira à noite com os amigos, mas o ambiente interno com mesinhas te proporciona provar as comidinhas, que honestamente eu nunca provei, além de ser uma boa pedida para dates.",
+      "tip": "Os melhores que provei foram os vinhos rosés. Não vale chegar muito tarde, pois as taças (copo mesmo, não bebida) acabam e pode sobrar apenas copo plástico para você...",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/los-perros/800/540",
+      "imageAlt": "Foto de Los Perros",
+      "featured": false
+    },
+    {
+      "id": "broca",
+      "name": "Broca",
+      "location": "Vila Madalena",
+      "coords": [
+        -23.5577482,
+        -46.6893516
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Pré role garantido",
+        "Almoço casual"
+      ],
+      "description": "Um restaurante bar, com pratos para compartilhar e muita referência asiática. Os drinks autorais são uma experiência, mas os pratos mais ainda. Vá em umas quatro pessoas para provar o cardápio todo, pois vale demais!",
+      "tip": "Na Aspicuelta, é um bom pré (chique rs) para algum bar fuleira ou baladinha depois!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/broca/800/540",
+      "imageAlt": "Foto de Broca",
+      "featured": false
+    },
+    {
+      "id": "esquina-do-souza",
+      "name": "Esquina do Souza",
+      "location": "Pompéia",
+      "coords": [
+        -23.529679,
+        -46.691225
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Comida de buteco"
+      ],
+      "occasion": [
+        "Domingo em família",
+        "Momento com as amigas"
+      ],
+      "description": "Não tenho medo de afirmar que é a melhor coxinha e caipirinha de toda a cidade e do Brasil.  Ah, mas qual caipirinha pedir? Se perca na leitura das milhares de opções espalhadas pelas paredes e pede a que mais combina com seu paladar!",
+      "tip": "Além das coxinhas, possuem outras comidinhas maravilhosas, mas sério, PRECISA pedir a porção de coxinha e até levar para viagem.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/esquina-do-souza/800/540",
+      "imageAlt": "Foto de Esquina do Souza",
+      "featured": false
+    },
+    {
+      "id": "agua-e-biscoito",
+      "name": "Água e Biscoito",
+      "location": "Barra Funda",
+      "coords": [
+        -23.5287941,
+        -46.6555938
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Bom para comemorações",
+        "Para levar quem visita a cidade",
+        "Momento com as amigas"
+      ],
+      "description": "Mistura um pouco de tudo, mas com muita classe e sem perder a identidade. Bar de rua. Speak listening. Coquetelaria fora do padrão. Comidinhas deliciosas. Casual e elegante! Como sugestão de comida o crudo, que entrega frescor e explosão de sabores.",
+      "tip": "Um lugar bom para date, almoço com amigas e até aniversário, entrega a casualidade de um bar de esquina e bons drinks, vinhos e comidas acompanhado de uma boa seleção musical.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/agua-e-biscoito/800/540",
+      "imageAlt": "Foto de Água e Biscoito",
+      "featured": false
+    },
+    {
+      "id": "kotchi",
+      "name": "Kotchi",
+      "location": "Jardins",
+      "coords": [
+        -23.567177,
+        -46.667543
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Perfeito para date"
+      ],
+      "description": "Bar com culinária japonesa e uma coquetelaria de alto nível. O lugar parece que foi realizado para dates, com um bar para um drink inicial e pratos para dividir, quero voltar para provar o restante! Ambiente elegante e intimista, atendimento incrível.",
+      "tip": "O destaque vai para o Duck Foie Tsukune, que são cogumelos recheados de pato e foie gras, uma explosão de sabores inexplicáveis, com muito umami. Provamos vários drinks, todos muito bons, vale falar seu gosto para o garçom que ele vai ter boas dicas! O que mais gostei foi o Melão, Algas e Folhas (sim, tinha tudo isso com vodka).",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/kotchi/800/540",
+      "imageAlt": "Foto de Kotchi",
+      "featured": false
+    },
+    {
+      "id": "por-amor",
+      "name": "Por Amor",
+      "location": "Barra Funda",
+      "coords": [
+        -23.5275601,
+        -46.6537297
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Comida de buteco"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Pré role garantido"
+      ],
+      "description": "O favorito da barra funda é um barzinho de rua, do lado do trem! Desde xeque-mate até drinks elaborados e litrão, o bar é o melhor lugar para uma comemoração, tarde de domingo com amigos e até mesmo assistir um jogo de futebol. Casual, cheio de gente bonita e bebida por um bom preço, ou seja, tudo que gostamos!",
+      "tip": "O bar fica ao lado do Quina, uma balada pequena, dos mesmos donos, que têm noites de funk, reggaeton e anos 2000. Vale super o role e fazer o esquenta no bar e ir para lá depois curtir o resto da noite dançando muito.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/por-amor/800/540",
+      "imageAlt": "Foto de Por Amor",
+      "featured": false
+    },
+    {
+      "id": "sao-cristovao",
+      "name": "São Cristóvão",
+      "location": "Vila Madalena",
+      "coords": [
+        -23.554061,
+        -46.691749
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Comida de buteco"
+      ],
+      "occasion": [
+        "Almoço casual",
+        "Domingo em família"
+      ],
+      "description": "Bar casual para ir com os amigos beber uma cerveja ou caipirinha, e principalmente assistir um jogo na mesa da calçada, admirando as paredes do bar que são cheias de itens de futebol! Além de um ambiente estilo botequin, os petiscos são deliciosos e a feijoada de domingo melhor ainda, super bem servida!",
+      "tip": "As caipirinhas são equilibradas e deliciosas, acompanhadas de boas companhias para curtir uma tarde de domingo ou um happy hour vale ainda mais!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/sao-cristovao/800/540",
+      "imageAlt": "Foto de São Cristóvão",
+      "featured": false
+    },
+    {
+      "id": "riviera",
+      "name": "Riviera",
+      "location": "Paulista",
+      "coords": [
+        -23.5552717,
+        -46.6630382
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Para levar quem visita a cidade",
+        "After perfeito"
+      ],
+      "description": "Uma instituição na cidade de São Paulo, um bar/ restaurante 24 horas que serve comidas incríveis e drinks deliciosos. O Viva La Vida é um dos meus drinks preferidos de lá, adoro sentar em uma mesinha para fofocar enquanto petiscos algo diferente, como o Tipo Bao, e depois ir no fumódromo estender a conversa e olhar a Consolação.",
+      "tip": "Já fui em date, noite com amigas, pós cinema, pós estádio de futebol, pós festa e até para almoçar com o pessoal do trabalho! É o lugar perfeito para levar alguém de fora da cidade ou ir para lá ficar até mais tarde.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/riviera/800/540",
+      "imageAlt": "Foto de Riviera",
+      "featured": false
+    },
+    {
+      "id": "bar-dos-arcos",
+      "name": "Bar dos Arcos",
+      "location": "Centro",
+      "coords": [
+        -23.5454262,
+        -46.6383694
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Para levar quem visita a cidade",
+        "Momento com as amigas"
+      ],
+      "description": "Um bar icônico que quase sempre está com fila de espera. No porão do teatro municipal com uma decoração diferente no meio das ruínas, a sensação lá é de ser transportado para outro mundo. O bar é formado por um balcão branco luminoso interligado e um espaço de sofás vintage para grupos maiores. Vale passear pelo local e ver cada detalhe, mas vale principalmente pedir todos os drinks do cardápio e comidinhas para compartilhar!",
+      "tip": "Já provei praticamente o cardápio inteiro e para mim, o Vacante, 1911, Katherine e Alcântara são os drinks mais gostosos! No cardápio, tem ilustrações de cada drink, super bacana! Nas comidinhas, o destaque ficou com o Crudo no Brioche e Tartare de Tomate, uma explosão de sabores.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/bar-dos-arcos/800/540",
+      "imageAlt": "Foto de Bar dos Arcos",
+      "featured": false
+    },
+    {
+      "id": "bargo-mooca",
+      "name": "Bargo Mooca",
+      "location": "Vila Buarque",
+      "coords": [
+        -23.5384931,
+        -46.6541841
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Italiana"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Bom para comemorações"
+      ],
+      "description": "Do mesmo grupo do Borgo Mooca, é uma experiência complementar e boa para dates e drinks com amigos. Por mais que seja um lugar de drinks famosos, eu só tomei champanhe (era uma noite especial!) então não posso opinar… De comida, o mais gostoso foram as pizzas direto do Borgo, ótimas para compartilhar e cada pessoa comer um pedacinho de cada sabor!",
+      "tip": "O espaço lá é o grande atrativo. Subterrâneo, o bar possui poucos lugares, itens de decoração super legais, uma parede com filmes noir e noites temáticas de jazz, dj e músicas. No dia que fomos (no meio da semana) éramos o único grupo, o resto era tudo date! Mas parece que recebem muitas comemorações também.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/bargo-mooca/800/540",
+      "imageAlt": "Foto de Bargo Mooca",
+      "featured": false
+    },
+    {
+      "id": "disse-que-me-disse",
+      "name": "Disse Que Me Disse",
+      "location": "Vila Madalena",
+      "coords": [
+        -23.5559827,
+        -46.6900519
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Comida de buteco"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Pré role garantido"
+      ],
+      "description": "Bar da Vila Madalena estilo boteco, com tema de fofoca boa que só uma cerveja proporciona. Possui uma carta de drinks e caipirinhas diferentes, com destaque para os drinks com aperol, que mostram como ele pode ir além do spritz. São poucas opções de petiscos, mas muito boas, vale dar uma olhada nos pratos.",
+      "tip": "É um bom lugar para comemorar e assistir futebol. Com um grande telão na área externa e televisões na interna, o bar comporta grupos grandes ou pessoas que só querem ver um jogo. Possuem programação de samba, sertanejo e noites com costela no bafo e outras laricas, vale conferir o Instagram!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/disse-que-me-disse/800/540",
+      "imageAlt": "Foto de Disse Que Me Disse",
+      "featured": false
+    },
+    {
+      "id": "lote-sp",
+      "name": "Lote sp",
+      "location": "Vila Madalena",
+      "coords": [
+        -23.5601182,
+        -46.6877587
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Bom para comemorações"
+      ],
+      "description": "Um bom lugar para comemorações, mistura bar sentado com bar de pé com balada, ou seja, um lugar que agrada todo mundo! O local fecha cedo, 11h, mas possui uma pista de dança com programações sempre diferentes. Vale verificar antes no Instagram.",
+      "tip": "Além dos drinks mais tradicionais, tem xeque mate, cerveja e outras bebidas de lata. O local também possui uma área de sanduíches e hambúrgueres que são muito gostosos e perfeitos para a larica da noite.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/lote-sp/800/540",
+      "imageAlt": "Foto de Lote sp",
+      "featured": false
+    },
+    {
+      "id": "goela",
+      "name": "Goela",
+      "location": "Vila Madalena",
+      "coords": [
+        -23.5560406,
+        -46.6899729
+      ],
+      "venue": "Bar",
+      "cuisine": [
+        "Comida de buteco"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Momento com as amigas"
+      ],
+      "description": "Em uma das ruas mais movimentadas da Madá, o espaço é enorme e sempre tem programação diferente! Com uma área externa para resenha, uma pista de dança e um amplo espaço com samba ao vivo ou outra programação diferente, o bar é ótimo para comemoração, se a ideia for um barzinho de pé e bem animado.",
+      "tip": "Carta enxuta de drinks e cervejas de 600, algumas opções de comidinhas para forrar o estômago, mas o grande x do bar é a possibilidade de encontrar um grande grupo e aproveitar a farra de um bar lotado.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/goela/800/540",
+      "imageAlt": "Foto de Goela",
+      "featured": false
+    },
+    {
+      "id": "sina",
+      "name": "Sina",
+      "location": "Moema",
+      "coords": [
+        -23.6062,
+        -46.6655
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Cafés especiais"
+      ],
+      "occasion": [
+        "Bom para comemorações"
+      ],
+      "description": "Conheci o Sina quando era uma casinha vintage no jardins, hoje é um café mais futurista em moema, mas ainda muito gostoso e com uma proposta muito bacana, combinando o mundo biker com o mundo do café! Além de um café delicioso que dá para ver que são grãos especiais, as comidinhas são super gostosas e a equipe bem simpática!",
+      "tip": "Para quem anda de bike, lá deve ser um lugar ainda mais incrível pois tem a oficina e loja de bicicleta, com itens que nunca tinha visto na vida! O espaço também possui música em vinil e em alguns finais de semana dj, transformando seu brunch em uma experiência ainda mais legal e divertida.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/sina/800/540",
+      "imageAlt": "Foto de Sina",
+      "featured": false
+    },
+    {
+      "id": "ze-latte",
+      "name": "Zé Latte",
+      "location": "Itaim Bibi",
+      "coords": [
+        -23.585,
+        -46.6785
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Cafés especiais"
+      ],
+      "occasion": [
+        "Momento com as amigas",
+        "After perfeito"
+      ],
+      "description": "Provavelmente meu café preferido no Itaim, combina a casualidade com modernidade e cafés gelados diferentes. Sempre está cheio mas é super tranquilo conseguir lugar, as comidinhas salgadas são bem mais atrativas que os doces, incluindo uma avocado toast dos deuses.",
+      "tip": "Lugar perfeito para ir pós uma corrida ou treino, com amigas ou para aquele momento sozinha. A rua é super tranquila e sentar na calçada e observar o dia fez a diferença na minha experiência.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/ze-latte/800/540",
+      "imageAlt": "Foto de Zé Latte",
+      "featured": false
+    },
+    {
+      "id": "good-market",
+      "name": "Good Market",
+      "location": "Jardins",
+      "coords": [
+        -23.566,
+        -46.6635
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Variada"
+      ],
+      "occasion": [
+        "Domingo em família",
+        "Bom para trabalhar"
+      ],
+      "description": "Se fosse para definir essa padaria, definiria como o café das dondocas do Jardins. E honestamente, queria ser elas em um chá da tarde com Aperol no meio de uma quarta-feira. Brincadeiras à parte, o espaço é mais uma padaria que cafeteria, com toasts bem saborosas, mas nada fora do normal, e tem até pratos para almoçar. Bom para fofocar com amigas, trabalhar e também só curtir uma tarde.",
+      "tip": "Tem vários itens e pães para levar para casa, vale levar um pãozinho especial para o café da manhã do outro dia!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/good-market/800/540",
+      "imageAlt": "Foto de Good Market",
+      "featured": false
+    },
+    {
+      "id": "le-jazz-boulangerie",
+      "name": "Le Jazz Boulangerie",
+      "location": "Pinheiros",
+      "coords": [
+        -23.5665,
+        -46.6825
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Francesa",
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Bom para trabalhar"
+      ],
+      "description": "Padaria com inspirações francesas com bom atendimento e cardápio extenso. Tem buffet de almoço, mas o destaque está para os pães diferentes da vitrine e sanduíches diferentes, além da rabanada com nutella que é insana! Aos finais de semana, o local sempre está cheio, mas vale se programar para conhecer.",
+      "tip": "Mesmo gostando de lá, acho melhor no dia a dia do que aos finais de semana, que a qualidade cai e algumas opções do cardápio ficam em falta. Considerando outras opções que tem por perto, vale avaliar se é o melhor lugar para seu brunch!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/le-jazz-boulangerie/800/540",
+      "imageAlt": "Foto de Le Jazz Boulangerie",
+      "featured": false
+    },
+    {
+      "id": "komah-bakery",
+      "name": "Komah Bakery",
+      "location": "Vila Madalena",
+      "coords": [
+        -23.5555,
+        -46.6875
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Quando quero me mimar",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Uma padaria coreana no meio da Vila Madalena que sempre está lotada. Com uma estética minimalista, o pão agridoce e os docinhos diferentes valem o hype, mas o que é imperdível mesmo é o queijo quente de kimchi. Volto lá só por esse sanduíche, a intensidade do queijo com a leve picância do kimchi fica maravilhosa, acompanhado de um bom café gelado deixa a experiência ainda melhor.",
+      "tip": "Minha sugestão, por conta da fila, é ir no sábado e passear nas lojas próximas para curtir um brunch ainda mais sossegado. De sobremesa, não deixe de pedir o doce de limão, um cítrico super equilibrado que vai te surpreender!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/komah-bakery/800/540",
+      "imageAlt": "Foto de Komah Bakery",
+      "featured": false
+    },
+    {
+      "id": "botanikafe",
+      "name": "Botanikafé",
+      "location": "Jardins",
+      "coords": [
+        -23.5685,
+        -46.6665
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Variada"
+      ],
+      "occasion": [
+        "Bom para trabalhar",
+        "Momento com as amigas",
+        "After perfeito"
+      ],
+      "description": "Acho que o Botanikafé já perdeu muito o brilho que tinha. Ainda sim, continua sendo um bom lugar, bem localizado, e com ótimas opções de comidinhas. Com um cardápio variado desde o café da manhã até o jantar, a proposta de brunch all day se confirma com cafés diferentes, bowls com ovo, toasts, sanduíches deliciosos e outros pratos mais tradicionais. Vale para um brunch em grupo e também para uma tarde de home office.",
+      "tip": "A nova unidade fica dentro do pavilhão da Bienal no Parque Ibirapuera, vale ir se exercitar no parque ou apenas passear e depois tomar um brunch por lá, uma programação de impressionar! Por R$190, você pode comprar uma caixa de piquenique, com muitas comidas, sucos e café para duas pessoas, e ir comer no parque (a própria caixa serve de toalha). Deve ser super bacana ir com amigos, pegar a caixa e comer perto do lago!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/botanikafe/800/540",
+      "imageAlt": "Foto de Botanikafé",
+      "featured": false
+    },
+    {
+      "id": "a-baianeira",
+      "name": "A Baianeira",
+      "location": "Bela Vista",
+      "coords": [
+        -23.5614,
+        -46.6559
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Contemporânea"
+      ],
+      "occasion": [
+        "Bom para trabalhar",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Cafeteria e restaurante dentro do Masp, que torna a experiência ainda mais incrível. Ainda não provei o restaurante, que dizem que é muito bom, está até no Guia Bibi Michelin, mas o café garanto que é ótimo para uma tarde ou brunch, unido a uma programação cultural, ou até mesmo um home office diferente, como eu mesma já fiz!",
+      "tip": "A dupla de pão de queijo recheado é imperdível, um mix de sabores com um conforto de comida brasileira. Quando fui, pedi também um crudo que estava super fresco e cítrico, explodia na boca. De bebidas, o destaque vai para a Soda de Coentro, juro que isso você não encontra em nenhum outro lugar, principalmente tão gostosa quanto essa!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/a-baianeira/800/540",
+      "imageAlt": "Foto de A Baianeira",
+      "featured": false
+    },
+    {
+      "id": "bella-paulista",
+      "name": "Bella Paulista",
+      "location": "Cerqueira César",
+      "coords": [
+        -23.5575,
+        -46.66
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Variada"
+      ],
+      "occasion": [
+        "After perfeito"
+      ],
+      "description": "Padaria 24 horas clássica perto da Avenida Paulista, ótima para um after, café da manhã e almoço. Com muitas opções passando pelos clássicos da padaria, o destaque vai para os sanduíches especiais que levam o nome de lugares icônicos da cidade.",
+      "tip": "Por mais que cara, tudo lá é super bem servido e gostoso, além de ser bem localizado. O local sempre está cheio, mas a fila anda rápido e são super organizados.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/bella-paulista/800/540",
+      "imageAlt": "Foto de Bella Paulista",
+      "featured": false
+    },
+    {
+      "id": "ffv-cafe",
+      "name": "FFV Café",
+      "location": "Vila Buarque",
+      "coords": [
+        -23.5455,
+        -46.648
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Mineira"
+      ],
+      "occasion": [
+        "Para levar quem visita a cidade",
+        "Momento com as amigas"
+      ],
+      "description": "Mesmo se o café não fosse bom, valeria a visita. O café fica em uma mini galeria, que tem uma loja colaborativa de roupas, acessórios, velas etc e uma galeria com peças de decoração e arte. Além disso, no último andar, está o Festival de Filmes Vencidos, loja de fotografia de BH que também toca o café no térreo. Voltando ao foco do café, o espaço é acolhedor e remete ao universo da fotografia. Por ser de BH, o pão de queijo e todas as outras comidinhas mineiras são incríveis. De bebida adorei o mate, mais que o café.",
+      "tip": "Tem várias cafeterias por perto, queria que fosse possível fazer uma maratona por todas elas! Vale passear pela rua e pelo bairro, tem diversas lojinhas e brechós!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/ffv-cafe/800/540",
+      "imageAlt": "Foto de FFV Café",
+      "featured": false
+    },
+    {
+      "id": "cafezzin",
+      "name": "Cafézzin",
+      "location": "Jardins",
+      "coords": [
+        -23.5665,
+        -46.672
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Cafés especiais"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Bom para trabalhar",
+        "Momento com as amigas"
+      ],
+      "description": "Famoso pelo seu bolo de chocolate, se eu fosse ranquear categorias, não estaria entre as primeiras, mas é boa o suficiente para estar neste guia! O Cafézzin já nasce com a proposta do hype, mas adorei o queijo quente de lá, bem mais que o bolo, diga-se de passagem. Além disso, como uma boa cafeteria hypada, eles possuem bons cafés gelados.",
+      "tip": "Há novas unidades dentro das academias do estúdio Beon (vidya, race etc), com cardápio mais enxuto e focado no mundo fitness. Não gostei tanto das opções e achei bem caro, mas os smoothies de whey são gostosos.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/cafezzin/800/540",
+      "imageAlt": "Foto de Cafézzin",
+      "featured": false
+    },
+    {
+      "id": "levena",
+      "name": "Levena",
+      "location": "Cerqueira César",
+      "coords": [
+        -23.5655,
+        -46.677
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Cafés especiais"
+      ],
+      "occasion": [
+        "Momento com as amigas"
+      ],
+      "description": "Confesso que tinha preconceito com esse lugar por conta do hype, mas a comida, principalmente doces (que por sinal você come com os olhos) é muito boa. Basicamente ele combina tudo de melhor em um único prato, então não tinha como ser ruim. Amei o benedict no croissant com lombo (bacon) e a toast de queijo de cabra e cebola caramelizada também estava boa.",
+      "tip": "Não provei a famosa banana pois tenho preconceito com doces que imitam frutas, mas a flor é bem doce e gostosa (banana não pode, mas flor sim rss). O Latte Caramel é super gostoso, mas bem doce também.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/levena/800/540",
+      "imageAlt": "Foto de Levena",
+      "featured": false
+    },
+    {
+      "id": "adara",
+      "name": "Adara",
+      "location": "Pinheiros",
+      "coords": [
+        -23.566,
+        -46.68
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Hambúrguer e sanduíches"
+      ],
+      "occasion": [
+        "Bom para comemorações",
+        "Momento com as amigas"
+      ],
+      "description": "Pequeno e charmoso, o café é conhecido pelos sanduíches. Amei o Tuna Melt e Moussaka Síria, são super bem servidos e valem cada mordida. Já para beber, os cold brews são super gostosos, além do clássico latte caramelo.",
+      "tip": "Na região do Adara tem vários brechós que valem muito a visita, aproveite a região e conheça as lojinhas andando em uma manhã/ tarde bem urbana!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/adara/800/540",
+      "imageAlt": "Foto de Adara",
+      "featured": false
+    },
+    {
+      "id": "fabrique",
+      "name": "Fabrique",
+      "location": "Consolação",
+      "coords": [
+        -23.546,
+        -46.657
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Cafés especiais"
+      ],
+      "occasion": [
+        "Domingo em família",
+        "Quando quero me mimar",
+        "Momento com as amigas"
+      ],
+      "description": "A favorita dos chefs de São Paulo, possui croissants de comer rezando, super levinhos. Todos os pães são insanos, super saborosos, leves e macios. Para comer, o custo benefício é ótimo, adorei os Ovos Arlington com Abacate, dá para dividir e provar outra coisinha do cardápio, como o pão com requeijão, que mesmo simples, entrega muito sabor.",
+      "tip": "O cardápio é super variado e possui combos com um ótimo custo benefício para seu brunch ficar ainda mais completo, vale avaliar!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/fabrique/800/540",
+      "imageAlt": "Foto de Fabrique",
+      "featured": false
+    },
+    {
+      "id": "mug",
+      "name": "Mug",
+      "location": "Jardins",
+      "coords": [
+        -23.568,
+        -46.6555
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Variada"
+      ],
+      "occasion": [
+        "Bom para trabalhar",
+        "Para levar quem visita a cidade",
+        "Momento com as amigas"
+      ],
+      "description": "Primeira opção que vem na minha cabeça quando penso em cafeterias hypadas. Tem uma unidade em um prédio comercial na Paulista e outra atrás da avenida, em um casarão lindíssimo. Gosto bastante das tostadas, principalmente a americana, que são acompanhadas por um ovo mole. Não seria minha primeira pedida em uma cafeteria, mas o cheesecake de lá realmente vale a pena!",
+      "tip": "Era do lado da minha faculdade e adorava ir trabalhar lá, possuem mesas grandes então é bom para um home office coletivo também, para uma tarde diferente com amigos ou reunião descontraída.",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/mug/800/540",
+      "imageAlt": "Foto de Mug",
+      "featured": false
+    },
+    {
+      "id": "abe",
+      "name": "Abe",
+      "location": "Vila Buarque",
+      "coords": [
+        -23.5445,
+        -46.65
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Asiática"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Momento com as amigas",
+        "After perfeito"
+      ],
+      "description": "Pequeno café e bar japonês, onde os onigiris são as estrelas. Eles são grandes e bem recheados, desmancham na boca, gostei demais! Além disso, o queijo quente é incrível. Fiquei muito curiosa para provar o guioza também… Nas bebidas, eles não possuem opções diferentes de bebidas com cafés, mas possuem vários cafés com grãos especiais que são super saborosos, então vale pedir um coado ou espresso, provei na versão gelada e estava ótimo. Amei o Shisso, mocktail de shisso e limão, super refrescante!",
+      "tip": "No dia que fui, estava rolando uma oficina de colagem, vi que eles também possuem outras oficinas. Vale conferir no Instagram para um brunch ainda mais diferente! Ah fui depois de uma caminhada no Minhocão, fica a sugestão de role!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/abe/800/540",
+      "imageAlt": "Foto de Abe",
+      "featured": false
+    },
+    {
+      "id": "bonita-cafe",
+      "name": "Bonita Café",
+      "location": "República",
+      "coords": [
+        -23.543,
+        -46.6425
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Cafés especiais"
+      ],
+      "occasion": [
+        "Bom para trabalhar"
+      ],
+      "description": "Café minimalista de frente para a Secretaria da Educação, com mesas na calçada e balcão, trazendo o conforto de um café de bairro com uma estética do hype. Tudo é fabricado por eles e o atendimento é super prático e rápido, além da conta ser toda na base da confiança! Ótimo lugar para um brunch seguido de um passeio pelo centro (inclusive, o café fica ao lado da Livraria Eiffel).",
+      "tip": "As comidas, principalmente a toast de avocado e brownie, são muito bons, mas fiquei apaixonada pelas bebidas, o Caramelo Machiatto possui calda de caramelo caseira, dando um sabor ainda mais incrível e o espresso tônica pode ser feito com xaropes naturais, escolhi o de gengibre e equilibrou perfeitamente a bebida!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/bonita-cafe/800/540",
+      "imageAlt": "Foto de Bonita Café",
+      "featured": false
+    },
+    {
+      "id": "kosmos-bakeshop",
+      "name": "Kosmos Bakeshop",
+      "location": "Vila Buarque",
+      "coords": [
+        -23.5455,
+        -46.651
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Cafés especiais"
+      ],
+      "occasion": [
+        "Perfeito para date",
+        "Bom para comemorações",
+        "Quando quero me mimar",
+        "Para levar quem visita a cidade",
+        "Momento com as amigas"
+      ],
+      "description": "Café lindo dentro do Higi Hotel, com toasts e sanduíches que são uma experiência à parte. Deixo de destaque a toast hash brown com tartar e avo toast, que além de lindas, possuem combinações que não tem como dar errado, são deliciosas! O queijo quente de kimchi também é incrível, vale provar! Nas bebidas, destaco o orange tee, super equilibrado, refrescante e energético!",
+      "tip": "Você pode também fechar o pacote do day use do hotel com consumação. Os valores são R200, de consumação ou R$150, sem consumação, estou louca para reunir minhas amigas e ir passar um dia na piscina bebendo os drinks que parecem incríveis, um café da manhã de comer rezando e ainda tem pratos para almoço!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/kosmos-bakeshop/800/540",
+      "imageAlt": "Foto de Kosmos Bakeshop",
+      "featured": false
+    },
+    {
+      "id": "notthesamo",
+      "name": "Notthesamo",
+      "location": "Vila Buarque",
+      "coords": [
+        -23.545,
+        -46.65
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Cafés especiais"
+      ],
+      "occasion": [
+        "Bom para trabalhar"
+      ],
+      "description": "Pequeno café deste hub criativo, com opções também criativas mas simples, em um enxuto cardápio. Além do café, ao lado tem o Notthesamo Anexo, uma espécie de galeria de arte e uma bancada de serviços de reparo e limpeza de tênis. Adorei o Iced Honey Coffee, a doçura do mel não se sobrepõe com o café que é leve mas presente, muito refrescante e equilibrado! Deixo minha menção a soda deles, com caldas de maracujá, framboesa e outras, que são feitas na casa, super saborosas e refrescantes!",
+      "tip": "Com vibe minimalista, o café possui poucas mesas, então não é um lugar que recomendo para um longo brunch ou café da tarde com fofoca, mas ainda sim vale a visita. Para acompanhar seu café, achei a focaccia de vegetais muito boa!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/notthesamo/800/540",
+      "imageAlt": "Foto de Notthesamo",
+      "featured": false
+    },
+    {
+      "id": "padoca-do-mani",
+      "name": "Padoca do Maní",
+      "location": "Itaim Bibi",
+      "coords": [
+        -23.5825,
+        -46.6795
+      ],
+      "venue": "Café",
+      "cuisine": [
+        "Variada"
+      ],
+      "occasion": [
+        "Domingo em família",
+        "Quando quero me mimar",
+        "Para levar quem visita a cidade"
+      ],
+      "description": "Só a ideia de ser uma padaria do Maní-Manioca já mostra que não tem como ser ruim. Com uma experiência que começa com o clássico polvilho, o cardápio é variado passando pelos clássicos e por toasts com um pão de fermentação natural incrível. Minhas sugestões: pães de queijo, que são deliciosos, e dividir as toasts de avocado e cogumelo!",
+      "tip": "Deixo uma menção aos doces também, principalmente o bolo de brigadeiro e de coco, que são de comer rezando!",
+      "tipLabel": "DICA DE OURO",
+      "image": "https://picsum.photos/seed/padoca-do-mani/800/540",
+      "imageAlt": "Foto de Padoca do Maní",
+      "featured": false
+    }
+  ]
+}

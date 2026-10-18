@@ -1,76 +1,80 @@
 ---
 name: Rouge et Vert Scrapbook
 colors:
-  surface: '#fbfbe2'
-  surface-dim: '#dbdcc3'
-  surface-bright: '#fbfbe2'
+  # Synced 2026-10-18 with the live site (tailwind.config in index.html). Tokens tagged '# legacy' are NOT used by the site;
+  # some still hold old-palette values (e.g. surface-tint, *-fixed-dim) — review or delete them (see docs/technical/TECH_DEBT.md TD-006).
+  surface: '#fdf8f0'
+  surface-dim: '#e6dcc8'
+  surface-bright: '#fdf8f0'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f5f5dc'
-  surface-container: '#efefd7'
-  surface-container-high: '#eaead1'
-  surface-container-highest: '#e4e4cc'
-  on-surface: '#1b1d0e'
-  on-surface-variant: '#584141'
-  inverse-surface: '#303221'
-  inverse-on-surface: '#f2f2d9'
-  outline: '#8c7071'
-  outline-variant: '#e0bfbf'
-  surface-tint: '#af2b3e'
-  primary: '#570013'
+  surface-container-low: '#f6efe2'
+  surface-container: '#f3ebdd'
+  surface-container-high: '#f3ebdd'
+  surface-container-highest: '#efe5d5'
+  on-surface: '#2b211b'
+  on-surface-variant: '#6b5347'
+  inverse-surface: '#2b211b'
+  inverse-on-surface: '#f6efe2'
+  outline: '#9c8478'
+  outline-variant: '#e8cfc0'
+  surface-tint: '#af2b3e' # legacy
+  primary: '#8d0b0b'
   on-primary: '#ffffff'
-  primary-container: '#800020'
-  on-primary-container: '#ff828a'
+  primary-container: '#6d0808'
+  on-primary-container: '#ff828a' # legacy
   inverse-primary: '#ffb3b5'
-  secondary: '#3b6751'
+  secondary: '#1c3535'
   on-secondary: '#ffffff'
-  secondary-container: '#bbeacf'
-  on-secondary-container: '#406b56'
-  tertiary: '#735c00'
-  on-tertiary: '#ffffff'
-  tertiary-container: '#cca730'
-  on-tertiary-container: '#4f3d00'
-  error: '#ba1a1a'
-  on-error: '#ffffff'
-  error-container: '#ffdad6'
-  on-error-container: '#93000a'
+  secondary-container: '#cfe1dd'
+  on-secondary-container: '#406b56' # legacy
+  tertiary: '#e8a12e'
+  on-tertiary: '#ffffff' # legacy
+  tertiary-container: '#e8a12e'
+  on-tertiary-container: '#4f3d00' # legacy
+  error: '#ba1a1a' # legacy
+  on-error: '#ffffff' # legacy
+  error-container: '#ffdad6' # legacy
+  on-error-container: '#93000a' # legacy
   primary-fixed: '#ffdada'
-  primary-fixed-dim: '#ffb3b5'
-  on-primary-fixed: '#40000b'
-  on-primary-fixed-variant: '#8e0f28'
-  secondary-fixed: '#bdedd2'
-  secondary-fixed-dim: '#a2d1b7'
-  on-secondary-fixed: '#002113'
-  on-secondary-fixed-variant: '#234f3b'
+  primary-fixed-dim: '#ffb3b5' # legacy
+  on-primary-fixed: '#4a0606'
+  on-primary-fixed-variant: '#8e0f28' # legacy
+  secondary-fixed: '#cfe1dd'
+  secondary-fixed-dim: '#a2d1b7' # legacy
+  on-secondary-fixed: '#0d2020'
+  on-secondary-fixed-variant: '#234f3b' # legacy
   tertiary-fixed: '#ffe088'
-  tertiary-fixed-dim: '#e9c349'
-  on-tertiary-fixed: '#241a00'
-  on-tertiary-fixed-variant: '#574500'
-  background: '#fbfbe2'
-  on-background: '#1b1d0e'
-  surface-variant: '#e4e4cc'
+  tertiary-fixed-dim: '#e9c349' # legacy
+  on-tertiary-fixed: '#4a3208'
+  on-tertiary-fixed-variant: '#574500' # legacy
+  background: '#fdf8f0'
+  on-background: '#2b211b'
+  surface-variant: '#efe5d5'
+  secondary-tint: '#d6e8e4' # tip box (green variant)
 typography:
+  # Parfumerie Script and Joshico are commercial and not in the repo yet; the site falls back to Great Vibes / Playfair Display.
   display-script:
-    fontFamily: Playfair Display
+    fontFamily: Parfumerie Script
     fontSize: 48px
     fontWeight: '700'
     lineHeight: 56px
   headline-lg:
-    fontFamily: Playfair Display
+    fontFamily: Joshico
     fontSize: 32px
     fontWeight: '900'
     lineHeight: 40px
   headline-md:
-    fontFamily: Playfair Display
+    fontFamily: Joshico
     fontSize: 24px
     fontWeight: '700'
     lineHeight: 32px
   body-lg:
-    fontFamily: Source Serif 4
+    fontFamily: Work Sans
     fontSize: 18px
     fontWeight: '400'
     lineHeight: 28px
   body-sm:
-    fontFamily: Source Serif 4
+    fontFamily: Work Sans
     fontSize: 14px
     fontWeight: '400'
     lineHeight: 22px
@@ -93,6 +97,8 @@ spacing:
   sticker-offset: -0.5rem
 ---
 
+> **Source of truth for live values:** `tailwind.config` in `index.html` and `:root` in `map.html` (synced 2026-10-18). Palette: wine `#8d0b0b`, beige `#fdf8f0`, amber `#e8a12e`, teal `#1c3535`; small accents blush `#ffdada` / lemon `#ffe088`.
+
 ## Brand & Style
 
 The design system embodies a "French Burlesque meets Y2K Maximalism" aesthetic. It is curated for a youthful, energetic audience that prizes personality over clinical precision. The mood is a sophisticated "messy" scrapbook—balancing the elegance of a Parisian lounge with the raw, eclectic energy of a 2000s digital diary.
@@ -103,19 +109,19 @@ The style is defined by **Maximalism** and **Tactile Scrapbooking**. Expect over
 
 The palette is anchored in a luxurious, traditional foundation with vibrant, modern pops. 
 
-- **Primary (Burgundy):** Used for large surface areas and core branding. It provides the "theatre" backdrop.
-- **Secondary (Forest Green):** Used for depth, navigation bars, and as a sophisticated alternative to black.
-- **Tertiary (Gold):** Reserved for delicate line art, button borders, and specific typography highlights to evoke "Burlesque" glamour.
-- **Neutral (Cream/Off-White):** The "paper" of the scrapbook. Avoid pure white; use this warm cream to maintain the vintage feel.
+- **Primary (Wine):** Used for large surface areas and core branding. It provides the "theatre" backdrop.
+- **Secondary (Teal):** Used for depth, navigation bars, and as a sophisticated alternative to black.
+- **Tertiary (Amber):** Reserved for delicate line art, button borders, and specific typography highlights to evoke "Burlesque" glamour.
+- **Neutral (Beige):** The "paper" of the scrapbook. Avoid pure white; use this warm beige to maintain the vintage feel.
 - **Accents:** Use Black for high-impact 2000s-style bold headers and outlines.
 
 ## Typography
 
 The typographic hierarchy mixes high-contrast elegance with modern utility.
 
-- **Display Titles:** Use an italicized, high-contrast serif (Playfair Display) to mimic the fluidity of Parfumerie Script while maintaining readability.
-- **Headlines:** Bold, heavy serifs convey authority and vintage editorial vibes.
-- **Body:** A sturdy serif (Source Serif 4) ensures long-form reviews remain legible against textured backgrounds.
+- **Display Titles / logo:** Parfumerie Script (fallback: Great Vibes) — a flowing calligraphic script.
+- **Headlines:** Joshico (fallback: Playfair Display), bold and heavy, for authority and a vintage editorial feel.
+- **Body:** Work Sans — a clean sans that keeps long-form reviews legible against textured backgrounds.
 - **Labels & UI:** A clean, modern sans-serif (Be Vietnam Pro) is used in all-caps for functional elements, providing a Y2K "label maker" contrast to the classic serif text.
 
 ## Layout & Spacing
@@ -130,8 +136,8 @@ This design system uses a **Fluid Grid** but encourages "intentional misalignmen
 
 Hierarchy is achieved through physical layering rather than standard shadows.
 
-- **Layering:** Use a "Stacking" model. Background (Burgundy) > Paper Layers (Cream) > Content (Photos/Text) > Top Layer (Stickers/Doodles).
-- **Outlines:** Instead of shadows, use "Double Borders." A 1px gold border inside a 4px solid Burgundy or Green border creates a framed, tactile effect.
+- **Layering:** Use a "Stacking" model. Background (Wine) > Paper Layers (Beige) > Content (Photos/Text) > Top Layer (Stickers/Doodles).
+- **Outlines:** Instead of shadows, use "Double Borders." A 1px amber border inside a 4px solid Wine or Teal border creates a framed, tactile effect.
 - **Sticker Depth:** Only the top-most "sticker" elements should have a very sharp, 1px black drop shadow at 45 degrees to make them appear "pasted" onto the screen.
 
 ## Shapes
@@ -144,9 +150,9 @@ The shape language is primarily **Soft (0.25rem)** to mimic the cut of thick car
 
 ## Components
 
-- **Buttons:** Rectangular with a 2px solid border. Hover states should swap the fill and border colors (e.g., Burgundy fill with Gold text swaps to Gold fill with Burgundy text).
+- **Buttons:** Rectangular with a 2px solid border. Hover states should swap the fill and border colors (e.g., Wine fill with Amber text swaps to Amber fill with Wine text).
 - **Chips/Tags:** Styled as "Washi Tape" or "Postage Stamps." Use a serrated edge for category tags like "Cafe" or "Bar."
-- **Cards:** Use the "Paper on Fabric" metaphor. A Cream container over a Burgundy background. Add a "Tape" element (semi-transparent blue or gold rectangle) at the top center of the card.
-- **Inputs:** Simple underlined fields (1px Gold) or thick-bordered boxes (2px Black) reminiscent of Y2K web forms.
+- **Cards:** Use the "Paper on Fabric" metaphor. A Beige container over a Wine background. Add a "Tape" element (semi-transparent blue or amber rectangle) at the top center of the card.
+- **Inputs:** Simple underlined fields (1px Amber) or thick-bordered boxes (2px Black) reminiscent of Y2K web forms.
 - **Stickers:** Distribute assets like the "Cherub," "Martini Glass," and "Lipstick Mark" randomly across the layout, often overlapping the corners of photos or cards.
 - **Lists:** Use the "Key" or "Matchstick" icons as custom bullets for food guides or spot rankings.

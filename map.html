@@ -144,8 +144,8 @@
 const VENUE_COLOR = { 'Restaurante':'#8d0b0b', 'Bar':'#e8a12e', 'Café':'#1c3535' };
 const VENUE_ICON  = { 'Restaurante':'restaurant', 'Bar':'local_bar', 'Café':'local_cafe' };
 const EMOJI = {
-  cuisine:  { 'Ramén':'🍜','Italiana':'🍝','Petiscos':'🍢','Nordestina':'🌶️','Contemporânea':'🎨','Café':'☕','Frango':'🍗','Poke':'🥗' },
-  occasion: { 'Encontro':'💋','Comemoração':'🥂','Conforto':'😌','Trabalhar':'💻','Brunch':'🥐','Especial':'✨' },
+  cuisine:  { 'Ramén':'🍜','Italiana':'🍝','Petiscos':'🍢','Nordestina':'🌶️','Contemporânea':'🎨','Cafés especiais':'☕','Frango':'🍗','Poke':'🥗' },
+  occasion: { 'Perfeito para date':'💋','Bom para comemorações':'🥂','Conforto':'😌','Bom para trabalhar':'💻','Brunch':'🥐','Especial':'✨' },
   badge:    { 'Favorito':'🌟','Hype':'🔥','Custo-benefício':'💰' },
 };
 function emj(group, v) { const e = (EMOJI[group]||{})[v]; return e ? e + ' ' + v : v; }
@@ -280,12 +280,12 @@ function fitMapToSpots(spots) {
 async function init() {
   let data;
   try {
-    const res = await fetch('spots.json');
+    const res = await fetch('spots.v2.json');
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {
     document.getElementById('spot-list').innerHTML =
-      `<p style="padding:2rem; font-family:'Work Sans',sans-serif; color:#8d0b0b;">Não foi possível carregar spots.json.<br><small>Use um servidor local: <code>python3 -m http.server 8080</code></small></p>`;
+      `<p style="padding:2rem; font-family:'Work Sans',sans-serif; color:#8d0b0b;">Não foi possível carregar spots.v2.json.<br><small>Use um servidor local: <code>python3 -m http.server 8080</code></small></p>`;
     return;
   }
 

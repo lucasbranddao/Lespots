@@ -64,7 +64,7 @@
     font-display: swap;
   }
   *, *::before, *::after { box-sizing: border-box; }
-  body { font-family: 'Work Sans', Georgia, sans-serif; background: #fdf8f0; color: #2b211b; }
+  body { font-family: 'Work Sans', system-ui, sans-serif; background: #fdf8f0; color: #2b211b; }
 
   .font-script   { font-family: 'Parfumerie Script', 'Great Vibes', cursive; }
   .font-display  { font-family: 'Joshico', 'Playfair Display', serif; }
@@ -73,6 +73,23 @@
 
   .paper-texture { background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); }
   .sticker-shadow { filter: drop-shadow(2px 3px 0px rgba(0,0,0,0.3)); }
+
+  /* Hero + reminder illustrations (PNG/SVG in ./assets). Positioned with top/left/right/bottom only —
+     initParallax() moves the hero ones through `transform`, so rotation uses the separate `rotate` property. */
+  .hero-art, .rem-art { position: absolute; height: auto; pointer-events: none; user-select: none; }
+  .hero-art { filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35)); }
+  /* The sidebar is sticky. When it is taller than the viewport it scrolls on its own; without this the
+     bottom filters stay out of reach until the whole feed has scrolled past. The padding / negative margin
+     pair keeps the hard shadow and the washi tape from being clipped by the overflow. */
+  @media (min-width: 768px) {
+    .sidebar-scroll {
+      max-height: calc(100vh - 9rem); overflow-x: hidden; overflow-y: auto;
+      padding: 18px 12px 14px 6px; margin: -18px -12px -14px -6px;
+      scrollbar-width: thin; scrollbar-color: #8d0b0b transparent;
+    }
+  }
+  .hero-copy p { margin: 0 0 1.1rem; }
+  .hero-copy p:last-child { margin-bottom: 0; }
   .hard-shadow    { box-shadow: 6px 6px 0px 0px #8d0b0b; }
   .gold-shadow    { box-shadow: 5px 5px 0px 0px #e8a12e; }
 
@@ -152,7 +169,7 @@
 <!-- NAV -->
 <header class="bg-surface-container-lowest border-b-4 border-primary sticky top-0 z-50" style="box-shadow: 0 4px 0 0 #8d0b0b;">
   <nav class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
-    <a href="#" class="font-script leading-none" style="font-size: 2.4rem; color: #e8a12e; line-height:1;">Le Spots</a>
+    <a href="#" class="block leading-none" aria-label="Le Spots"><img src="assets/logo.png" alt="Le Spots" style="height:46px; width:auto; display:block;"></a>
     <div class="flex gap-4 items-center">
       <a href="map.html" class="font-label hidden sm:inline-block text-xs px-4 py-2 transition-all hover:scale-105"
          style="border:2px solid #8d0b0b; color:#8d0b0b; text-decoration:none;">Ver Mapa</a>
@@ -163,19 +180,27 @@
 </header>
 
 <!-- HERO -->
-<section class="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden" style="background:#6d0808;">
-  <div class="absolute inset-0 opacity-[0.11] pointer-events-none select-none overflow-hidden">
-    <span class="material-symbols-outlined absolute top-8 left-8 text-7xl sticker-shadow" style="color:#ffe088; font-variation-settings:'FILL' 1;">star</span>
-    <span class="material-symbols-outlined absolute bottom-16 right-10 text-[7rem] sticker-shadow" style="color:#ffdada; font-variation-settings:'FILL' 1;">photo_camera</span>
-    <span class="material-symbols-outlined absolute top-1/3 right-1/4 text-[6rem] sticker-shadow" style="color:#cfe1dd; font-variation-settings:'FILL' 1; transform:rotate(14deg);">auto_awesome</span>
-    <span class="material-symbols-outlined absolute bottom-1/4 left-16 text-7xl sticker-shadow" style="color:#ffe088; font-variation-settings:'FILL' 1; transform:rotate(-8deg);">wine_bar</span>
+<section class="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden py-28 md:py-24" style="background:#6d0808;">
+  <!-- Illustrations (assets/). Mobile keeps 3 in the corners; md+ shows all, as in the reference layout. -->
+  <div class="absolute inset-0 pointer-events-none select-none overflow-hidden">
+    <img src="assets/hero-combo-superior.png" alt="" class="hero-art top-3 left-3 md:top-6 md:left-[4%]" style="width:clamp(96px, 15vw, 210px);">
+    <!-- PÁSSARO (canto superior direito): colocar o arquivo em assets/hero-passaro.png e descomentar.
+    <img src="assets/hero-passaro.png" alt="" class="hero-art hidden md:block top-6 right-[3%]" style="width:clamp(110px, 14vw, 200px);">
+    -->
+    <img src="assets/hero-fone.png" alt="" class="hero-art hidden md:block top-[50%] right-[4%]" style="width:clamp(70px, 9vw, 125px); rotate:6deg;">
+    <img src="assets/hero-tartaruga.png" alt="" class="hero-art hidden md:block bottom-[17%] left-[3%]" style="width:clamp(90px, 12vw, 170px);">
+    <img src="assets/hero-olho-grego.png" alt="" class="hero-art bottom-3 left-3 md:bottom-[6%] md:left-[6%]" style="width:clamp(64px, 8vw, 112px);">
+    <img src="assets/hero-combo-inferior.png" alt="" class="hero-art bottom-3 right-3 md:bottom-[5%] md:right-[3%]" style="width:clamp(96px, 14vw, 200px);">
   </div>
   <div class="relative z-10 text-center max-w-3xl px-6">
-    <p class="font-label mb-4" style="font-size:11px; letter-spacing:0.45em; color:#ffe088;">Lugares que valem em SP</p>
-    <h1 class="font-script text-white leading-none" style="font-size: clamp(5rem, 18vw, 11rem); text-shadow: 3px 4px 0 rgba(0,0,0,0.18);">Le Spots</h1>
-    <p class="font-display italic mt-4 max-w-md mx-auto" style="font-size: clamp(1rem, 2.5vw, 1.2rem); color:#ffdada; opacity:0.88; line-height:1.65;">
-      "Guia pessoal e com muita personalidade — onde o conforto encontra a comida boa de verdade em São Paulo."
-    </p>
+    <p class="font-label mb-5" style="font-size:11px; letter-spacing:0.45em; color:#ffe088;">Lugares que valem em SP</p>
+    <h1 class="m-0 leading-none"><img src="assets/logo.png" alt="Le Spots" class="mx-auto block" style="width:clamp(280px, 56vw, 560px); height:auto;"></h1>
+    <div class="hero-copy font-body mt-9 mx-auto" style="max-width:40rem; font-size:0.95rem; line-height:1.75; color:#fdf8f0;">
+      <p>Adoro sair de casa, passear e descobrir lugares novos. Como uma boa taurina, sempre topo qualquer programa que envolva uma boa comida. Conforme fui conhecendo novos lugares e fazendo novas programações, fui indicando para amigos e aí nasceu esse guia!</p>
+      <p><strong>Navegar por aqui é bem fácil:</strong> os spots estão divididos em três categorias principais: restaurantes, bares e cafés. E isso é só o começo! Já estou preparando novas categorias de rolês, cultura e outros achados da cidade. Dentro de cada categoria, você ainda pode filtrar por tipo de cozinha, ocasião e pelos selos do blog, criados para ajudar (de verdade) na escolha do seu próximo destino. Ah, e não esqueça de dar uma olhada no mapa para encontrar a localização certinha de cada lugar.</p>
+      <p>Se você também gosta de viver a cidade através da comida, dos encontros e das descobertas, se inscreva na <strong>newsletter</strong>. Por lá compartilho opiniões sinceras e outras histórias que nem sempre chegam ao blog.</p>
+      <p><strong>Com amor, Helena &lt;3</strong></p>
+    </div>
     <div class="mt-10 flex flex-wrap justify-center gap-4">
       <button onclick="document.getElementById('spots-feed').scrollIntoView({behavior:'smooth'})"
               class="font-label text-xs px-8 py-3 transition-all duration-200 hover:scale-105 active:scale-95"
@@ -184,13 +209,10 @@
          style="border:2px solid rgba(255,218,218,0.6); color:#ffdada; background:transparent; text-decoration:none;">Ver Mapa</a>
     </div>
   </div>
-  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 font-label opacity-30 flex gap-14" style="color:#ffdada; font-size:9px; letter-spacing:0.55em;">
-    <span>HNM</span><span>VOL.1</span><span>JUN / 26</span>
-  </div>
 </section>
 
 <!-- VENUE SELECTOR (horizontal) -->
-<div class="sticky top-[60px] z-40 border-b-2 border-primary" style="background:#fdf8f0;">
+<div class="sticky top-[68px] z-40 border-b-2 border-primary" style="background:#fdf8f0;">
   <div class="max-w-7xl mx-auto px-4 md:px-8 py-3 flex gap-2.5 overflow-x-auto" id="venue-tabs"></div>
 </div>
 
@@ -205,7 +227,7 @@
   <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
 
     <!-- SIDEBAR -->
-    <aside class="md:col-span-3 md:sticky md:top-32 space-y-6 z-20">
+    <aside class="sidebar-scroll md:col-span-3 md:sticky md:top-32 space-y-6 z-20">
 
       <!-- Filter box -->
       <div class="paper-texture border-2 border-primary p-5 hard-shadow relative" style="transform: rotate(0.4deg);">
@@ -228,7 +250,7 @@
                class="w-full aspect-[4/5] object-cover border-4 border-white grayscale hover:grayscale-0 transition-all duration-500">
           <div class="washi-tape-green absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5 opacity-70 z-10 rounded-sm"></div>
           <div class="bg-white pt-2 pb-3 px-3 border-x-4 border-b-4 border-white">
-            <p class="font-label text-center opacity-45" style="font-size:9px; color:#2b211b;">São Paulo, SP</p>
+            <p class="font-label text-center" style="font-size:9px;"><a href="https://www.instagram.com/lenanmello" target="_blank" rel="noopener" class="opacity-60 hover:opacity-100 transition-opacity" style="color:#2b211b; text-decoration:none;">@lenanmello</a></p>
           </div>
         </div>
       </div>
@@ -297,35 +319,28 @@
 </section>
 
 <!-- QUOTE -->
-<section class="py-20 px-6 text-center relative overflow-hidden border-t-4 border-primary" style="background:#fdf8f0;">
-  <div class="absolute inset-0 opacity-[0.03] pointer-events-none select-none">
-    <div class="grid grid-cols-6 gap-8 p-4">
-      <span class="material-symbols-outlined text-8xl">local_cafe</span><span class="material-symbols-outlined text-8xl">camera</span>
-      <span class="material-symbols-outlined text-8xl">icecream</span><span class="material-symbols-outlined text-8xl">nightlife</span>
-      <span class="material-symbols-outlined text-8xl">bakery_dining</span><span class="material-symbols-outlined text-8xl">celebration</span>
-    </div>
+<section class="py-24 px-6 text-center relative overflow-hidden border-t-4 border-primary" style="background:#fdf8f0;">
+  <div class="absolute inset-0 pointer-events-none select-none overflow-hidden">
+    <img src="assets/cupido.svg" alt="" class="rem-art top-3 left-0 md:top-8 md:left-[12%]" style="width:clamp(96px, 16vw, 210px);">
+    <img src="assets/coracao.svg" alt="" class="rem-art top-3 right-3 md:top-6 md:right-[20%]" style="width:clamp(52px, 8vw, 96px);">
+    <img src="assets/coelho.png" alt="" class="rem-art bottom-3 right-2 md:bottom-12 md:right-[10%]" style="width:clamp(96px, 16vw, 210px);">
   </div>
-  <div class="relative z-10 max-w-lg mx-auto border-4 border-primary p-10 bg-white hard-shadow" style="transform:rotate(-0.6deg);">
-    <p class="font-script leading-tight mb-4" style="font-size: clamp(2.4rem, 6vw, 3.4rem); color:#8d0b0b;">"The good old days are happening now."</p>
-    <div class="flex justify-center gap-6 mt-4">
-      <span class="material-symbols-outlined text-4xl" style="color:#8d0b0b;">wine_bar</span>
-      <span class="material-symbols-outlined text-4xl" style="color:#e8a12e;">history_edu</span>
-      <span class="material-symbols-outlined text-4xl" style="color:#1c3535;">favorite</span>
-    </div>
+  <div class="relative z-10 max-w-xl mx-auto border-4 border-primary p-3 md:p-5 bg-white hard-shadow" style="transform:rotate(-0.6deg);">
+    <img src="assets/reminder.png" alt="Reminder: the good old days are happening now" class="block w-full h-auto">
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="py-12 px-8 flex flex-col items-center space-y-5 text-center border-t-8 relative overflow-hidden" style="background:#8d0b0b; border-color:#e8a12e;">
-  <div class="absolute -top-8 -left-8 opacity-[0.07] rotate-12 select-none">
-    <span class="material-symbols-outlined text-[180px]" style="color:#ffe088;">auto_awesome</span>
+  <div class="absolute inset-y-0 left-3 md:left-12 flex items-center pointer-events-none select-none">
+    <img src="assets/footer-lua.png" alt="" style="height:clamp(96px, 12vw, 150px); width:auto;">
   </div>
-  <span class="font-script" style="font-size:2.6rem; color:#ffe088; line-height:1;">Le Spots</span>
+  <img src="assets/logo.png" alt="Le Spots" style="height:3.4rem; width:auto; position:relative;">
   <nav class="flex flex-wrap justify-center gap-8 text-sm font-body">
     <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="#">Sobre</a>
     <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="map.html">Mapa</a>
-    <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="#">Instagram</a>
-    <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="#">Contato</a>
+    <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="https://www.instagram.com/lenanmello" target="_blank" rel="noopener">Instagram</a>
+    <a class="text-white opacity-70 hover:opacity-100 transition-all cursor-pointer" href="mailto:helenanmello@hotmail.com">Contato</a>
   </nav>
   <p class="font-label opacity-35" style="font-size:9px; color:#fff; letter-spacing:0.2em;">© 2026 Le Spots · Vol. 1 · São Paulo</p>
 </footer>
@@ -349,18 +364,24 @@
 <script>
 // ═══════════════ Facet config ═══════════════
 // Color encodes the facet:  Cozinha = burgundy · Ocasião = green · Selos = gold
+// `values` = fixed list curated for the sidebar (order as given, shown even if no spot uses it yet).
+// Facets without `values` (Selos) are derived from spots.v2.json.
 const FACETS = [
-  { key:'cuisine',  field:'cuisine',  title:'Cozinha',  color:'#8d0b0b' },
-  { key:'occasion', field:'occasion', title:'Ocasião',  color:'#1c3535' },
-  { key:'badge',    field:'badges',   title:'Selos',    color:'#e8a12e' },
+  { key:'cuisine',  field:'cuisine',  title:'Culinária', color:'#8d0b0b',
+    values:['Cafés especiais','Variada','Asiática','Contemporânea','Oriente Médio','Hambúrguer e sanduíches','Afetiva','Italiana','Saudável','Frutos do Mar','Hot Dog','Poke','Pizza','Comida de buteco','Francesa','Mexicana','Mineira'] },
+  { key:'occasion', field:'occasion', title:'Ocasião',   color:'#1c3535',
+    values:['Perfeito para date','Bom para comemorações','Pré role garantido','Almoço casual','Domingo em família','Bom para trabalhar','Quando quero me mimar','Para levar quem visita a cidade','Momento com as amigas','After perfeito'] },
+  { key:'badge',    field:'badges',   title:'Selos',     color:'#e8a12e' },
 ];
 
 const EMOJI = {
-  cuisine:  { 'Ramén':'🍜','Italiana':'🍝','Petiscos':'🍢','Nordestina':'🌶️','Contemporânea':'🎨','Café':'☕','Frango':'🍗','Poke':'🥗' },
-  occasion: { 'Encontro':'💋','Comemoração':'🥂','Conforto':'😌','Trabalhar':'💻','Brunch':'🥐','Especial':'✨' },
+  cuisine:  { 'Ramén':'🍜','Italiana':'🍝','Petiscos':'🍢','Nordestina':'🌶️','Contemporânea':'🎨','Cafés especiais':'☕','Frango':'🍗','Poke':'🥗' },
+  occasion: { 'Perfeito para date':'💋','Bom para comemorações':'🥂','Conforto':'😌','Bom para trabalhar':'💻','Brunch':'🥐','Especial':'✨' },
   badge:    { 'Favorito':'🌟','Hype':'🔥','Custo-benefício':'💰' },
 };
 const VENUE_ICON = { 'Bar':'local_bar', 'Restaurante':'restaurant', 'Café':'local_cafe' };
+// Display names for the venue tabs only — the data value (`venue` in spots.v2.json) stays Bar | Restaurante | Café.
+const VENUE_LABEL = { 'Restaurante':'Restaurantes que abraçam', 'Bar':'Barzinho perfeito', 'Café':'Cafés &amp; brunch' };
 
 function labelFor(facetKey, value) {
   const e = (EMOJI[facetKey] || {})[value];
@@ -468,7 +489,7 @@ function renderSpot(spot, index) {
 function renderVenueTabs(venues) {
   const el = document.getElementById('venue-tabs');
   const tabs = [{ value:null, label:'Todos', icon:'apps' },
-                ...venues.map(v => ({ value:v, label:v, icon: VENUE_ICON[v] || 'restaurant' }))];
+                ...venues.map(v => ({ value:v, label: VENUE_LABEL[v] || v, icon: VENUE_ICON[v] || 'restaurant' }))];
   el.innerHTML = tabs.map(t => `
     <span class="venue-tab ${t.value === filters.venue ? 'active' : ''}" data-venue="${t.value === null ? '' : t.value}"
           onclick="selectVenue(${t.value === null ? 'null' : `'${t.value}'`})">
@@ -489,7 +510,7 @@ function selectVenue(value) {
 function renderFilterGroups() {
   const wrap = document.getElementById('filter-groups');
   wrap.innerHTML = FACETS.map(facet => {
-    const values = uniqueValues(facet.field);
+    const values = facet.values || uniqueValues(facet.field);
     if (!values.length) return '';
     const pills = values.map(v => {
       const active = filters[facet.key] === v;
@@ -614,7 +635,7 @@ function initParallax() {
   window.addEventListener('mousemove', e => {
     const x = ((e.clientX / window.innerWidth) - 0.5) * 12;
     const y = ((e.clientY / window.innerHeight) - 0.5) * 12;
-    hero.querySelectorAll('.sticker-shadow').forEach(el => { el.style.transform = `translate(${x}px, ${y}px)`; });
+    hero.querySelectorAll('.hero-art').forEach(el => { el.style.transform = `translate(${x}px, ${y}px)`; });
   });
 }
 
@@ -622,13 +643,13 @@ function initParallax() {
 async function init() {
   let data;
   try {
-    const res = await fetch('spots.json');
+    const res = await fetch('spots.v2.json');
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {
     document.getElementById('spots-container').innerHTML = `
       <div style="padding:3rem 1rem; font-family:'Work Sans',sans-serif; color:#8d0b0b;">
-        <p style="font-size:1.15rem; margin-bottom:0.5rem;">Não foi possível carregar <strong>spots.json</strong>.</p>
+        <p style="font-size:1.15rem; margin-bottom:0.5rem;">Não foi possível carregar <strong>spots.v2.json</strong>.</p>
         <p style="font-size:0.9rem; opacity:0.7;">Abra via servidor local — não funciona com file://.</p>
         <pre style="font-size:0.8rem; margin-top:1rem; opacity:0.6;">python3 -m http.server 8080</pre>
       </div>`;
