@@ -27,10 +27,10 @@ Visual vibe: "French Burlesque meets Y2K" scrapbook — see `DESIGN.md`.
 - **Relative paths only** (`spots.v2.json`, `map.html`): Pages serves under `/Lespots/`, a leading `/` breaks it.
 - **Spot schema** (full table in `docs/technical/ARCHITECTURE.md`): `venue` is exactly one of `Bar | Restaurante | Café`; `cuisine[]`, `occasion[]`, `badges[]` are the sidebar facets; `tags[]` are free chips (not filterable); `coords` is `[lat, lng]` and **`[0, 0]` means "not filled yet"** — the map doesn't guard it yet (TD-001). `location` starting with `PENDENTE` = unconfirmed unit.
 - **Filter semantics**: venue AND one pick per facet (AND across axes, single-select per facet). Don't switch to OR without a new ADR.
-- `EMOJI` and `VENUE_ICON` are duplicated in `index.html` and `map.html` — change both (TD-004). A label with no emoji renders bare, no error.
+- `VENUE_ICON` is duplicated in `index.html` and `map.html` — change both (TD-004). Category/filter labels are plain text on purpose: the emojis were removed on 2026-10-29, don't bring them back.
 - Palette = 4 colors, hard-coded as hex everywhere: wine `#8d0b0b`, beige `#fdf8f0`, amber `#e8a12e`, teal `#1c3535` (+ blush `#ffdada`, lemon `#ffe088` accents). `map.html` variable names (`--burgundy`, `--green`, `--gold`) are legacy. Grep before renaming a color.
 - Fonts: Work Sans (body), Joshico (headings), Parfumerie Script (logo), Be Vietnam Pro (labels). Joshico and Parfumerie Script are **commercial and not in the repo** (`fonts/` is missing → fallbacks Playfair Display / Great Vibes). Don't add font files without a license check.
-- Images are `picsum.photos` placeholders until real photos arrive. The newsletter only writes to the visitor's `localStorage` — nothing is sent (TD-002).
+- Spot images are `picsum.photos` placeholders until real photos arrive (the sidebar photo is real: `assets/foto-lateral.jpg`). The newsletter only writes to the visitor's `localStorage` — nothing is sent (TD-002).
 - Root-level `code.html`, `files.zip`, `screen*.png` are gitignored reference material — don't edit or commit them.
 
 ## Docs workflow — how we resume work

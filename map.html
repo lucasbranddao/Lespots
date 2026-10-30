@@ -143,12 +143,6 @@
 // ── Venue → pin colour + icon ─────────────────────────────────
 const VENUE_COLOR = { 'Restaurante':'#8d0b0b', 'Bar':'#e8a12e', 'Café':'#1c3535' };
 const VENUE_ICON  = { 'Restaurante':'restaurant', 'Bar':'local_bar', 'Café':'local_cafe' };
-const EMOJI = {
-  cuisine:  { 'Ramén':'🍜','Italiana':'🍝','Petiscos':'🍢','Nordestina':'🌶️','Contemporânea':'🎨','Cafés especiais':'☕','Frango':'🍗','Poke':'🥗' },
-  occasion: { 'Perfeito para date':'💋','Bom para comemorações':'🥂','Conforto':'😌','Bom para trabalhar':'💻','Brunch':'🥐','Especial':'✨' },
-  badge:    { 'Favorito':'🌟','Hype':'🔥','Custo-benefício':'💰' },
-};
-function emj(group, v) { const e = (EMOJI[group]||{})[v]; return e ? e + ' ' + v : v; }
 function venueColor(v) { return VENUE_COLOR[v] || '#8d0b0b'; }
 
 // ── State ─────────────────────────────────────────────────────
@@ -172,9 +166,9 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_L
 function chipsFor(spot, small) {
   const cls = small ? 'spot-cat-chip' : 'popup-cat';
   return [
-    ...(spot.cuisine  || []).map(v => `<span class="${cls}" style="background:#8d0b0b;">${emj('cuisine', v)}</span>`),
-    ...(spot.occasion || []).map(v => `<span class="${cls}" style="background:#1c3535;">${emj('occasion', v)}</span>`),
-    ...(spot.badges   || []).map(v => `<span class="${cls}" style="background:#e8a12e;">${emj('badge', v)}</span>`),
+    ...(spot.cuisine  || []).map(v => `<span class="${cls}" style="background:#8d0b0b;">${v}</span>`),
+    ...(spot.occasion || []).map(v => `<span class="${cls}" style="background:#1c3535;">${v}</span>`),
+    ...(spot.badges   || []).map(v => `<span class="${cls}" style="background:#e8a12e;">${v}</span>`),
   ].join('');
 }
 
@@ -202,7 +196,7 @@ function buildPopup(spot) {
         <span class="popup-venue">${spot.venue}</span>
         <p class="popup-name">${spot.name}</p>
         <p class="popup-loc"><span class="ms" style="font-family:'Material Symbols Outlined'; font-variation-settings:'FILL' 1; font-size:11px;">location_on</span>${spot.location}</p>
-        <div class="popup-chips">${(spot.cuisine || []).map(v => `<span class="popup-cat" style="background:#8d0b0b;">${emj('cuisine', v)}</span>`).join('')}</div>
+        <div class="popup-chips">${(spot.cuisine || []).map(v => `<span class="popup-cat" style="background:#8d0b0b;">${v}</span>`).join('')}</div>
         <a class="popup-link" href="index.html#${spot.id}">Detalhes<span class="ms">arrow_forward</span></a>
       </div>
     </div>`;

@@ -23,7 +23,7 @@ The previous file `spots.json` (v1, 20 spots) is no longer referenced by any pag
 | `index.html` | Guide page | Sections: nav, hero, **venue tabs** (sticky), main (**facet sidebar** + spot feed), inline newsletter, quote, footer, mobile bottom nav. Tailwind Play CDN + a `<style>` block + heavy inline `style=""` with hex colors. |
 | `map.html` | Map page | Leaflet 1.9.4. Own CSS with `:root` variables; **no Tailwind**. Left panel (venue pills + spot list) + map. Variable names are legacy (`--burgundy`, `--green`, `--gold`) but hold the current palette. |
 | `subscribe.js` | Global subscribe widget | Self-contained IIFE: injects its own styles, a floating "Assinar" button and a modal. Exposes `window.LeSpotsSubscribe = { open, close }`; any element with `data-open-subscribe` opens it. |
-| `assets/` | Images | Brand logo (`logo.png`), hero illustrations (`hero-*.png`), "reminder" card (`reminder.png` + `cupido.svg`, `coracao.svg`, `coelho.png`) and footer moon (`footer-lua.png`). The PNGs are copies of the files in the curator's "lespots files" folder, trimmed of transparent margins and capped at 520–1200 px (originals are 1040 px squares, 0.4–0.9 MB each). The hero reserves a commented slot for `hero-passaro.png` (B-018). |
+| `assets/` | Images | Brand logo (`logo.png`), hero illustrations (`hero-*.png`), "reminder" card (`reminder.png` + `cupido.svg`, `coracao.svg`, `coelho.png`) footer moon (`footer-lua.png`) and the sidebar photo (`foto-lateral.jpg`, 720×1280 JPEG converted from the WebP the curator sent; shown in colour in a 4:5 frame with `object-position: 50% 45%`). The PNGs are copies of the files in the curator's "lespots files" folder, trimmed of transparent margins and capped at 520–1200 px (originals are 1040 px squares, 0.4–0.9 MB each). The hero reserves a commented slot for `hero-passaro.png` (B-018). |
 | `spots.v2.json` | Data | `{ "spots": [ … ] }` — 83 spots, schema below. |
 | `spots.json` | Old data (v1) | 20 spots. Not loaded by any page; rollback only (ADR-009). |
 | `DESIGN.md` | Visual spec | Tokens + rules. |
@@ -43,7 +43,7 @@ Gitignored working material at the repo root (not part of the site): `code.html`
 | `venue` | enum | Exactly one of `Bar`, `Restaurante`, `Café`. Drives the top tabs and map pin color/icon. |
 | `cuisine` | string[] | Facet "Culinária" (type of food). The sidebar shows the **fixed list** in `FACETS[0].values` (`index.html`) whether or not a spot uses a value; a value in the data that is not in that list still shows on the card but cannot be filtered. |
 | `occasion` | string[] | Facet "Ocasião" (type of place/moment). Same rule: fixed list in `FACETS[1].values`. |
-| `badges` | string[] | Facet "Selos": `Favorito`, `Hype`, `Custo-benefício` (these get emoji + gold styling). Optional — v2 has none, so the "Selos" group is hidden (it is derived from the data). |
+| `badges` | string[] | Facet "Selos": `Favorito`, `Hype`, `Custo-benefício` (these get gold styling). Optional — v2 has none, so the "Selos" group is hidden (it is derived from the data). |
 | `tags` | string[] | Free-form chips on the card. **Not filterable.** Optional — v2 has none. |
 | `description` | string | Review text; first letter is rendered as a drop-cap. |
 | `tip` / `tipLabel` | string | The highlighted tip box and its label (all current spots use `DICA DE OURO`). Optional. |
@@ -53,7 +53,7 @@ Gitignored working material at the repo root (not part of the site): `code.html`
 
 `venue` holds the **enum**, not the display text: the tab labels ("Restaurantes que abraçam", "Barzinho perfeito", "Cafés & brunch") come from `VENUE_LABEL` in `index.html` (ADR-009).
 
-Display labels get an emoji from `EMOJI` (`index.html`, `map.html`). Values missing from `EMOJI` render without one — no error.
+Cuisine, occasion and badge labels are rendered as plain text — no emojis, in the guide (pills, card chips, image badges) and on the map (list chips, popup). The `EMOJI` tables were removed on 2026-10-29 at the curator's request.
 
 ## Filtering
 

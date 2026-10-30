@@ -16,20 +16,19 @@ _Atualizado em 2026-10-18. Dívidas técnicas ficam em `docs/technical/TECH_DEBT
 
 - [ ] **B-004 · Fotos reais** — trocar as 20 imagens placeholder (picsum) e reescrever o `imageAlt` de cada uma. _Refs: TD-012_
 - [ ] **B-005 · Fontes da marca** — colocar `ParfumerieScript.woff2` e `Joshico.woff2` em `fonts/` (conferir a licença de uso na web). _Refs: TD-007_
-- [ ] **B-006 · Emojis que faltam** (contagem refeita para o v2) — cozinha: Asiática, Comida de buteco, Francesa, Frutos do Mar, Hambúrguer e sanduíches, Hot Dog, Mineira, Oriente Médio, Pizza, Saudável, Variada; ocasião: After perfeito, Almoço casual, Domingo em família, Momento com as amigas, Para levar quem visita a cidade, Pré role garantido, Quando quero me mimar. _Refs: TD-004_
 - [ ] **B-007 · Validador do `spots.json`** — script + GitHub Action que avisa de vírgula sobrando, campo faltando, `venue` inválido, `id` repetido e coords zeradas. Importante porque a curadoria edita o JSON na mão. _Refs: TD-003_
 - [ ] **B-008 · Stickers reais** — substituir os ícones Material Symbols pelos PNGs (planilhas de stickers / `files.zip`).
 
 - [ ] **B-016 · Preencher as dicas pendentes** — `flores` e `selvagem` estão com `"tip": "[preencher dica]"` no `spots.v2.json`, e o card mostra esse texto literalmente. Preencher (ou apagar o campo `tip`) antes de publicar o v2.
 - [ ] **B-017 · Decidir o destino do v1** — o `spots.json` (20 spots) ficou como backup sem uso. Antes de apagá-lo, decidir o que fazer com `badges` (Favorito/Hype/Custo-benefício), `tags` e `rating`, que o v2 não tem. _Refs: TD-013_
-- [ ] **B-018 · Pássaro do banner e foto da lateral** — o pássaro (canto superior direito do banner) não estava na pasta "icones home": colocar em `assets/hero-passaro.png` e descomentar o bloco no `index.html` (comentário "PÁSSARO"). A foto da lateral (hoje placeholder picsum, legenda `@lenanmello`) precisa do arquivo real; o "link" da página 4 do PDF veio sem endereço.
+- [ ] **B-018 · Pássaro do banner** — o pássaro (canto superior direito do banner) não estava na pasta "icones home": colocar em `assets/hero-passaro.png` e descomentar o bloco no `index.html` (comentário "PÁSSARO"). _A foto da lateral já foi trocada (2026-10-29)._
 - [ ] **B-019 · Levar o novo visual para o mapa** — logo em imagem e nomes das categorias (Restaurantes que abraçam / Barzinho perfeito / Cafés & brunch) no `map.html`. _Refs: TD-014_
 
 ## Depois
 
-- [ ] **B-009 · Funções hoje só ilustrativas** — favoritos, busca, páginas Sobre/Contato/Instagram, bottom-nav do celular. _Refs: TD-009_
+- [ ] **B-009 · Funções hoje só ilustrativas** — favoritos e perfil (ocultos por enquanto, 2026-10-29), busca, página Sobre. _Refs: TD-009_
 - [ ] **B-010 · Unificar a newsletter** — a seção inline passa a abrir o mesmo diálogo do `subscribe.js`. _Refs: TD-002_
-- [ ] **B-011 · `config.js` compartilhado** — um só lugar para emojis, ícones e cores de venue. _Refs: TD-004_
+- [ ] **B-011 · `config.js` compartilhado** — um só lugar para ícones, nomes e cores de venue. _Refs: TD-004_
 - [ ] **B-012 · Tokens de cor e Tailwind** — variáveis CSS como fonte única; build do Tailwind ou remoção dele. _Refs: TD-005, TD-006_
 - [ ] **B-013 · Polimento do mapa** — `autoPanPadding` no popup, cores/ícones por venue em config. _Refs: TD-010_
 - [ ] **B-014 · Limpar a raiz do repo** — mover `code.html`, `files.zip`, `screen*.png` para `reference/` (ignorado pelo git). _Refs: TD-011_
@@ -43,6 +42,7 @@ _Atualizado em 2026-10-18. Dívidas técnicas ficam em `docs/technical/TECH_DEBT
 
 ## Concluído
 
+- [x] Segunda rodada de ajustes (2026-10-29): foto da lateral trocada por `assets/foto-lateral.jpg` (colorida, legenda `@lenanmello`); favoritos (coração do cabeçalho e item do menu do celular) e perfil ocultos — comentados no `index.html`, é só remover o comentário para voltar; emojis removidos das categorias e filtros no guia e no mapa (sobraram só o ✕ do botão "limpar" e o 🎉 da mensagem de inscrição).
 - [x] Ajustes do PDF "Ajustes Le Spots", páginas 1–5 (2026-10-18): logo em imagem no header, banner e footer; ícones novos no banner e na seção "reminder"; texto de apresentação no banner (sem o texto de rodapé); abas "Restaurantes que abraçam / Barzinho perfeito / Cafés & brunch"; listas novas de Culinária e Ocasião; Instagram e e-mail no footer; ícone do footer; lateral de filtros com rolagem própria. Cores conferidas — decisão: os 4 tons principais ficam como base e rosa/limão/menta/vinho escuro seguem como tons de apoio. **Páginas 6–7 do PDF (após o "PARA POR AQUI!") não foram feitas.** Pendências: B-018.
 - [x] Guia com cards estilo scrapbook e filtros por facetas (venue + cozinha/ocasião/selos, combinados com E)
 - [x] Mapa Leaflet/Esri sem chave de API, popup horizontal e botão "Detalhes" que leva ao spot no guia

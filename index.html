@@ -173,7 +173,9 @@
     <div class="flex gap-4 items-center">
       <a href="map.html" class="font-label hidden sm:inline-block text-xs px-4 py-2 transition-all hover:scale-105"
          style="border:2px solid #8d0b0b; color:#8d0b0b; text-decoration:none;">Ver Mapa</a>
+      <!-- Favoritos: oculto por enquanto (TD-009). Para reativar, remova este comentário.
       <span class="material-symbols-outlined cursor-pointer active:scale-90 transition-transform" style="color:#8d0b0b; font-size:22px;">favorite</span>
+      -->
       <span class="material-symbols-outlined cursor-pointer active:scale-90 transition-transform" style="color:#8d0b0b; font-size:22px;">search</span>
     </div>
   </nav>
@@ -246,8 +248,8 @@
       <!-- City photo -->
       <div class="hidden md:block sticker-shadow" style="transform: rotate(-1.3deg);">
         <div class="relative">
-          <img src="https://picsum.photos/seed/sao-paulo-city/400/500" alt="São Paulo"
-               class="w-full aspect-[4/5] object-cover border-4 border-white grayscale hover:grayscale-0 transition-all duration-500">
+          <img src="assets/foto-lateral.jpg" alt="Foto de @lenanmello"
+               class="w-full aspect-[4/5] object-cover border-4 border-white" style="object-position:50% 45%;">
           <div class="washi-tape-green absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5 opacity-70 z-10 rounded-sm"></div>
           <div class="bg-white pt-2 pb-3 px-3 border-x-4 border-b-4 border-white">
             <p class="font-label text-center" style="font-size:9px;"><a href="https://www.instagram.com/lenanmello" target="_blank" rel="noopener" class="opacity-60 hover:opacity-100 transition-opacity" style="color:#2b211b; text-decoration:none;">@lenanmello</a></p>
@@ -350,20 +352,24 @@
   <a class="flex flex-col items-center px-5 py-2 rounded-full transition-all active:scale-90" style="background:#8d0b0b; color:#fff;" href="index.html">
     <span class="material-symbols-outlined text-base">explore</span><span class="font-label text-[8px] mt-0.5">Explorar</span>
   </a>
+  <!-- Favoritos: oculto por enquanto (TD-009). Para reativar, remova este comentário.
   <a class="flex flex-col items-center px-4 py-2 rounded-full text-on-surface-variant hover:bg-primary-fixed transition-all" href="#">
     <span class="material-symbols-outlined text-base">star</span><span class="font-label text-[8px] mt-0.5">Favoritos</span>
   </a>
+  -->
   <a class="flex flex-col items-center px-4 py-2 rounded-full text-on-surface-variant hover:bg-primary-fixed transition-all" href="map.html">
     <span class="material-symbols-outlined text-base">location_on</span><span class="font-label text-[8px] mt-0.5">Mapa</span>
   </a>
+  <!-- Perfil: oculto por enquanto (TD-009). Para reativar, remova este comentário.
   <a class="flex flex-col items-center px-4 py-2 rounded-full text-on-surface-variant hover:bg-primary-fixed transition-all" href="#">
     <span class="material-symbols-outlined text-base">person</span><span class="font-label text-[8px] mt-0.5">Perfil</span>
   </a>
+  -->
 </div>
 
 <script>
 // ═══════════════ Facet config ═══════════════
-// Color encodes the facet:  Cozinha = burgundy · Ocasião = green · Selos = gold
+// Color encodes the facet:  Culinária = burgundy · Ocasião = green · Selos = gold
 // `values` = fixed list curated for the sidebar (order as given, shown even if no spot uses it yet).
 // Facets without `values` (Selos) are derived from spots.v2.json.
 const FACETS = [
@@ -374,19 +380,9 @@ const FACETS = [
   { key:'badge',    field:'badges',   title:'Selos',     color:'#e8a12e' },
 ];
 
-const EMOJI = {
-  cuisine:  { 'Ramén':'🍜','Italiana':'🍝','Petiscos':'🍢','Nordestina':'🌶️','Contemporânea':'🎨','Cafés especiais':'☕','Frango':'🍗','Poke':'🥗' },
-  occasion: { 'Perfeito para date':'💋','Bom para comemorações':'🥂','Conforto':'😌','Bom para trabalhar':'💻','Brunch':'🥐','Especial':'✨' },
-  badge:    { 'Favorito':'🌟','Hype':'🔥','Custo-benefício':'💰' },
-};
 const VENUE_ICON = { 'Bar':'local_bar', 'Restaurante':'restaurant', 'Café':'local_cafe' };
 // Display names for the venue tabs only — the data value (`venue` in spots.v2.json) stays Bar | Restaurante | Café.
 const VENUE_LABEL = { 'Restaurante':'Restaurantes que abraçam', 'Bar':'Barzinho perfeito', 'Café':'Cafés &amp; brunch' };
-
-function labelFor(facetKey, value) {
-  const e = (EMOJI[facetKey] || {})[value];
-  return e ? `${e} ${value}` : value;
-}
 
 // ═══════════════ State ═══════════════
 // venue: null=Todos. cuisine/occasion/badge: null=any, else single value (AND between facets)
@@ -407,14 +403,14 @@ function renderSpot(spot, index) {
   const venueIcon = VENUE_ICON[spot.venue] || 'restaurant';
   const venueBadge = `<span class="cat-badge" style="background:#8d0b0b;"><span class="material-symbols-outlined" style="font-size:12px; font-variation-settings:'FILL' 1;">${venueIcon}</span>${spot.venue}</span>`;
   const cuisineBadges = (spot.cuisine || []).slice(0,2).map(c =>
-    `<span class="cat-badge" style="background:#e8a12e;">${labelFor('cuisine', c)}</span>`
+    `<span class="cat-badge" style="background:#e8a12e;">${c}</span>`
   ).join('');
 
   // Facet chips below name (color-coded by facet)
   const facetChips =
-    (spot.cuisine  || []).map(v => `<span class="chip" style="background:#fff; color:#8d0b0b; border:1.5px solid #8d0b0b;">${labelFor('cuisine', v)}</span>`).join('') +
-    (spot.occasion || []).map(v => `<span class="chip" style="background:#fff; color:#1c3535; border:1.5px solid #1c3535;">${labelFor('occasion', v)}</span>`).join('') +
-    (spot.badges   || []).map(v => `<span class="chip" style="background:#e8a12e; color:#fff;">${labelFor('badge', v)}</span>`).join('');
+    (spot.cuisine  || []).map(v => `<span class="chip" style="background:#fff; color:#8d0b0b; border:1.5px solid #8d0b0b;">${v}</span>`).join('') +
+    (spot.occasion || []).map(v => `<span class="chip" style="background:#fff; color:#1c3535; border:1.5px solid #1c3535;">${v}</span>`).join('') +
+    (spot.badges   || []).map(v => `<span class="chip" style="background:#e8a12e; color:#fff;">${v}</span>`).join('');
 
   // Free-form descriptive tags (lighter)
   const tagsHTML = (spot.tags || []).map((tag,i) => {
@@ -518,7 +514,7 @@ function renderFilterGroups() {
         ? `background:${facet.color}; color:#fff; border-color:${facet.color};`
         : `background:#fff; color:${facet.color}; border-color:${facet.color};`;
       return `<span class="fpill" style="${style}" data-facet="${facet.key}" data-value="${v}"
-                    onclick="toggleFacet('${facet.key}','${v.replace(/'/g, "\\'")}')">${labelFor(facet.key, v)}</span>`;
+                    onclick="toggleFacet('${facet.key}','${v.replace(/'/g, "\\'")}')">${v}</span>`;
     }).join('');
     return `
       <div>
