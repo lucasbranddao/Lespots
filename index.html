@@ -77,7 +77,8 @@
   /* Hero + reminder illustrations (PNG/SVG in ./assets). Positioned with top/left/right/bottom only —
      initParallax() moves the hero ones through `transform`, so rotation uses the separate `rotate` property. */
   .hero-art, .rem-art { position: absolute; height: auto; pointer-events: none; user-select: none; }
-  .hero-art { filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35)); }
+  .hero-art { filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35)); width: var(--wm); }
+  @media (min-width: 768px) { .hero-art { width: var(--wd); } } /* each <img> sets --wm (mobile) and --wd (md+) */
   /* The sidebar is sticky. When it is taller than the viewport it scrolls on its own; without this the
      bottom filters stay out of reach until the whole feed has scrolled past. The padding / negative margin
      pair keeps the hard shadow and the washi tape from being clipped by the overflow. */
@@ -88,9 +89,37 @@
       scrollbar-width: thin; scrollbar-color: #8d0b0b transparent;
     }
   }
+  .hero-kicker { font-size: 11px; letter-spacing: 0.45em; color: #ffe088; }
+  .hero-copy { max-width: 40rem; font-size: 0.95rem; line-height: 1.75; color: #fdf8f0; }
   .hero-copy p { margin: 0 0 1.1rem; }
   .hero-copy p:last-child { margin-bottom: 0; }
-  .hard-shadow    { box-shadow: 6px 6px 0px 0px #8d0b0b; }
+  .hero-polaroid, .hero-toggle { display: none; } /* mobile-only pieces, switched on below */
+
+  /* Mobile hero: the long letter would fill 1.5 screens, so only the intro shows (with the author's polaroid
+     wrapped by the text) and the rest opens with "Ler mais". From md up none of this applies. */
+  @media (max-width: 767px) {
+    .hero-kicker { font-size: 10px; letter-spacing: 0.3em; }
+    .hero-copy { text-align: left; font-size: 0.875rem; line-height: 1.62; }
+    .hero-polaroid {
+      display: block; float: left; position: relative; width: clamp(104px, 29vw, 150px);
+      margin: 6px 16px 10px 2px; padding: 4px 4px 0; background: #fff; rotate: -3deg;
+      box-shadow: 3px 4px 0 rgba(0,0,0,0.3);
+    }
+    .hero-polaroid img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 45%; }
+    .hero-polaroid .tape { position: absolute; top: -8px; left: 50%; width: 46px; height: 14px; margin-left: -23px; background: rgba(232,161,46,0.7); transform: rotate(2deg); }
+    .hero-polaroid figcaption { padding: 5px 0 6px; text-align: center; font: 700 8px 'Be Vietnam Pro', sans-serif; letter-spacing: 0.09em; text-transform: uppercase; }
+    .hero-polaroid figcaption a { color: #2b211b; text-decoration: none; opacity: 0.7; }
+    .hero-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s ease; clear: both; }
+    .hero-more-inner { overflow: hidden; min-height: 0; }
+    .hero-copy.is-open .hero-more { grid-template-rows: 1fr; }
+    .hero-toggle {
+      display: inline-flex; align-items: center; gap: 4px; margin-top: 0.4rem; padding: 6px 0;
+      background: none; border: 0; cursor: pointer; color: #ffe088;
+      font: 700 10px 'Be Vietnam Pro', sans-serif; letter-spacing: 0.09em; text-transform: uppercase;
+    }
+    .hero-toggle .ms-ic { font-size: 18px; }
+  }
+  .hard-shadow   { box-shadow: 6px 6px 0px 0px #8d0b0b; }
   .gold-shadow    { box-shadow: 5px 5px 0px 0px #e8a12e; }
 
   .washi-tape       { background: rgba(232,161,46,0.55); transform: rotate(-2deg); }
@@ -182,32 +211,43 @@
 </header>
 
 <!-- HERO -->
-<section class="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden py-28 md:py-24" style="background:#6d0808;">
-  <!-- Illustrations (assets/). Mobile keeps 3 in the corners; md+ shows all, as in the reference layout. -->
+<section class="relative md:min-h-[640px] flex flex-col items-center justify-center overflow-hidden pt-12 pb-[4.75rem] md:py-24" style="background:#6d0808;">
+  <!-- Illustrations (assets/). Mobile: small pieces cropped by the corners; md+: all of them, as in the reference layout. -->
   <div class="absolute inset-0 pointer-events-none select-none overflow-hidden">
-    <img src="assets/hero-combo-superior.png" alt="" class="hero-art top-3 left-3 md:top-6 md:left-[4%]" style="width:clamp(96px, 15vw, 210px);">
+    <img src="assets/hero-combo-superior.png" alt="" class="hero-art top-1 -left-1 md:top-6 md:left-[4%]" style="--wm:72px; --wd:clamp(96px, 15vw, 210px);">
     <!-- PÁSSARO (canto superior direito): colocar o arquivo em assets/hero-passaro.png e descomentar.
-    <img src="assets/hero-passaro.png" alt="" class="hero-art hidden md:block top-6 right-[3%]" style="width:clamp(110px, 14vw, 200px);">
+    <img src="assets/hero-passaro.png" alt="" class="hero-art hidden md:block top-6 right-[3%]" style="--wd:clamp(110px, 14vw, 200px);">
     -->
-    <img src="assets/hero-fone.png" alt="" class="hero-art hidden md:block top-[50%] right-[4%]" style="width:clamp(70px, 9vw, 125px); rotate:6deg;">
-    <img src="assets/hero-tartaruga.png" alt="" class="hero-art hidden md:block bottom-[17%] left-[3%]" style="width:clamp(90px, 12vw, 170px);">
-    <img src="assets/hero-olho-grego.png" alt="" class="hero-art bottom-3 left-3 md:bottom-[6%] md:left-[6%]" style="width:clamp(64px, 8vw, 112px);">
-    <img src="assets/hero-combo-inferior.png" alt="" class="hero-art bottom-3 right-3 md:bottom-[5%] md:right-[3%]" style="width:clamp(96px, 14vw, 200px);">
+    <img src="assets/hero-fone.png" alt="" class="hero-art top-3 -right-1 md:top-[50%] md:right-[4%]" style="--wm:52px; --wd:clamp(70px, 9vw, 125px); rotate:6deg;">
+    <img src="assets/hero-tartaruga.png" alt="" class="hero-art hidden md:block bottom-[17%] left-[3%]" style="--wd:clamp(90px, 12vw, 170px);">
+    <img src="assets/hero-olho-grego.png" alt="" class="hero-art hidden md:block bottom-[6%] left-[6%]" style="--wd:clamp(64px, 8vw, 112px);">
+    <img src="assets/hero-combo-inferior.png" alt="" class="hero-art bottom-0 -right-3 md:bottom-[5%] md:right-[3%]" style="--wm:80px; --wd:clamp(96px, 14vw, 200px);">
   </div>
   <div class="relative z-10 text-center max-w-3xl px-6">
-    <p class="font-label mb-5" style="font-size:11px; letter-spacing:0.45em; color:#ffe088;">Lugares que valem em SP</p>
-    <h1 class="m-0 leading-none"><img src="assets/logo.png" alt="Le Spots" class="mx-auto block" style="width:clamp(280px, 56vw, 560px); height:auto;"></h1>
-    <div class="hero-copy font-body mt-9 mx-auto" style="max-width:40rem; font-size:0.95rem; line-height:1.75; color:#fdf8f0;">
+    <p class="hero-kicker font-label mb-3 md:mb-5">Lugares que valem em SP</p>
+    <h1 class="m-0 leading-none"><img src="assets/logo.png" alt="Le Spots" class="mx-auto block" style="width:clamp(230px, 56vw, 560px); height:auto;"></h1>
+    <div class="hero-copy font-body mt-5 md:mt-9 mx-auto" id="hero-copy">
+      <!-- Só no celular: foto da Helena como assinatura da carta. No desktop a foto fica na lateral. -->
+      <figure class="hero-polaroid">
+        <span class="tape"></span>
+        <img src="assets/foto-lateral.jpg" alt="Foto de @lenanmello">
+        <figcaption><a href="https://www.instagram.com/lenanmello" target="_blank" rel="noopener">@lenanmello</a></figcaption>
+      </figure>
       <p>Adoro sair de casa, passear e descobrir lugares novos. Como uma boa taurina, sempre topo qualquer programa que envolva uma boa comida. Conforme fui conhecendo novos lugares e fazendo novas programações, fui indicando para amigos e aí nasceu esse guia!</p>
-      <p><strong>Navegar por aqui é bem fácil:</strong> os spots estão divididos em três categorias principais: restaurantes, bares e cafés. E isso é só o começo! Já estou preparando novas categorias de rolês, cultura e outros achados da cidade. Dentro de cada categoria, você ainda pode filtrar por tipo de cozinha, ocasião e pelos selos do blog, criados para ajudar (de verdade) na escolha do seu próximo destino. Ah, e não esqueça de dar uma olhada no mapa para encontrar a localização certinha de cada lugar.</p>
-      <p>Se você também gosta de viver a cidade através da comida, dos encontros e das descobertas, se inscreva na <strong>newsletter</strong>. Por lá compartilho opiniões sinceras e outras histórias que nem sempre chegam ao blog.</p>
-      <p><strong>Com amor, Helena &lt;3</strong></p>
+      <div class="hero-more" id="hero-more"><div class="hero-more-inner">
+        <p><strong>Navegar por aqui é bem fácil:</strong> os spots estão divididos em três categorias principais: restaurantes, bares e cafés. E isso é só o começo! Já estou preparando novas categorias de rolês, cultura e outros achados da cidade. Dentro de cada categoria, você ainda pode filtrar por tipo de cozinha, ocasião e pelos selos do blog, criados para ajudar (de verdade) na escolha do seu próximo destino. Ah, e não esqueça de dar uma olhada no mapa para encontrar a localização certinha de cada lugar.</p>
+        <p>Se você também gosta de viver a cidade através da comida, dos encontros e das descobertas, se inscreva na <strong>newsletter</strong>. Por lá compartilho opiniões sinceras e outras histórias que nem sempre chegam ao blog.</p>
+        <p><strong>Com amor, Helena &lt;3</strong></p>
+      </div></div>
+      <button type="button" class="hero-toggle" aria-expanded="false" aria-controls="hero-more" onclick="toggleHeroMore(this)">
+        <span class="lbl">Ler mais</span><span class="material-symbols-outlined ms-ic">expand_more</span>
+      </button>
     </div>
-    <div class="mt-10 flex flex-wrap justify-center gap-4">
+    <div class="mt-7 md:mt-10 flex flex-wrap justify-center gap-3 md:gap-4">
       <button onclick="document.getElementById('spots-feed').scrollIntoView({behavior:'smooth'})"
-              class="font-label text-xs px-8 py-3 transition-all duration-200 hover:scale-105 active:scale-95"
+              class="font-label text-xs px-5 py-2.5 md:px-8 md:py-3 transition-all duration-200 hover:scale-105 active:scale-95"
               style="background:#e8a12e; color:#fff; border:2px solid #e8a12e; box-shadow:4px 4px 0 #4a0606;">Explorar Guia</button>
-      <a href="map.html" class="font-label text-xs px-8 py-3 transition-all duration-200 hover:scale-105 inline-block"
+      <a href="map.html" class="font-label text-xs px-5 py-2.5 md:px-8 md:py-3 transition-all duration-200 hover:scale-105 inline-block"
          style="border:2px solid rgba(255,218,218,0.6); color:#ffdada; background:transparent; text-decoration:none;">Ver Mapa</a>
     </div>
   </div>
@@ -616,6 +656,14 @@ function showNlMsg(el, text, ok) {
   el.style.color = ok ? '#1c3535' : '#ba1a1a';
   el.classList.remove('hidden');
   return false;
+}
+
+// ═══════════════ Hero "Ler mais" (mobile only — the button is hidden from md up) ═══════════════
+function toggleHeroMore(btn) {
+  const open = document.getElementById('hero-copy').classList.toggle('is-open');
+  btn.setAttribute('aria-expanded', String(open));
+  btn.querySelector('.lbl').textContent = open ? 'Ler menos' : 'Ler mais';
+  btn.querySelector('.ms-ic').textContent = open ? 'expand_less' : 'expand_more';
 }
 
 // ═══════════════ Reveal + parallax ═══════════════
